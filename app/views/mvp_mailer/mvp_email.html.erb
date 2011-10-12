@@ -1,12 +1,12 @@
 <h1>Stack of the Day</h1>
 
-<%= form_for(@response) do |f| %>
-  <%= render 'shared/error_messages' %>
+<form accept-charset="UTF-8" action="http://growing-fog-5322.heroku.com/responses" class="new_response" id="new_response" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+  
   <div class="field">
-    <%= f.label :value, "How much do you pay your babysitter?" %><br />
-    <span class="dollar_sign">$</span><%= f.text_field :value, :size => 3 %> per hour
+    <label for="response_value">How much do you pay your babysitter?</label><br />
+    <span class="dollar_sign">$</span><input id="response_value" name="response[value]" size="3" type="text" /> per hour
   </div>
   <div class="actions">
-    <%= f.submit "Stack Me Up", :class => "form_button" %>
+    <input class="form_button" id="response_submit" name="commit" type="submit" value="Stack Me Up" />
   </div>
-<% end %>
+</form>

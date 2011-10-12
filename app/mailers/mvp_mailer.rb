@@ -3,7 +3,6 @@ class MvpMailer < ActionMailer::Base
 
   def mvp_email(email)
     @response = Response.new
-    @url  = "http://stkup-alpha.heroku.com/signin"
     mail(:to => email, :subject => "Daily Stack - Parenting")
   end
 end
