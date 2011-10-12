@@ -54,11 +54,15 @@ class MvpController < ApplicationController
 
       # Calculate dollar_diff
       if @user_rank == "lowest"
-        @dollar_diff = "$" + "%.f" % (( @lowest_spenders - session[:you] ) * 240) + " less"
+        # The following line works, but does not put the commas in the amount
+        # @dollar_diff = "$" + "%.f" % (( @lowest_spenders - session[:you] ) * 240) + " less"
         @dollar_diff_amt = (( @lowest_spenders - session[:you] ) * 240).round
+        @dollar_diff_text = " less"
       else
-        @dollar_diff = "$" + "%.f" % (( session[:you] - @lowest_spenders ) * 240) + " more"
+        # Same here...
+        # @dollar_diff = "$" + "%.f" % (( session[:you] - @lowest_spenders ) * 240) + " more"
         @dollar_diff_amt = (( session[:you] - @lowest_spenders ) * 240).round
+        @dollar_diff_text = " more"
       end
 
     else
