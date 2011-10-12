@@ -3,6 +3,6 @@ class MvpMailer < ActionMailer::Base
 
   def mvp_email(email)
     @response = Response.new
-    mail(:to => email, :subject => "Daily Stack - Parenting")
+    mail(:to => email, :subject => "Parenting question")
   end
 end
