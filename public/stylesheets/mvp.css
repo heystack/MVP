@@ -124,6 +124,7 @@ div.action_steps {
 }
 
 td.action_steps {
+  color: #999;
   font-weight: bold;
   font-size: 125%;
 }
@@ -139,7 +140,45 @@ div.hc {
   clear:both;
 }
 
-/* Stack Form */
+/* Share Stack */
+
+div.share {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  width: 50%;
+  text-align: center;
+  background-color: #ffc;
+  padding: 10px 10px 1px 10px;
+  color: #999;
+}
+
+div.share_header {
+  font-weight: bold;
+  font-size: 125%;
+}
+
+div.disclaimer {
+  font-size: 75%;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+input.share_button {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: block;
+  text-align: center;
+  width: 180px;
+  color: #fff;
+  background: #4572A7;
+  font-size: 100%;
+  font-weight: normal;
+  padding: 10px;
+}
+
 input.form_button {
   margin-top: 20px;
   display: block;

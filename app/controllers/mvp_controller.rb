@@ -55,8 +55,10 @@ class MvpController < ApplicationController
       # Calculate dollar_diff
       if @user_rank == "lowest"
         @dollar_diff = "$" + "%.f" % (( @lowest_spenders - session[:you] ) * 240) + " less"
+        @dollar_diff_amt = (( @lowest_spenders - session[:you] ) * 240).round
       else
         @dollar_diff = "$" + "%.f" % (( session[:you] - @lowest_spenders ) * 240) + " more"
+        @dollar_diff_amt = (( session[:you] - @lowest_spenders ) * 240).round
       end
 
     else
@@ -71,7 +73,7 @@ class MvpController < ApplicationController
   def send_stack_form
     @contact = params[:contact]
     MvpMailer.mvp_email(@contact[:email]).deliver
-    flash[:success] = "Stack sent to #{@contact[:email]}."
+    flash[:success] = "Ok, shared with #{@contact[:email]}."
     redirect_to root_path
   end
 
