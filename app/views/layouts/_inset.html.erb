@@ -36,7 +36,7 @@
   </table>
 </div>
 
-<%= @dollar_diff_amt = number_to_currency(@dollar_diff_amt, :strip_insignificant_zeros => true) %>
+<% @dollar_diff_amt = number_to_currency(@dollar_diff_amt, :strip_insignificant_zeros => true) %>
 <div class="assessment_inset round">
 With four 5 hours sits per month, this costs you <span class="em"><%= @dollar_diff_amt %></span> per year <img src="/images/bang.gif", height="18">
 </div>
