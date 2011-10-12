@@ -1,0 +1,196 @@
+.container {
+  width: 800px;
+  padding-bottom: 30px;
+}
+
+body {
+  background-image:url('/images/bg.png');
+}
+
+header {
+  padding-top: 20px;
+}
+
+header img {
+  padding: 1em;
+  background: #fff;
+}
+
+section {
+  margin-top: 1em;
+  font-size: 120%;
+  padding: 20px;
+  background: #fff;
+}
+
+section h1 {
+  font-size: 200%;
+}
+
+/* Links */
+
+a {
+  color: #09c;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #069;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #069;
+}
+
+/* Round corners */
+
+.round {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}
+
+/* Comparison */
+
+.comparison {
+  font: 110% arial,sans-serif;
+}
+
+span.em {
+  color: #4572A7;
+  font-weight: bold;
+}
+
+/* Inset */
+
+div.inset {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  padding: 5px 0px 0px 5px;
+}
+
+.border_left {
+  border-style: none none none solid;
+  border-width: 1px;
+  border-color: black;
+  padding-left: 15px;
+}
+
+div.assessment_inset {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  padding: 5px;
+  margin: 20px 0px 0px 60px;	
+}
+
+/* Legend */
+
+div.legend {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  font-size: 85%;
+}
+
+table.legend {
+}
+
+td.legend_all {
+  background-color: #92A8CD;
+  border: 7px solid white;
+}
+
+td.legend_lowest {
+  background-color: #89A54E;
+  border: 7px solid white;
+}
+
+tr.plain td.plain {
+  background-color: white;
+}
+
+/* Action Steps */
+
+div.action_steps {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  width: 80%;
+  background-color: #ffc;
+  padding: 10px 10px 1px 10px;
+}
+
+td.action_steps {
+  font-weight: bold;
+  font-size: 125%;
+}
+
+td.action_links {
+}
+
+/* Highchart */
+
+div.hc {
+  height:300px;
+  width: 400px;
+  clear:both;
+}
+
+/* Stack Form */
+input.form_button {
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  width: 150px;
+  color: #fff;
+  background: #4572A7;
+  font-size: 100%;
+  font-weight: normal;
+  padding: 10px;
+}
+
+/* Errors */
+
+.field_with_errors {
+  margin-top: 10px;
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+.field_with_errors label {
+  color: #fff;
+}
+
+#error_explanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}

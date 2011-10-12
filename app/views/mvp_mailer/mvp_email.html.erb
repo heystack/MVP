@@ -1,0 +1,12 @@
+<h1>Stack of the Day</h1>
+
+<%= form_for(@response) do |f| %>
+  <%= render 'shared/error_messages' %>
+  <div class="field">
+    <%= f.label :value, "How much do you pay your babysitter?" %><br />
+    <span class="dollar_sign">$</span><%= f.text_field :value, :size => 3 %> per hour
+  </div>
+  <div class="actions">
+    <%= f.submit "Stack Me Up", :class => "form_button" %>
+  </div>
+<% end %>

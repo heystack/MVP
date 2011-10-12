@@ -1,4 +1,15 @@
 Mvp::Application.routes.draw do
+  resources :responses
+  match '/response',  :to => 'responses#new'
+
+  get "responses/new"
+  get "responses/show"
+
+  get "mvp/home"
+  get "mvp/contact"
+  
+  match '/send_stack_form', :to => 'mvp#send_stack_form'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +59,7 @@ Mvp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  root :to => "mvp#home"
 
   # See how all your routes lay out with "rake routes"
 

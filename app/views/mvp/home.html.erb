@@ -1,0 +1,35 @@
+<%= render 'layouts/hc_script' %>
+
+<div class="comparison">Comparison  |  You spend <span class="em"><%= @percent_diff %></span> than your lowest spending neighbors</div>
+
+<table>
+  <tr>
+	<td>
+	  <div id="hc" class="hc"></div>
+	</td>
+	<td>
+	  <%= render 'layouts/inset' %>
+	</td>
+  </tr>
+</table>
+
+<div id="legend" class="legend"><%= render 'layouts/legend' %></div>
+
+<div id="action_steps" class="action_steps round"><%= render 'layouts/action_steps' %></div>
+
+<h2>Send Stack</h2>
+<em>Email this stack to the email address entered below. Comment not used currently</em><br/>
+<%= form_tag "/send_stack_form" do -%>
+<table>
+<tr>
+<td><label for="send_to_email">Email Address to Send Stack:</label></td>
+<td width="60%"><%= text_field "contact", "email", :size => 40 %></td>
+</tr>
+<tr>
+<td><label for="comment_body">Comment:</label></td>
+<td><%= text_field "contact", "comment", :size => 40 %></td>
+</tr>
+</table>
+
+<input type="submit" value="Send Stack" class="primary" />
+<% end -%>

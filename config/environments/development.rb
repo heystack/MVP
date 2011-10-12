@@ -22,5 +22,17 @@ Mvp::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+  
+    # Action Mailer settings for StkUp
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => 'mail.stkup.com',
+      :user_name            => 'sbrown@stkup.com',
+      :password             => 'may18stkup',
+      :authentication       => 'plain',
+      :enable_starttls_auto => true  }
+  
 end
 

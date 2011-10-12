@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "xhtml11.dtd">
+<html>
+  <head>
+    <title>Testing Highcharts</title>
+	<!-- Include Ajax and Highcharts js -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+	<script src="/javascripts/highcharts.js" type="text/javascript"></script>
+	<!--[if IE]> <script src="/javascripts/excanvas.compiled" type="text/javascript"></script> <![endif]-->
+
+  </head>
+  <body>
+
+  <script type="text/javascript">
+	var chart;
+	$(document).ready(function() {
+		chart = new Highcharts.Chart({
+		   chart: {
+		      renderTo: 'container',
+		      defaultSeriesType: 'bar'
+		   },
+		   title: {
+		      text: null
+		   },
+		   subtitle: {
+		      text: null
+		   },
+		   xAxis: {
+		      categories: ['Lowest Spenders', 'All Neighbors', 'YOU', 'Biggest Spenders'],
+		      title: {
+		         text: null
+		      },
+			  tickLength: 0
+		   },
+		   yAxis: {
+		      min: 0,
+		      title: null,
+	          labels: {
+	            enabled: false
+	          },
+			  gridLineColor: '#fff'
+		   },
+		   tooltip: {
+		      formatter: function() {
+		         return ''+
+		             this.x +': $'+ this.y +'/hr';
+		      }
+		   },
+		   plotOptions: {
+		      bar: {
+		         dataLabels: {
+		            enabled: true,
+			        formatter: function() {
+			          return '$'+ this.y;
+			        }
+		         },
+		         pointPadding: 0,
+				 groupPadding: 0.15
+		      }
+		   },
+	       legend: {
+		      enabled: false
+	       },
+		   credits: {
+		      enabled: false
+		   },
+		   colors: [
+			  '#80699B'
+		   ],
+		   series: [{
+		      data: [{
+				name: 'Point 1',
+				color: '#89A54E',
+				y: 8
+			  }, {
+				name: 'Point 2',
+				color: '#92A8CD',
+				y: 11
+			  }, {
+				name: 'Point 3',
+				color: '#4572A7',
+				y: 11.50
+			  }, {
+				name: 'Point 4',
+				color: '#DB843D',
+				y: 13
+			  }]
+		   }]
+		});
+	});
+  </script>
+
+<div style="font:100% arial,sans-serif;">Comparison  |  You spend <span style="color: #92A8CD">38% more</span> than your lowest spending neighbors</div>
+<div id="container" style="height:300px; width: 400px; margin: 0 2em; clear:both"></div>
+
+  </body>
+</html>
