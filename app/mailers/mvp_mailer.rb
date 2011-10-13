@@ -3,6 +3,7 @@ class MvpMailer < ActionMailer::Base
 
   def mvp_email(email)
     @response = Response.new
+    @email = email
     mail(:to => email, :subject => "Parenting question")
   end
 end

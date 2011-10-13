@@ -12,6 +12,7 @@ class ResponsesController < ApplicationController
     if @response.save
       # flash[:success] = "Response saved: " + @response.value.to_s
       session[:you] = @response.value
+      session[:email] = @response.email
       redirect_to root_path
     else
       render 'new'

@@ -1,7 +1,11 @@
 <h3>Your friend has shared this question with you.</h3>
 <em>Interested to see how you stack up against your neighbors?</em>
 <br/><br/>
-<form accept-charset="UTF-8" action="http://parenting-mvp.heroku.com/responses" class="new_response" id="new_response" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+<form accept-charset="UTF-8" action="http://parenting-mvp.heroku.com/responses" class="new_response" id="new_response" method="post">
+  <div style="margin:0;padding:0;display:inline">
+  <input type="hidden" name="utf8" value="&#x2713;" />
+  <input type="hidden" id="response_email" name="response[email]" value="<%= @email %>" />
+  </div>
   
   <div class="field">
     <label for="response_value">How much do you typically pay your babysitter?</label><br />

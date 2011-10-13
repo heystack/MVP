@@ -76,6 +76,7 @@ class MvpController < ApplicationController
 
   def send_stack_form
     @contact = params[:contact]
+    session[:email] = @contact[:email]
     MvpMailer.mvp_email(@contact[:email]).deliver
     flash[:success] = "Thanks for sharing with #{@contact[:email]}. Feel free to share as many times as you'd like!"
     redirect_to root_path

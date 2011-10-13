@@ -2,6 +2,7 @@
 
 <%= form_for(@response) do |f| %>
   <%= render 'shared/error_messages' %>
+  <%= f.hidden_field :email, :value => session[:email] %><br />
   <div class="field">
     <%= f.label :value, "How much do you pay your babysitter?" %><br />
     <span class="dollar_sign">$</span><%= f.text_field :value, :size => 3 %> per hour

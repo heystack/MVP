@@ -1,5 +1,7 @@
 <%= render 'layouts/hc_script' %>
 
+session[:email] = <%= session[:email] %><br/><br/>
+
 <div class="comparison">Comparison  |  You spend <span class="em"><%= @percent_diff %></span> than your lowest spending neighbors</div>
 
 <table>
