@@ -6,6 +6,7 @@
 #  value      :float
 #  created_at :datetime
 #  updated_at :datetime
+#  email      :string
 #
 
 class Response < ActiveRecord::Base

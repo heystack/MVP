@@ -32,7 +32,7 @@ describe ResponsesController do
     describe "success" do
 
       before(:each) do
-        @attr = { :value => "15" }
+        @attr = { :value => "15", :email => "sbrown@stkup.com" }
       end
 
       it "should create a Response" do
