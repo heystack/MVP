@@ -10,7 +10,7 @@ class ResponsesController < ApplicationController
   def create
     @response = Response.new(params[:response])
     if @response.save
-      # flash[:success] = "Response saved: " + @response.value.to_s
+      flash[:success] = "Response saved: " + @response.value.to_s + " email=" + @response.email
       session[:you] = @response.value
       session[:email] = @response.email
       redirect_to root_path

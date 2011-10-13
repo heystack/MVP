@@ -9,7 +9,7 @@
 #
 
 class Response < ActiveRecord::Base
-  attr_accessible :value
+  attr_accessible :value, :email
   
   validates :value, :presence => true
   
