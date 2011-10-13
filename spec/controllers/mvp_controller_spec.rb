@@ -16,7 +16,7 @@ describe MvpController do
     it "should have the right title" do
       get 'home'
       response.should have_selector("title",
-                        :content => "StkUp MVP")
+                        :content => "Simple, Purposeful Comparisons")
     end
 
     it "should have a hc div" do

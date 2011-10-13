@@ -1,5 +1,9 @@
 <h1>Stack of the Day</h1>
 
+<div class="new_response_img">
+  <img src="http://t2.gstatic.com/images?q=tbn:ANd9GcQYMjdebWTuYTi5p6lgwvHZnCi6BTHc0v6RxifOBLgBED_bJwcS">
+</div>
+<div class="new_response_form">
 <%= form_for(@response) do |f| %>
   <%= render 'shared/error_messages' %>
   <%= f.hidden_field :email, :value => session[:email] %><br />
@@ -11,3 +15,4 @@
     <%= f.submit "Stack Me Up", :class => "form_button" %>
   </div>
 <% end %>
+</div>

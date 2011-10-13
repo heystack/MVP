@@ -119,6 +119,7 @@ div.action_steps {
   margin-right: auto;
   margin-top: 30px;
   width: 80%;
+/*  background: #000 url(/images/bg_bluefade.png) top center repeat-x;*/
   background-color: #ffc;
   padding: 10px 10px 1px 10px;
 }
@@ -149,6 +150,7 @@ div.share {
   width: 50%;
   text-align: center;
   background-color: #ffc;
+/*  background: #000 url(/images/bg_bluefade.png) top center repeat-x;*/
   padding: 10px 10px 1px 10px;
   color: #999;
 }
@@ -193,6 +195,18 @@ input.form_button {
   font-size: 100%;
   font-weight: normal;
   padding: 10px;
+}
+
+/* New Response Form */
+
+div.new_response_img {
+  display: inline-block;
+}
+
+div.new_response_form {
+  margin-left: 20px;
+  display: inline-block;
+  vertical-align: top;
 }
 
 /* Errors */

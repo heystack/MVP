@@ -3,13 +3,16 @@ class MvpController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
   def home
+    if !session[:you]
+      redirect_to new_response_path
+    end
+    session[:you] ||= 0
     @lowest_color = '#89A54E'
     @all_neighbors_color = '#92A8CD'
     @you_color = '#4572A7'
     @biggest_color = '#DB843D'
 
     @count = Response.count
-    session[:you] ||= 0
 
     if @count > 0
       # Calculate all_neighbors
@@ -77,12 +80,12 @@ class MvpController < ApplicationController
   def send_stack_form
     @contact = params[:contact]
     session[:email] = @contact[:email]
-    if !@contact[:from_email].blank?
-      session[:from_email] = @contact[:from_email]
-    else
-      session[:from_email] = "sbrown@stkup.com"
-    end
-    MvpMailer.mvp_email(@contact[:email], @contact[:from_email]).deliver
+    # if !@contact[:from_email].blank?
+    #   session[:from_email] = @contact[:from_email]
+    # else
+    #   session[:from_email] = "sbrown@stkup.com"
+    # end
+    MvpMailer.mvp_email(@contact[:email]).deliver
     flash[:success] = "Thanks for sharing with #{@contact[:email]}. Feel free to share as many times as you'd like!"
     redirect_to root_path
   end
