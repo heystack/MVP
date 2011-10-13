@@ -79,14 +79,20 @@ class MvpController < ApplicationController
 
   def send_stack_form
     @contact = params[:contact]
-    session[:email] = @contact[:email]
-    # if !@contact[:from_email].blank?
-    #   session[:from_email] = @contact[:from_email]
-    # else
-    #   session[:from_email] = "sbrown@stkup.com"
-    # end
-    MvpMailer.mvp_email(@contact[:email]).deliver
+    @from_email = session[:email]
+    MvpMailer.mvp_email(@contact[:email], @from_email).deliver
     flash[:success] = "Thanks for sharing with #{@contact[:email]}. Feel free to share as many times as you'd like!"
+    redirect_to root_path
+  end
+
+  def suggestion_form
+  end
+
+  def send_suggestion
+    # @contact_email = params[:contact_email]
+    @contact = params[:contact]
+    MvpMailer.suggestion_email(@contact).deliver
+    flash[:success] = "Thanks for the suggestion!"
     redirect_to root_path
   end
 

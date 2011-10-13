@@ -30,17 +30,20 @@ section h1 {
 /* Links */
 
 a {
-  color: #09c;
+/*  color: #09c;*/
+  color: #4572A7;
   text-decoration: none;
 }
 
 a:hover {
-  color: #069;
+/*  color: #069;*/
+  color: #4572A7;
   text-decoration: underline;
 }
 
 a:visited {
-  color: #069;
+/*  color: #069;*/
+  color: #4572A7;
 }
 
 /* Round corners */
@@ -49,6 +52,18 @@ a:visited {
   -moz-border-radius:    10px;
   -webkit-border-radius: 10px;
   border-radius:         10px;
+}
+
+/* Header */
+
+td.header_logo {
+  margin-bottom: 30px;
+}
+
+td.header_tagline {
+  text-align: right;
+  font-style: italic;
+  color: #999;
 }
 
 /* Comparison */

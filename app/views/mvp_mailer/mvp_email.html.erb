@@ -5,7 +5,11 @@
 </td>	
 <td>
 <div style="margin-left: 20px;">
-<h3>Your friend has shared this question with you.</h3>
+<h3>Your friend
+<% if @from_email %>
+(<%= @from_email %>)
+<% end %>
+has shared this question with you.</h3>
 <em>Interested to see how you stack up against your neighbors?</em>
 <br/><br/>
 <form accept-charset="UTF-8" action="http://parenting-mvp.heroku.com/responses" class="new_response" id="new_response" method="post">
