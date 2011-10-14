@@ -8,9 +8,7 @@
   <%= render 'layouts/stylesheets' %>
 </head>
 <body>
-  <div class="outside_container">
-  <div class="shadow round">
-  <div class="container">
+  <div class="container shadow">
 	<section class="round">
       <%= render 'layouts/header' %>
 	  <% flash.each do |key, value| %>
@@ -18,8 +16,6 @@
 	  <% end %>
 	  <%= yield %>
 	</section>
-  </div>
-  </div>
   </div>
   <%= debug(params) if Rails.env.development? %>
 </body>

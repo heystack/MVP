@@ -1,31 +1,17 @@
-.container, .shadow {
-  position: relative;
-  bottom: 6px;
-  right: 6px;
-}
-
 .container {
   width: 800px;
 }
 
 .shadow {
-  background-color: #46a1d4;
-  width: 800px;
-}
-
-.outside_container {
-  width: 800px;
-  padding-top: 20px;
-  padding-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
+-moz-box-shadow: 10px 15px 20px #ccc;
+-webkit-box-shadow: 10px 15px 20px #ccc;
 }
 
 body {
-	/*  background-image:url('/images/1x407bluefade.png');*/
-	/*  background-image:url('/images/bg.png');*/
-	  background-image:url('/images/bluebg.png');
-/*	background-color: #0088ce;*/
+  /*  background-image:url('/images/1x407bluefade.png');*/
+  /*  background-image:url('/images/bg.png');*/
+  /*  background-color: #0088ce;*/
+  background-image:url('/images/bluebg.png');
 }
 
 section {
