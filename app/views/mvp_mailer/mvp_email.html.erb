@@ -6,7 +6,7 @@
 <td>
 <div style="margin-left: 20px;">
 <h3>Your friend
-<% if @from_email %>
+<% if @from_email && !@from_email.blank? %>
 (<%= @from_email %>)
 <% end %>
 has shared this question with you.</h3>

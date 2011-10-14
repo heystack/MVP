@@ -1,19 +1,30 @@
+.container, .shadow {
+  position: relative;
+  bottom: 6px;
+  right: 6px;
+}
+
 .container {
   width: 800px;
+}
+
+.shadow {
+  background-color: #46a1d4;
+  width: 800px;
+}
+
+.outside_container {
+  width: 800px;
+  padding-top: 20px;
   padding-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body {
-  background-image:url('/images/bg.png');
-}
-
-header {
-  padding-top: 20px;
-}
-
-header img {
-  padding: 1em;
-  background: #fff;
+	/*  background-image:url('/images/1x407bluefade.png');*/
+	/*  background-image:url('/images/bg.png');*/
+	background-color: #0088ce;
 }
 
 section {
@@ -31,19 +42,38 @@ section h1 {
 
 a {
 /*  color: #09c;*/
-  color: #4572A7;
+  color: #fff;
   text-decoration: none;
 }
 
 a:hover {
 /*  color: #069;*/
-  color: #4572A7;
+  color: #fff;
   text-decoration: underline;
 }
 
 a:visited {
 /*  color: #069;*/
-  color: #4572A7;
+  color: #fff;
+}
+
+/* White Links */
+
+td.action_steps.a {
+/*  color: #09c;*/
+  color: #fff;
+  text-decoration: none;
+}
+
+td.action_steps.a:hover {
+/*  color: #069;*/
+  color: #fff;
+  text-decoration: underline;
+}
+
+td.action_steps.a:visited {
+/*  color: #069;*/
+  color: #fff;
 }
 
 /* Round corners */
@@ -70,10 +100,11 @@ td.header_tagline {
 
 .comparison {
   font: 110% arial,sans-serif;
+  margin-left: 10px;
 }
 
 span.em {
-  color: #4572A7;
+  color: #0088ce;
   font-weight: bold;
 }
 
@@ -84,6 +115,10 @@ div.inset {
   border-width: 1px;
   border-color: black;
   padding: 5px 0px 0px 5px;
+}
+
+div.inset_title {
+  font-weight: bold;
 }
 
 .border_left {
@@ -101,25 +136,49 @@ div.assessment_inset {
   margin: 20px 0px 0px 60px;	
 }
 
+tr.boldrow {
+  font-weight: 900;
+  font-size: 120%;
+}
+
 /* Legend */
 
 div.legend {
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  margin-bottom: 30px;
+  width: 100%;
   font-size: 85%;
 }
 
 table.legend {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-top: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #eee;
+}
+
+td.legend_header {
+  vertical-align: top;
+  font-size: 120%;
+  font-weight: bold;
+}
+
+td.legend_series {
+  font-size: 120%;
 }
 
 td.legend_all {
-  background-color: #92A8CD;
+  background-color: #999;
   border: 7px solid white;
 }
 
 td.legend_lowest {
-  background-color: #89A54E;
+  background-color: #8cb941;
   border: 7px solid white;
 }
 
@@ -127,20 +186,26 @@ tr.plain td.plain {
   background-color: white;
 }
 
+/* Area Below Highchart */
+
+div.below_the_fold {
+  padding: 20px;
+  background: #000 url(/images/1x400greyfade.png) top center repeat-x;
+}
+
 /* Action Steps */
 
 div.action_steps {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
   width: 80%;
-/*  background: #000 url(/images/bg_bluefade.png) top center repeat-x;*/
-  background-color: #ffc;
+  background: #000 url(/images/1x151bluefade.png) top center repeat-x;
+/*  background-color: #ffc;*/
   padding: 10px 10px 1px 10px;
 }
 
 td.action_steps {
-  color: #999;
+  color: #fff;
   font-weight: bold;
   font-size: 125%;
 }
@@ -164,10 +229,10 @@ div.share {
   margin-top: 30px;
   width: 50%;
   text-align: center;
-  background-color: #ffc;
-/*  background: #000 url(/images/bg_bluefade.png) top center repeat-x;*/
+/*  background-color: #ffc;*/
+  background: #000 url(/images/1x400greyfade.png) top center repeat-x;
   padding: 10px 10px 1px 10px;
-  color: #999;
+  color: #333;
 }
 
 div.share_header {
@@ -188,16 +253,18 @@ td.share_labels {
 input.share_button {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
+  margin-top: -10px;
   margin-bottom: 20px;
   display: block;
   text-align: center;
   width: 180px;
+  height: 29px;
   color: #fff;
-  background: #4572A7;
+/*  background: #4572A7;*/
+  background: #000 url(/images/1x29orangefade.png) top center repeat-x;
   font-size: 100%;
   font-weight: normal;
-  padding: 10px;
+  padding: 3px;
 }
 
 input.form_button {
@@ -222,6 +289,12 @@ div.new_response_form {
   margin-left: 20px;
   display: inline-block;
   vertical-align: top;
+}
+
+/* Responses Index */
+
+td.response_header {
+  font-weight: bold;
 }
 
 /* Errors */

@@ -15,9 +15,11 @@
 
 <div id="legend" class="legend"><%= render 'layouts/legend' %></div>
 
+<div class="below_the_fold round">
+	
 <div id="action_steps" class="action_steps round"><%= render 'layouts/action_steps' %></div>
 
-<div id="share" class="share round">
+<div id="share" class="share">
 <div class="share_header">Share with Friends!</div>
 <em>Want to see how you stack up against others you know?</em><br/>
 <%= form_tag "/send_stack_form" do -%>
@@ -33,10 +35,11 @@
 	</td>
   </tr>
 </table>
-<input type="submit" value="Share with a Friend" class="share_button" />
+<input type="submit" value="Share with a Friend" class="share_button round" />
 <% end -%>
 
 <!-- <div class="disclaimer">
 We promise to only use this email for sharing this question!
 </div> -->
+</div>
 </div>

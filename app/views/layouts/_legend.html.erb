@@ -1,14 +1,15 @@
-<!-- <table class="legend">
+<table class="legend">
   <tr>
+	<td class="legend_header">WHO ARE YOUR "NEIGHBORS"?</td>
 	<td>
 	<table>
 	  <tr class="plain">
 		<td class="legend_all"></td>
-		<td class="plain">ALL NEIGHBORS</td>
+		<td class="plain legend_series">ALL NEIGHBORS</td>
 	  </tr>
 	  <tr class="plain">
 		<td class="plain"></td>
-		<td class="plain">Approximately 100 parents in the 22314 zip code.</td>
+		<td class="plain legend_def">Approximately <%= "%.f" % ((@count * 0.1).ceil.to_f / 0.1) %> parents in the DC Metro area.</td>
 	  </tr>
 	</table>
 	</td>
@@ -16,18 +17,17 @@
 	<table>
 	  <tr class="plain">
 		<td class="legend_lowest"></td>
-		<td class="plain">LOWEST SPENDERS</td>
+		<td class="plain legend_series">LOWEST SPENDERS</td>
 	  </tr>
 	  <tr class="plain">
 		<td class="plain"></td>
-		<td class="plain">The lowest spending 20% from the ALL NEIGHBORS group.</td>
+		<td class="plain legend_def">The lowest spending 20% from the ALL NEIGHBORS group.</td>
 	  </tr>
 	</table>
 	</td>
   </tr>
 </table>
-<br/> -->
-<table>
+<!-- <table>
   <tr class="plain">
 	<td class="legend_all"></td>
 	<td class="plain">ALL NEIGHBORS &#8212; Approximately <%= "%.f" % ((@count * 0.1).ceil.to_f / 0.1) %> parents in the DC Metro area.</td>
@@ -37,4 +37,4 @@
 	<td class="legend_lowest"></td>
 	<td class="plain">LOWEST SPENDERS &#8212; The lowest spending 20% from the ALL NEIGHBORS group.</td>
   </tr>
-</table>
+</table> -->

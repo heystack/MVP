@@ -25,6 +25,7 @@ class ResponsesController < ApplicationController
 
   def index
     @responses = Response.all
+    @count = Response.count
   end
 
 end

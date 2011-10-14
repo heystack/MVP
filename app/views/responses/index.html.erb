@@ -1,5 +1,10 @@
 <h1>Stack Responses</h1>
+Total <%= pluralize( @count, 'response') %>; last response <%= time_ago_in_words(Response.last.created_at) %> ago.<br/><br/>
 <table>
-  <tr><td>Value</td><td>Email</td><td>Created At</td><td>Modified At</td>
+  <tr>
+	<td class="response_header">Value</td>
+	<td class="response_header">Email</td>
+	<td class="response_header">Created At</td>
+	<td class="response_header">Modified At</td>
   <%= render @responses %>
 </table>

@@ -7,10 +7,10 @@ class MvpController < ApplicationController
       redirect_to new_response_path
     end
     session[:you] ||= 0
-    @lowest_color = '#89A54E'
-    @all_neighbors_color = '#92A8CD'
-    @you_color = '#4572A7'
-    @biggest_color = '#DB843D'
+    @lowest_color = LOWEST_COLOR
+    @all_neighbors_color = ALL_NEIGHBORS_COLOR
+    @you_color = YOU_COLOR
+    @biggest_color = BIGGEST_COLOR
 
     @count = Response.count
 

@@ -8,6 +8,8 @@
   <%= render 'layouts/stylesheets' %>
 </head>
 <body>
+  <div class="outside_container">
+  <div class="shadow round">
   <div class="container">
 	<section class="round">
       <%= render 'layouts/header' %>
@@ -16,7 +18,9 @@
 	  <% end %>
 	  <%= yield %>
 	</section>
-    <%= debug(params) if Rails.env.development? %>
   </div>
+  </div>
+  </div>
+  <%= debug(params) if Rails.env.development? %>
 </body>
 </html>
