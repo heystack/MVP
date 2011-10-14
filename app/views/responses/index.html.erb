@@ -1,6 +1,5 @@
 <div class="responses">
-<h1>Stack Responses</h1>
-Total <%= pluralize( @count, 'response') %>; last response <%= time_ago_in_words(Response.last.created_at) %> ago.<br/><br/>
+<h1>Stack Responses (<%= @count %> Total)</h1>
 <table>
   <tr>
 	<td class="response_header">Value</td>
