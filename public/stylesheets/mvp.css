@@ -105,6 +105,7 @@ td.header_logo {
 td.header_tagline {
   text-align: right;
   font-style: italic;
+  font-size: 125%;
   color: #999;
 }
 
