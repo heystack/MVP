@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Stack Suggestion!</h1>
+    <p>
+      Contact us form submitted with the following info:<br/>
+      Name: <%= @contact[:name] %><br/>
+      Email: <%= @contact[:email] %><br/>
+      Suggestion: <%= @contact[:suggestion] %><br/>
+    </p>
+    <p><%= Time.now %></p>
+  </body>
+</html>

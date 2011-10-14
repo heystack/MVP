@@ -1,0 +1,21 @@
+<h1>Suggest a Stack</h1>
+We would love to hear your suggestions for new stacks!
+
+<%= form_tag "/send_suggestion" do -%>
+<table>
+<tr>
+<td><label for="contact_name">Name (optional):</label></td>
+<td><%= text_field "contact", "name" %></td>
+</tr>
+<tr>
+<td><label for="contact_email">Email (optional):</label></td>
+<td><%= text_field "contact", "email" %></td>
+</tr>
+<tr>
+<td style="vertical-align:top"><label for="comment_body">Suggestion:</label></td>
+<td><%= text_area "contact", "suggestion", :size => "8x30" %></td>
+</tr>
+</table>
+
+<input type="submit" value="Submit" class="primary" />
+<% end -%>
