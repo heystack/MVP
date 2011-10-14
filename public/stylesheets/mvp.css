@@ -18,7 +18,7 @@ body {
 section {
   margin-top: 1em;
   font-size: 120%;
-  padding: 20px;
+/*  padding: 20px;*/
   background: #fff;
 }
 
@@ -72,7 +72,31 @@ td.action_steps.a:visited {
   border-radius:         10px;
 }
 
+.round_bottom {
+  -moz-border-bottom-left-radius:     10px;
+  -moz-border-bottom-right-radius:    10px;
+  -webkit-border-bottom-left-radius:  10px;
+  -webkit-border-bottom-right-radius: 10px;
+  border-bottom-left-radius:          10px;
+  border-bottom-right-radius:         10px;
+}
+
+.round_top {
+  -moz-border-top-left-radius:     10px;
+  -moz-border-top-right-radius:    10px;
+  -webkit-border-top-left-radius:  10px;
+  -webkit-border-top-right-radius: 10px;
+  border-top-left-radius:          10px;
+  border-top-right-radius:         10px;
+}
+
 /* Header */
+
+div.header {
+  padding-top:   10px;
+  padding-right: 20px;
+  padding-left:  20px;
+}
 
 td.header_logo {
   margin-bottom: 30px;
@@ -84,7 +108,12 @@ td.header_tagline {
   color: #999;
 }
 
-/* Comparison */
+/* Above the Fold */
+
+.above_the_fold {
+  padding-left:  20px;
+  padding-right: 20px;
+}
 
 .comparison {
   font: 110% arial,sans-serif;
@@ -190,6 +219,7 @@ div.action_steps {
   background: #000 url(/images/1x151bluefade.png) top center repeat-x;
 /*  background-color: #ffc;*/
   padding: 10px 10px 1px 10px;
+  margin-bottom: 40px;
 }
 
 td.action_steps {
@@ -214,11 +244,10 @@ div.hc {
 div.share {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
   width: 50%;
   text-align: center;
 /*  background-color: #ffc;*/
-  background: #000 url(/images/1x400greyfade.png) top center repeat-x;
+/*  background: #000 url(/images/1x400greyfade.png) top center repeat-x;*/
   padding: 10px 10px 1px 10px;
   color: #333;
 }

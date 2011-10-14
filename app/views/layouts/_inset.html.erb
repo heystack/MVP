@@ -1,6 +1,6 @@
 <div class="inset_title">How You Stack Up</div>
 
-<div class="inset round">
+<div class="inset round shadow">
   <table>
 	<tr class="plain <%= @user_rank == 'lowest' ? 'boldrow' : '' %>">
 	  <td class="plain"><%= @user_rank == "lowest" ? "You >" : "" %></td>
@@ -38,6 +38,6 @@
 </div>
 
 <% @dollar_diff_amt = number_to_currency(@dollar_diff_amt, :strip_insignificant_zeros => true) %>
-<div class="assessment_inset round">
+<div class="assessment_inset round shadow">
 With four 5 hours sits per month, this costs you <span class="em"><%= @dollar_diff_amt %><%= @dollar_diff_text %></span> per year. <!-- <img src="/images/bang.gif", height="18"> -->
 </div>

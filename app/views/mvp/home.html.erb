@@ -1,5 +1,7 @@
 <%= render 'layouts/hc_script' %>
 
+<div class="above_the_fold">
+
 <div class="comparison">Comparison  |  You spend <span class="em"><%= @percent_diff %></span> than your lowest spending neighbors</div>
 
 <table>
@@ -15,31 +17,12 @@
 
 <div id="legend" class="legend"><%= render 'layouts/legend' %></div>
 
-<div class="below_the_fold round">
+</div> <!-- above_the_fold -->
+
+<div id="action_steps" class="action_steps round shadow"><%= render 'layouts/action_steps' %></div>
+
+<div class="below_the_fold round_bottom">
 	
-<div id="action_steps" class="action_steps round"><%= render 'layouts/action_steps' %></div>
+<div id="share" class="share round_top"><%= render 'layouts/share_stack' %></div>
 
-<div id="share" class="share">
-<div class="share_header">Share with Friends!</div>
-<em>Want to see how you stack up against others you know?</em><br/>
-<%= form_tag "/send_stack_form" do -%>
-<table class="share_form">
-  <tr>
-	<td class="share_labels">
-	  <label for="email">Email:</label><br/>
-	  <!-- <label for="from_email">From:</label> -->
-	</td>
-	<td class="share_fields">
-	  <%= text_field "contact", "email", :size => 40 %><br/>
-	  <!-- <%= text_field "contact", "from_email", :size => 40, :value => session[:from_email] %> -->
-	</td>
-  </tr>
-</table>
-<input type="submit" value="Share with a Friend" class="share_button round" />
-<% end -%>
-
-<!-- <div class="disclaimer">
-We promise to only use this email for sharing this question!
-</div> -->
-</div>
 </div>
