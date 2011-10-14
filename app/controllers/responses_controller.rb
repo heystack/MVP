@@ -24,7 +24,7 @@ class ResponsesController < ApplicationController
   end
 
   def index
-    @responses = Response.all
+    @responses = Response.all(:order => 'id DESC')
     @count = Response.count
   end
 

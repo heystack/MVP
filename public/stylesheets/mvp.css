@@ -311,6 +311,10 @@ div.new_response_form {
 
 /* Responses Index */
 
+div.responses {
+  padding: 0 30px 10px 30px;
+}
+
 td.response_header {
   font-weight: bold;
 }
