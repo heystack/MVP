@@ -24,7 +24,8 @@
 body {
 	/*  background-image:url('/images/1x407bluefade.png');*/
 	/*  background-image:url('/images/bg.png');*/
-	background-color: #0088ce;
+	  background-image:url('/images/bluebg.png');
+/*	background-color: #0088ce;*/
 }
 
 section {
