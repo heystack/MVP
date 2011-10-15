@@ -4,6 +4,11 @@
 }
 
 .shadow {
+-moz-box-shadow: 10px 15px 20px #222;
+-webkit-box-shadow: 10px 15px 20px #222;
+}
+
+.shadowlight {
 -moz-box-shadow: 10px 15px 20px #ccc;
 -webkit-box-shadow: 10px 15px 20px #ccc;
 }
@@ -323,6 +328,7 @@ td.response_header {
 
 div.suggestion_form {
   padding-left: 30px;
+  padding-bottom: 20px;
 }
 
 /* Errors */
