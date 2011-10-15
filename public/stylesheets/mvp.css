@@ -31,6 +31,11 @@ section h1 {
   font-size: 200%;
 }
 
+div.flash_container {
+  padding-left:  30px;
+  padding-right: 30px;
+}
+
 /* Links */
 
 a {
