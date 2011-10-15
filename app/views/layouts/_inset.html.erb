@@ -40,7 +40,7 @@
 <% @dollar_diff_amt = number_to_currency(@dollar_diff_amt, :strip_insignificant_zeros => true) %>
 <div class="assessment_inset round shadowlight">
 <% if @user_rank == "lowest" %>
-With four 5 hours sits per month, you spend <span class="em"><%= @dollar_diff_amt %><%= @dollar_diff_text %> per year</span>.
+With four 5 hours sits per month, you spend <span class="em"><%= @dollar_diff_amt %><%= @dollar_diff_text %> per year</span> than your lowest spending neighbors.
 <% else %>
 With four 5 hours sits per month, this costs you <span class="em"><%= @dollar_diff_amt %><%= @dollar_diff_text %></span> per year.
 <% end %>
