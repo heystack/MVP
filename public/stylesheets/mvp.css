@@ -244,6 +244,7 @@ td.below_the_fold_left {
 td.below_the_fold_right {
   width: 50%;
   vertical-align: top;
+  padding-left: 20px;
 }
 
 div.below_the_fold_header {

@@ -1,4 +1,33 @@
-<table>
+<p>Hey neighbor,</p>
+ 
+<p>When we're shelling out dough for babysitters, I'm always wondering if we're overpaying, scrimping or getting it just right.  Since a call-athon to other parents isn't going to happen, I'm experimenting with a new way to see how our wages compare against what other folks like us are paying.</p>
+
+<p>If you're interested to see how you stack up, it's super simple to participate, <span class="em">give</span> your rate below, <span class="em">get</span> back an immediate web comparison against other Alexandrians.<p/>
+
+<form accept-charset="UTF-8" action="http://parenting-mvp.heroku.com/responses" class="new_response" id="new_response" method="post">
+  <div style="margin:0;padding:0;display:inline">
+  <input type="hidden" name="utf8" value="&#x2713;" />
+  <input type="hidden" id="response_email" name="response[email]" value="<%= @email %>" />
+  </div>
+  
+  <div class="field">
+    <label for="response_value">How much do you typically pay your babysitter?</label><br />
+	<br/>
+    <span class="dollar_sign">$</span><input id="response_value" name="response[value]" size="3" type="text" /> per hour
+  </div>
+<br/>
+  <div class="actions">
+    <input class="form_button" id="response_submit" name="commit" type="submit" value="Stack Me Up" />
+  </div>
+</form>
+
+<p>Feel free to forward to other parents.  The more of us who answer, the better the results.  And if the muse strikes you with other comparisons you'd be interested in seeing, submit one and we'll give it a try.</p>
+
+<p>
+Thanks.
+</p>
+
+<!-- <table>
 <tr>
 <td>
   <img src="http://t2.gstatic.com/images?q=tbn:ANd9GcQYMjdebWTuYTi5p6lgwvHZnCi6BTHc0v6RxifOBLgBED_bJwcS">
@@ -31,4 +60,4 @@ has shared this question with you.</h3>
 </div>
 </td>
 </tr>
-</table>
+</table> -->
