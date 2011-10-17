@@ -1,5 +1,5 @@
-<div class="share_header">Share with Friends!</div>
-<em>Want to see how you stack up against others you know?</em><br/>
+<div class="below_the_fold_header">Share with other Alexandrians!</div>
+<div><em>Pass this along to your neighbors in Alexandria.</em></div>
 <%= form_tag "/send_stack_form" do -%>
 <table class="share_form">
   <tr>
@@ -9,13 +9,8 @@
 	</td>
 	<td class="share_fields">
 	  <%= text_field "contact", "email", :size => 40 %><br/>
-	  <!-- <%= text_field "contact", "from_email", :size => 40, :value => session[:from_email] %> -->
 	</td>
   </tr>
 </table>
-<input type="submit" value="Share with a Friend" class="share_button round" />
+<input type="submit" value="Share with a Neighbor" style="margin-top: -15px" class="form_button round" />
 <% end -%>
-
-<!-- <div class="disclaimer">
-We promise to only use this email for sharing this question!
-</div> -->

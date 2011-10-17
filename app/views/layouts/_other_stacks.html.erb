@@ -1,0 +1,11 @@
+<div class="below_the_fold_header">Other Topics</div>
+<a href="http://bitly.com/oCQINm" target="_blank">How much daily homework does your child get? >></a><br/>
+<a href="http://bitly.com/nUN6KP" target="_blank">At what age did/will your child get a cell phone? >></a><br/>
+<br/>
+<span class="de-em">Suggest a topic...</span><br/>
+<%= form_tag "/suggestion" do -%>
+<label for="How much">How much</label> <%= text_field "topic", "topic1", :size => 40 %>?<br/>
+<label for="At what age">At what age</label> <%= text_field "topic", "topic2", :size => 40 %>?<br/>
+<label for="At what age">Other</label> <%= text_field "topic", "topic3", :size => 50 %>?<br/>
+<input type="submit" value="Suggest a Topic" style="margin-top: 10px" class="form_button round" />
+<% end -%>

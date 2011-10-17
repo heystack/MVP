@@ -8,8 +8,8 @@ class MvpMailer < ActionMailer::Base
     mail(:to => email, :subject => "Parenting question")
   end
 
-  def suggestion_email(contact)
-    @contact = contact
-    mail(:to => "nycbrown@gmail.com", :subject => "Stack Suggestion!")
+  def suggestion_email(suggestion)
+    @suggestion = suggestion
+    mail(:to => "nycbrown@gmail.com", :subject => "Topic Suggestion!")
   end
 end

@@ -40,19 +40,19 @@ div.flash_container {
 
 a {
 /*  color: #09c;*/
-  color: #fff;
+  color: #0088ce;
   text-decoration: none;
 }
 
 a:hover {
 /*  color: #069;*/
-  color: #fff;
+  color: #0088ce;
   text-decoration: underline;
 }
 
 a:visited {
 /*  color: #069;*/
-  color: #fff;
+  color: #0088ce;
 }
 
 /* White Links */
@@ -122,6 +122,7 @@ td.header_tagline {
 /* Above the Fold */
 
 .above_the_fold {
+  padding-top: 20px;
   padding-left:  20px;
   padding-right: 20px;
 }
@@ -134,6 +135,19 @@ td.header_tagline {
 span.em {
   color: #0088ce;
   font-weight: bold;
+}
+
+span.de-em {
+  color: #555;
+  font-style: italic;
+}
+
+/* Highchart */
+
+div.hc {
+  height:300px;
+  width: 400px;
+  clear:both;
 }
 
 /* Inset */
@@ -183,8 +197,8 @@ table.legend {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 10px;
   padding-top: 10px;
+  padding-left: 10px;
   border-style: solid;
   border-width: 1px;
   border-color: #eee;
@@ -214,11 +228,57 @@ tr.plain td.plain {
   background-color: white;
 }
 
-/* Area Below Highchart */
+/* Below the Fold */
 
 div.below_the_fold {
   padding: 20px;
   background: #000 url(/images/1x400greyfade.png) top center repeat-x;
+  text-align: top;
+}
+
+td.below_the_fold_left {
+  width: 50%;
+  vertical-align: top;
+}
+
+td.below_the_fold_right {
+  width: 50%;
+  vertical-align: top;
+}
+
+div.below_the_fold_header {
+  font-weight: bold;
+  font-size: 125%;
+  margin-bottom: 10px;
+}
+
+/* Share Stack */
+
+div.share {
+  padding: 10px 10px 1px 10px;
+  color: #333;
+}
+
+div.disclaimer {
+  font-size: 75%;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+td.share_labels {
+  text-align: left;
+}
+
+input.form_button {
+  display: block;
+  text-align: center;
+  width: 180px;
+  height: 29px;
+  color: #fff;
+  background: #000 url(/images/1x29orangefade.png) top center repeat-x;
+  font-size: 100%;
+  font-weight: normal;
+  padding: 3px;
 }
 
 /* Action Steps */
@@ -240,71 +300,6 @@ td.action_steps {
 }
 
 td.action_links {
-}
-
-/* Highchart */
-
-div.hc {
-  height:300px;
-  width: 400px;
-  clear:both;
-}
-
-/* Share Stack */
-
-div.share {
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  text-align: center;
-/*  background-color: #ffc;*/
-/*  background: #000 url(/images/1x400greyfade.png) top center repeat-x;*/
-  padding: 10px 10px 1px 10px;
-  color: #333;
-}
-
-div.share_header {
-  font-weight: bold;
-  font-size: 125%;
-}
-
-div.disclaimer {
-  font-size: 75%;
-  font-style: italic;
-  margin-bottom: 20px;
-}
-
-td.share_labels {
-  text-align: right;
-}
-
-input.share_button {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -10px;
-  margin-bottom: 20px;
-  display: block;
-  text-align: center;
-  width: 180px;
-  height: 29px;
-  color: #fff;
-/*  background: #4572A7;*/
-  background: #000 url(/images/1x29orangefade.png) top center repeat-x;
-  font-size: 100%;
-  font-weight: normal;
-  padding: 3px;
-}
-
-input.form_button {
-  margin-top: 20px;
-  display: block;
-  text-align: center;
-  width: 150px;
-  color: #fff;
-  background: #4572A7;
-  font-size: 100%;
-  font-weight: normal;
-  padding: 10px;
 }
 
 /* New Response Form */

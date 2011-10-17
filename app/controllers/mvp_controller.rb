@@ -88,10 +88,17 @@ class MvpController < ApplicationController
   def suggestion_form
   end
 
-  def send_suggestion
-    # @contact_email = params[:contact_email]
-    @contact = params[:contact]
-    MvpMailer.suggestion_email(@contact).deliver
+  # def send_suggestion
+  #   # @contact_email = params[:contact_email]
+  #   @contact = params[:contact]
+  #   MvpMailer.suggestion_email(@contact).deliver
+  #   flash[:success] = "Thanks for the suggestion!"
+  #   redirect_to root_path
+  # end
+
+  def suggestion
+    @suggestion = params[:topic]
+    MvpMailer.suggestion_email(@suggestion).deliver
     flash[:success] = "Thanks for the suggestion!"
     redirect_to root_path
   end
