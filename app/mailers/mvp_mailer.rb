@@ -5,7 +5,7 @@ class MvpMailer < ActionMailer::Base
     @response = Response.new
     @email = email
     @from_email = from_email
-    mail(:to => email, :subject => "Parenting question")
+    mail(:to => email, :subject => "Alexandria parenting question")
   end
 
   def suggestion_email(suggestion)
