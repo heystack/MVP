@@ -10,13 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111013010511) do
+ActiveRecord::Schema.define(:version => 20111018034102) do
 
   create_table "responses", :force => true do |t|
     t.float    "value"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "email"
+    t.string   "topic"
   end
 
 end
