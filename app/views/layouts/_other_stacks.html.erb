@@ -1,6 +1,10 @@
 <div class="below_the_fold_header">Other Topics</div>
 <div><em>Here are some other potential topics of interest...</em></div>
+<% if Topic.count > 1 %>
 <%= render @topics, :omit_topic => @topic %>
+<% else %>
+<%= link_to "Add a New Topic", new_topic_path %><br/>
+<% end %>
 <br/>
 <span class="de-em">And if you're interested in seeing other comparisons, just submit one and we'll give it a try...</span><br/>
 <%= form_tag "/suggestion" do -%>
