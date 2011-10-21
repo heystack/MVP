@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111021184634) do
+ActiveRecord::Schema.define(:version => 20111021212409) do
 
   create_table "responses", :force => true do |t|
     t.float    "value"
@@ -18,6 +18,13 @@ ActiveRecord::Schema.define(:version => 20111021184634) do
     t.datetime "updated_at"
     t.string   "email"
     t.integer  "topic_id"
+  end
+
+  create_table "sessions", :force => true do |t|
+    t.string   "session_id"
+    t.text     "data",       :limit => 5000
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "topics", :force => true do |t|
