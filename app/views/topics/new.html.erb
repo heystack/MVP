@@ -1,0 +1,17 @@
+<div class="padding_20px">
+<h1>New Topic</h1>
+
+<div class="new_topic_form">
+<%= form_for(@topic) do |f| %>
+  <div class="field">
+    <%= f.label :value, "Topic Name" %> <%= f.text_field :name, :size => 40 %>
+  </div>
+  <div class="field">
+    <%= f.label :value, "Topic Question" %> <%= f.text_field :question, :size => 40 %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Create Topic", :class => "form_button" %>
+  </div>
+<% end %>
+</div>
+</div>

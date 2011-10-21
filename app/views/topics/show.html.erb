@@ -1,0 +1,28 @@
+<%= render 'layouts/hc_script' %>
+
+<div class="above_the_fold">
+
+<div class="comparison">Comparison  |  <%=raw @comparison_text %></div>
+
+<table>
+  <tr>
+	<td>
+	  <div id="hc" class="hc"></div>
+	</td>
+	<td>
+	  <%= render 'layouts/inset' %>
+	</td>
+  </tr>
+</table>
+
+<div id="legend" class="legend"><%= render 'layouts/legend' %></div>
+
+</div> <!-- above_the_fold -->
+
+<!-- <div id="action_steps" class="action_steps round shadowlight"><%= render 'layouts/action_steps' %></div> -->
+
+<div class="below_the_fold round_bottom">
+
+<%= render 'layouts/below_the_fold' %>
+
+</div>
