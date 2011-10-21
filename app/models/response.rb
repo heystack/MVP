@@ -14,6 +14,8 @@ class Response < ActiveRecord::Base
   
   validates :value, :presence => true
   
+  belongs_to :topic
+  
   def all_neighbors
     Response.average(:value)
   end

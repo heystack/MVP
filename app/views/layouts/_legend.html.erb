@@ -17,24 +17,13 @@
 	<table>
 	  <tr class="plain">
 		<td class="legend_lowest"></td>
-		<td class="plain legend_series">LOWEST SPENDERS</td>
+		<td class="plain legend_series"><%= @lowest_desc.upcase %></td>
 	  </tr>
 	  <tr class="plain">
 		<td class="plain"></td>
-		<td class="plain legend_def">The lowest spending 20% from the ALL NEIGHBORS group.</td>
+		<td class="plain legend_def"><%= @lowest_legend %></td>
 	  </tr>
 	</table>
 	</td>
   </tr>
 </table>
-<!-- <table>
-  <tr class="plain">
-	<td class="legend_all"></td>
-	<td class="plain">ALL NEIGHBORS &#8212; Approximately <%= "%.f" % ((@count * 0.1).ceil.to_f / 0.1) %> parents in the DC Metro area.</td>
-  </tr>
-  <tr class="plain"><td class="plain" span="2"></td></tr>
-  <tr class="plain">
-	<td class="legend_lowest"></td>
-	<td class="plain">LOWEST SPENDERS &#8212; The lowest spending 20% from the ALL NEIGHBORS group.</td>
-  </tr>
-</table> -->

@@ -1,4 +1,8 @@
 Mvp::Application.routes.draw do
+  resources :topics
+  get "topics/new"
+  get "topics/show"
+
   resources :responses
   match '/response',  :to => 'responses#new'
 

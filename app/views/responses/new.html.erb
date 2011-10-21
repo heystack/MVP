@@ -1,18 +1,53 @@
-<h1>Stack of the Day</h1>
+<div class="padding_20px">
+<h1>Topic of the Day</h1>
 
-<div class="new_response_img">
-  <img src="http://t2.gstatic.com/images?q=tbn:ANd9GcQYMjdebWTuYTi5p6lgwvHZnCi6BTHc0v6RxifOBLgBED_bJwcS">
-</div>
+<% if @topic.name == "Babysitter Pay Rate" %>
 <div class="new_response_form">
 <%= form_for(@response) do |f| %>
   <%= render 'shared/error_messages' %>
   <%= f.hidden_field :email, :value => session[:email] %><br />
   <div class="field">
-    <%= f.label :value, "How much do you pay your babysitter?" %><br />
+    <%= f.label :value, @topic.question %><br />
     <span class="dollar_sign">$</span><%= f.text_field :value, :size => 3 %> per hour
   </div>
   <div class="actions">
     <%= f.submit "Stack Me Up", :class => "form_button" %>
   </div>
 <% end %>
+</div>
+
+<% elsif @topic.name == "Mobilizers" %>
+
+<div class="new_response_form">
+<%= form_for(@response) do |f| %>
+  <%= render 'shared/error_messages' %>
+  <%= f.hidden_field :email, :value => session[:email] %><br />
+  <div class="field">
+    <%= f.label :value, @topic.question %><br />
+    <span class="dollar_sign"></span><%= f.text_field :value, :size => 3 %> years old
+  </div>
+  <div class="actions">
+    <%= f.submit "Stack Me Up", :class => "form_button" %>
+  </div>
+<% end %>
+</div>
+
+<% elsif @topic.name == "Homework" %>
+
+<div class="new_response_form">
+<%= form_for(@response) do |f| %>
+  <%= render 'shared/error_messages' %>
+  <%= f.hidden_field :email, :value => session[:email] %><br />
+  <div class="field">
+    <%= f.label :value, @topic.question %><br />
+    <span class="dollar_sign"></span><%= f.text_field :value, :size => 3 %> hours of homework per weeknight
+  </div>
+  <div class="actions">
+    <%= f.submit "Stack Me Up", :class => "form_button" %>
+  </div>
+<% end %>
+</div>
+
+<% end %>
+
 </div>

@@ -36,6 +36,10 @@ div.flash_container {
   padding-right: 30px;
 }
 
+div.padding_20px {
+  padding: 20px;
+}
+
 /* Links */
 
 a {
@@ -167,7 +171,7 @@ div.inset_title {
   border-style: none none none solid;
   border-width: 1px;
   border-color: black;
-  padding-left: 15px;
+  padding-left: 10px;
 }
 
 div.assessment_inset {
@@ -232,7 +236,7 @@ tr.plain td.plain {
 
 div.below_the_fold {
   padding: 20px;
-  background: #000 url(/images/1x400greyfade.png) top center repeat-x;
+  background: #000 url(/images/1x400greyfade.png) top center repeat;
   text-align: top;
 }
 
@@ -303,7 +307,7 @@ td.action_steps {
 td.action_links {
 }
 
-/* New Response Form */
+/* Responses */
 
 div.new_response_img {
   display: inline-block;
@@ -315,14 +319,20 @@ div.new_response_form {
   vertical-align: top;
 }
 
-/* Responses Index */
-
 div.responses {
-  padding: 0 30px 10px 30px;
+  padding: 30px 30px 10px 30px;
 }
 
 td.response_header {
   font-weight: bold;
+}
+
+/* Topics */
+
+div.new_topic_form {
+  margin-left: 20px;
+  display: inline-block;
+  vertical-align: top;
 }
 
 /* Suggestion Form */

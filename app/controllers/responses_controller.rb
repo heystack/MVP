@@ -3,17 +3,37 @@ class ResponsesController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
   def new
-    @response = Response.new
+    if !session[:topic]
+      @topic = Topic.first
+      session[:topic] = @topic
+    else
+      @topic = session[:topic]
+    end
+    @response = @topic.responses.new
     @title = "New Response"
   end
 
   def create
-    @response = Response.new(params[:response])
+    @topic = session[:topic]
+    @response = @topic.responses.build(params[:response])
     if @response.save
       # flash[:success] = "Response saved: " + @response.value.to_s + " email=" + @response.email
       session[:you] = @response.value
       session[:email] = @response.email
-      redirect_to root_path
+      
+      if @topic.name == "Babysitter Pay Rate"
+        session[:babysitter_pay_rate] = session[:you]
+      elsif @topic.name == "Mobilizers"
+        session[:mobilizers] = session[:you]
+      elsif @topic.name == "Homework"
+        session[:homework] = session[:you]
+      end
+
+      if session[:topic]
+        redirect_to topic_path(session[:topic])
+      else
+        redirect_to root_path
+      end
     else
       render 'new'
     end

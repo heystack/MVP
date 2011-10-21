@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/views/mvp_mailer/mvp_email.html.erb</string>
+	<string>app/views/topics/show.html.erb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,100 +21,85 @@
 	<integer>286</integer>
 	<key>metaData</key>
 	<dict>
-		<key>app/controllers/mvp_controller.rb</key>
+		<key>app/controllers/topics_controller.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>53</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>82</integer>
+				<integer>90</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>60</integer>
 		</dict>
-		<key>app/controllers/responses_controller.rb</key>
+		<key>app/views/layouts/_inset.html.erb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
 				<integer>0</integer>
 				<key>line</key>
-				<integer>15</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>app/mailers/mvp_mailer.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>7</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>app/views/mvp_mailer/mvp_email.html.erb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>83</integer>
-				<key>line</key>
-				<integer>17</integer>
+				<integer>40</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>13</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>77</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>17</integer>
+				<integer>39</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>83</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>17</integer>
+				<integer>40</integer>
 			</dict>
+		</dict>
+		<key>app/views/topics/show.html.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>42</integer>
+				<key>line</key>
+				<integer>4</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
 		<key>public/stylesheets/mvp.css</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>19</integer>
+				<integer>13</integer>
 				<key>line</key>
-				<integer>63</integer>
+				<integer>331</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>49</integer>
+			<integer>303</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>public/stylesheets/mvp.css</string>
-		<string>app/controllers/mvp_controller.rb</string>
-		<string>app/mailers/mvp_mailer.rb</string>
-		<string>app/views/mvp_mailer/mvp_email.html.erb</string>
-		<string>app/controllers/responses_controller.rb</string>
+		<string>app/controllers/topics_controller.rb</string>
+		<string>app/views/topics/show.html.erb</string>
+		<string>app/views/layouts/_inset.html.erb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>

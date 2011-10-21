@@ -1,4 +1,6 @@
+<% topic = Topic.find_by_id(response.topic_id) %>
 <tr>
+  <td><%= topic.nil? ? "" : topic.name %></td>
   <td><%= response.value %></td>
   <td><%= response.email %></td>
   <td><%= time_ago_in_words(response.created_at) %> ago</td>

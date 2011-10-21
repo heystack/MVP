@@ -4,9 +4,9 @@
 <% @point4_color = @biggest_color %>
 
 <% @point1_value = session[:you] %>
-<% @point2_value = @lowest_spenders %>
+<% @point2_value = @lowest_amt %>
 <% @point3_value = @all_neighbors %>
-<% @point4_value = @biggest_spenders %>
+<% @point4_value = @biggest_amt %>
 
 <script type="text/javascript">
 var chart;
@@ -24,31 +24,31 @@ $(document).ready(function() {
 	   },
 	   xAxis: {
 		  <% if @user_rank == "lowest" %>
-	      categories: ['YOU', 'Lowest Spenders', 'All Neighbors', 'Biggest Spenders'],
+	      categories: ['YOU', '<%= @lowest_desc %>', 'All Neighbors', '<%= @biggest_desc %>'],
 		  <% elsif @user_rank == "average" %>
 		  <%   @point1_color = @lowest_color %>
 		  <%   @point2_color = @you_color %>
-		  <%   @point1_value = @lowest_spenders %>
+		  <%   @point1_value = @lowest_amt %>
 		  <%   @point2_value = session[:you] %>
-	      categories: ['Lowest Spenders', 'YOU', 'All Neighbors', 'Biggest Spenders'],
+	      categories: ['<%= @lowest_desc %>', 'YOU', 'All Neighbors', '<%= @biggest_desc %>'],
 		  <% elsif @user_rank == "more than most"  %>
 		  <%   @point1_color = @lowest_color %>
 		  <%   @point2_color = @all_neighbors_color %>
 		  <%   @point3_color = @you_color %>
-		  <%   @point1_value = @lowest_spenders %>
+		  <%   @point1_value = @lowest_amt %>
 		  <%   @point2_value = @all_neighbors %>
 		  <%   @point3_value = session[:you] %>
-	      categories: ['Lowest Spenders', 'All Neighbors', 'YOU', 'Biggest Spenders'],
+	      categories: ['<%= @lowest_desc %>', 'All Neighbors', 'YOU', '<%= @biggest_desc %>'],
 		  <% elsif @user_rank == "biggest"  %>
 		  <%   @point1_color = @lowest_color %>
 		  <%   @point2_color = @all_neighbors_color %>
 		  <%   @point3_color = @biggest_color %>
 		  <%   @point4_color = @you_color %>
-		  <%   @point1_value = @lowest_spenders %>
+		  <%   @point1_value = @lowest_amt %>
 		  <%   @point2_value = @all_neighbors %>
-		  <%   @point3_value = @biggest_spenders %>
+		  <%   @point3_value = @biggest_amt %>
 		  <%   @point4_value = session[:you] %>
-	      categories: ['Lowest Spenders', 'All Neighbors', 'Biggest Spenders', 'YOU'],
+	      categories: ['<%= @lowest_desc %>', 'All Neighbors', '<%= @biggest_desc %>', 'YOU'],
 		  <% end %>
 	      title: {
 	         text: null
@@ -65,8 +65,7 @@ $(document).ready(function() {
 	   },
 	   tooltip: {
 	      formatter: function() {
-	         return ''+
-	             this.x +': $'+ this.y.toFixed(2).gsub(".00", "") +'/hr';
+	         return <%=raw @hc_tooltip %>;
 	      }
 	   },
 	   plotOptions: {
@@ -74,7 +73,7 @@ $(document).ready(function() {
 	         dataLabels: {
 	            enabled: true,
 		        formatter: function() {
-		          return '$'+ this.y.toFixed(2).gsub(".00", "");
+		          return <%=raw @hc_dataLabel %>;
 		        }
 	         },
 	         pointPadding: 0,

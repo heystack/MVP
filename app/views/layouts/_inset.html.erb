@@ -3,45 +3,40 @@
 <div class="inset round shadowlight">
   <table>
 	<tr class="plain <%= @user_rank == 'lowest' ? 'boldrow' : '' %>">
-	  <td class="plain"><%= @user_rank == "lowest" ? "You >" : "" %></td>
-	  <td class="plain border_left">Lowest</td>
-	  <td class="plain">$</td>
+	  <td class="plain"><%= @user_rank == "lowest" ? raw("You&nbsp;>") : "" %></td>
+	  <td class="plain border_left"><%=raw @lowest_desc %></td>
+	  <td class="plain"><%=raw @legend_icon %></td>
 	  <td class="plain"><% if @user_rank == "lowest" %>
-		<img src="/images/smiley_1.png" height="25">
+		<%=raw @smiley_lowest %>
 		<% end %></td>
 	</tr>	
 	<tr class="plain <%= @user_rank == 'average' ? 'boldrow' : '' %>">
-	  <td class="plain"><%= @user_rank == "average" ? "You >" : "" %></td>
+	  <td class="plain"><%= @user_rank == "average" ? raw("You&nbsp;>") : "" %></td>
 	  <td class="plain border_left">Average</td>
-	  <td class="plain">$$</td>
+	  <td class="plain"><%=raw @legend_icon %><%=raw @legend_icon %></td>
 	  <td class="plain"><% if @user_rank == "average" %>
-		<img src="/images/smiley_2.png" height="25">
+		<%=raw @smiley_average %>
 		<% end %></td>
 	</tr>
 	<tr class="plain <%= @user_rank == 'more than most' ? 'boldrow' : '' %>">
-	  <td class="plain"><%= @user_rank == "more than most" ? "You >" : "" %></td>
-	  <td class="plain border_left">More&nbsp;Than&nbsp;Most</td>
-	  <td class="plain">$$$</td>
+	  <td class="plain"><%= @user_rank == "more than most" ? raw("You&nbsp;>") : "" %></td>
+	  <td class="plain border_left"><%=raw @than_most_desc %></td>
+	  <td class="plain"><%=raw @legend_icon %><%=raw @legend_icon %><%=raw @legend_icon %></td>
 	  <td class="plain"><% if @user_rank == "more than most" %>
-		<img src="/images/smiley_3.png" height="25">
+		<%=raw @smiley_more_than_most %>
 		<% end %></td>
 	</tr>
 	<tr class="plain <%= @user_rank == 'biggest' ? 'boldrow' : '' %>">
-	  <td class="plain"><%= @user_rank == "biggest" ? "You >" : "" %></td>
-	  <td class="plain border_left">Big Spend</td>
-	  <td class="plain">$$$$</td>
+	  <td class="plain"><%= @user_rank == "biggest" ? raw("You&nbsp;>") : "" %></td>
+	  <td class="plain border_left"><%=raw @biggest_desc %></td>
+	  <td class="plain"><%=raw @legend_icon %><%=raw @legend_icon %><%=raw @legend_icon %><%=raw @legend_icon %></td>
 	  <td class="plain"><% if @user_rank == "biggest" %>
-		<img src="/images/smiley_4.png" height="25">
+		<%=raw @smiley_biggest %>
 		<% end %></td>
 	</tr>
   </table>
 </div>
 
-<% @dollar_diff_amt = number_to_currency(@dollar_diff_amt, :strip_insignificant_zeros => true) %>
 <div class="assessment_inset round shadowlight">
-<% if @user_rank == "lowest" %>
-With four 5 hours sits per month, you spend <span class="em"><%= @dollar_diff_amt %><%= @dollar_diff_text %> per year</span> than your lowest spending neighbors.
-<% else %>
-With four 5 hours sits per month, this costs you <span class="em"><%= @dollar_diff_amt %><%= @dollar_diff_text %></span> per year.
-<% end %>
+<%=raw @diff_text %>
 </div>
