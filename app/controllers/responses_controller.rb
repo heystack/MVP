@@ -5,16 +5,16 @@ class ResponsesController < ApplicationController
   def new
     if !session[:topic]
       @topic = Topic.first
-      session[:topic] = @topic
+      session[:topic] = @topic.id
     else
-      @topic = session[:topic]
+      @topic = find_by_id(session[:topic])
     end
     @response = @topic.responses.new
     @title = "New Response"
   end
 
   def create
-    @topic = session[:topic]
+    @topic = Topic.find_by_id(session[:topic])
     @response = @topic.responses.build(params[:response])
     if @response.save
       # flash[:success] = "Response saved: " + @response.value.to_s + " email=" + @response.email

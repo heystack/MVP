@@ -7,7 +7,7 @@ class MvpController < ApplicationController
       redirect_to new_response_path
     else
       session[:you] ||= 0
-      session[:topic] ||= Topic.first
+      session[:topic] ||= Topic.first.id
 
       if Topic.count > 0
         redirect_to topic_path(session[:topic])

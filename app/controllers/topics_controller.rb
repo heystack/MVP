@@ -13,7 +13,7 @@ class TopicsController < ApplicationController
     @topic = Topic.new(params[:topic])
     if @topic.save
       flash[:success] = "Topic saved: " + @topic.name
-      session[:topic] = @topic
+      session[:topic] = @topic.id
       redirect_to topic_path(@topic)
     else
       flash[:error] = "Topic not saved"
@@ -29,7 +29,7 @@ class TopicsController < ApplicationController
     end
     
     @topics = Topic.all
-    session[:topic] = @topic
+    session[:topic] = @topic.id
 
     if !session[:you]
       redirect_to new_response_path
