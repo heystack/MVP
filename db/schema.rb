@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20111021212409) do
   end
 
   create_table "sessions", :force => true do |t|
-    t.string   "session_id"
+    t.text     "session_id", :limit => 1000
     t.text     "data",       :limit => 1000
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -7,7 +7,7 @@ class ResponsesController < ApplicationController
       @topic = Topic.first
       session[:topic] = @topic.id
     else
-      @topic = find_by_id(session[:topic])
+      @topic = Topic.find_by_id(session[:topic])
     end
     @response = @topic.responses.new
     @title = "New Response"
