@@ -109,10 +109,10 @@ class TopicsController < ApplicationController
       if @topic.name == "Babysitter Pay Rate"
         if @user_rank == "lowest"
           @diff_amt = (( @lowest_amt - session[:you] ) * 240).round
-          @diff_text = " less"
+          @diff_text = "&nbsp;less"
         else
           @diff_amt = (( session[:you] - @lowest_amt ) * 240).round
-          @diff_text = " more"
+          @diff_text = "&nbsp;more"
         end
         @diff_amt = number_to_currency(@diff_amt, :strip_insignificant_zeros => true)
         if @diff_amt == 0
@@ -138,10 +138,10 @@ class TopicsController < ApplicationController
       elsif @topic.name == "Mobilizers"
         if @user_rank == "lowest"
           @diff_amt = (( @lowest_amt - session[:you] ) * 240).round
-          @diff_text = " earlier"
+          @diff_text = "&nbsp;earlier"
         else
           @diff_amt = (( session[:you] - @lowest_amt ) * 240).round
-          @diff_text = " later"
+          @diff_text = "&nbsp;later"
         end
         if @diff_amt == 0
           @comparison_text = "You gave your child a mobile phone <span class='em'>" + "at the same age" + "</span> as your earliest mobilizing neighbors"
@@ -165,10 +165,10 @@ class TopicsController < ApplicationController
       elsif @topic.name == "Homework"
         if @user_rank == "lowest"
           @diff_amt = (( @lowest_amt - session[:you] ) * 21).round
-          @diff_text = " less"
+          @diff_text = "&nbsp;less"
         else
           @diff_amt = (( session[:you] - @lowest_amt ) * 21).round
-          @diff_text = " more"
+          @diff_text = "&nbsp;more"
         end
         if @diff_amt == 0
           @comparison_text = "Your child's homework load is <span class='em'>" + "the same as" + "</span> as their least loaded peers"
