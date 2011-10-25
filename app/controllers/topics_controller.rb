@@ -153,7 +153,7 @@ class TopicsController < ApplicationController
         @lowest_desc = "Earliest Mobilizers"
         @lowest_legend = "The earliest mobilizing 20% from the ALL NEIGHBORS group."
         @biggest_desc = "Latest Mobilizers"
-        @than_most_desc = "Earlier&nbsp;Than&nbsp;Most"
+        @than_most_desc = "Later&nbsp;Than&nbsp;Most"
         @hc_tooltip = "this.x +': '+ this.y.toFixed(1).gsub(\".0\", \"\") +' yrs old'"
         @hc_dataLabel = "''+ this.y.toFixed(1).gsub(\".0\", \"\")"
         @legend_icon = "<img src=\"/images/cell_phone_icon.png\" width=\"15\">"

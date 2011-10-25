@@ -2,7 +2,8 @@ class MvpMailer < ActionMailer::Base
   default :from => "parenting@stkup.com"
 
   def mvp_email(topic, email, from_email)
-    @response = topic.responses.new
+    @topic = topic
+    @response = @topic.responses.new
     @email = email
     @from_email = from_email
     mail(:to => email, :subject => "Alexandria parenting question")
