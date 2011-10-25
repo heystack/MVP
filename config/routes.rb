@@ -1,5 +1,7 @@
 Mvp::Application.routes.draw do
-  resources :topics
+  resources :topics do
+    resources :responses
+  end
   get "topics/new"
   get "topics/show"
 

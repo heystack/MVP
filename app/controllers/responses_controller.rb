@@ -14,7 +14,7 @@ class ResponsesController < ApplicationController
   end
 
   def create
-    @topic = Topic.find_by_id(session[:topic])
+    @topic = Topic.find_by_id(params[:topic_id])
     @response = @topic.responses.build(params[:response])
     if @response.save
       # flash[:success] = "Response saved: " + @response.value.to_s + " email=" + @response.email
@@ -29,6 +29,8 @@ class ResponsesController < ApplicationController
         session[:homework] = session[:you]
       end
 
+      # Session vars must be set since we might be coming from an email form submission
+      session[:topic] = @topic.id
       if session[:topic]
         redirect_to topic_path(session[:topic])
       else

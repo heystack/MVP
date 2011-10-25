@@ -32,26 +32,26 @@ class TopicsController < ApplicationController
     session[:topic] = @topic.id
 
     if !session[:you]
-      redirect_to new_response_path
+      redirect_to new_topic_response_path(@topic)
     else
       session[:you] ||= 0
     end
 
     if @topic.name == "Babysitter Pay Rate"
       if !session[:babysitter_pay_rate]
-        redirect_to new_response_path
+        redirect_to new_topic_response_path(@topic)
       else
         session[:you] = session[:babysitter_pay_rate]
       end
     elsif @topic.name == "Mobilizers"
       if !session[:mobilizers]
-        redirect_to new_response_path
+        redirect_to new_topic_response_path(@topic)
       else
         session[:you] = session[:mobilizers]
       end
     elsif @topic.name == "Homework"
       if !session[:homework]
-        redirect_to new_response_path
+        redirect_to new_topic_response_path(@topic)
       else
         session[:you] = session[:homework]
       end

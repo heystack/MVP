@@ -3,7 +3,7 @@
 
 <% if @topic.name == "Babysitter Pay Rate" %>
 <div class="new_response_form">
-<%= form_for(@response) do |f| %>
+<%= form_for(@response, :url => topic_responses_path) do |f| %>
   <%= render 'shared/error_messages' %>
   <%= f.hidden_field :email, :value => session[:email] %><br />
   <div class="field">
@@ -19,7 +19,7 @@
 <% elsif @topic.name == "Mobilizers" %>
 
 <div class="new_response_form">
-<%= form_for(@response) do |f| %>
+<%= form_for(@response, :url => topic_responses_path) do |f| %>
   <%= render 'shared/error_messages' %>
   <%= f.hidden_field :email, :value => session[:email] %><br />
   <div class="field">
@@ -35,7 +35,7 @@
 <% elsif @topic.name == "Homework" %>
 
 <div class="new_response_form">
-<%= form_for(@response) do |f| %>
+<%= form_for(@response, :url => topic_responses_path) do |f| %>
   <%= render 'shared/error_messages' %>
   <%= f.hidden_field :email, :value => session[:email] %><br />
   <div class="field">

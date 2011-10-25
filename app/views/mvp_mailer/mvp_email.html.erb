@@ -4,7 +4,7 @@
 
 <p>If you're interested too, it's super simple to see how you compare as well &mdash; just <strong>give</strong> your rate below, then <strong>get</strong> back an immediate web comparison against other Alexandrians.<p/>
 
-<form accept-charset="UTF-8" action="http://parenting-mvp.heroku.com/responses" class="new_response" id="new_response" method="post">
+<form accept-charset="UTF-8" action="http://parenting-mvp.heroku.com/topics/<%= @response.topic_id %>/responses" class="new_response" id="new_response" method="post">
   <div style="margin:0;padding:0;display:inline">
   <input type="hidden" name="utf8" value="&#x2713;" />
   <input type="hidden" id="response_email" name="response[email]" value="<%= @email %>" />
@@ -17,7 +17,7 @@
   </div>
 <br/>
   <div class="actions">
-    <input class="form_button" id="response_submit" name="commit" type="submit" value="Submit" />
+    <input class="form_button" id="response_submit" name="commit" type="submit" value="Stack Me Up" />
   </div>
 </form>
 
