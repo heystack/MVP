@@ -1,6 +1,8 @@
 <div class="padding_20px">
 <h1>Topic of the Day</h1>
 
+<div class="padding_20px">
+
 <% if @topic.name == "Babysitter Pay Rate" %>
 <div class="new_response_form">
 <%= form_for(@response, :url => topic_responses_path) do |f| %>
@@ -50,4 +52,5 @@
 
 <% end %>
 
+</div>
 </div>

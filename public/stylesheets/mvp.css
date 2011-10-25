@@ -315,6 +315,7 @@ div.new_response_img {
 
 div.new_response_form {
   margin-left: 20px;
+  margin-bottom: 30px;
   display: inline-block;
   vertical-align: top;
 }
