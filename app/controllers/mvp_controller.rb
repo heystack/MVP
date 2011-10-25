@@ -10,6 +10,7 @@ class MvpController < ApplicationController
       session[:you] ||= 0
 
       if Topic.count > 0
+        flash.keep
         redirect_to topic_path(session[:topic])
       else
         redirect_to new_topic_path
