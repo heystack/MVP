@@ -48,4 +48,8 @@ class MvpController < ApplicationController
     redirect_to root_path
   end
 
+  def sample_email
+    @topic = Topic.find_by_id(session[:topic])
+  end
+
 end
