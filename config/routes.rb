@@ -7,6 +7,7 @@ Mvp::Application.routes.draw do
 
   resources :responses
   match '/response',  :to => 'responses#new'
+  match '/stkresponses',       :to => 'responses#stkresponses'
 
   get "responses/new"
   get "responses/show"
@@ -14,11 +15,13 @@ Mvp::Application.routes.draw do
   get "mvp/home"
   get "mvp/contact"
   
-  match '/send_stack_form', :to => 'mvp#send_stack_form'
-  match '/suggestion_form', :to => 'mvp#suggestion_form'
-  match '/send_suggestion', :to => 'mvp#send_suggestion'
-  match '/suggestion',      :to => 'mvp#suggestion'
-  match '/sample_email',      :to => 'mvp#sample_email'
+  match '/send_stack_form',     :to => 'mvp#send_stack_form'
+  match '/suggestion_form',     :to => 'mvp#suggestion_form'
+  match '/send_suggestion',     :to => 'mvp#send_suggestion'
+  match '/suggestion',          :to => 'mvp#suggestion'
+  match '/sample_email',        :to => 'mvp#sample_email'
+  match '/email_preview',       :to => 'mvp#email_preview'
+  match '/share_with_neighbor', :to => 'mvp#share_with_neighbor'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

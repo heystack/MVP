@@ -25,7 +25,24 @@ class MvpController < ApplicationController
     @contact = params[:contact]
     @topic = Topic.find_by_id(session[:topic])
     @from_email = session[:email]
+    session[:to_email] = @contact[:email]
     MvpMailer.mvp_email(@topic, @contact[:email], @from_email).deliver
+    flash[:success] = "Thanks for sharing with #{@contact[:email]}. Feel free to share as many times as you'd like!"
+    redirect_to root_path
+  end
+
+  def email_preview
+    @contact = params[:contact]
+    @topic = Topic.find_by_id(session[:topic])
+    @from_email = session[:email]
+    session[:to_email] = @contact[:email]
+  end
+
+  def share_with_neighbor
+    @contact = params[:contact]
+    @topic = Topic.find_by_id(session[:topic])
+    @from_email = session[:email]
+    MvpMailer.email_neighbor(@topic, @contact, @from_email).deliver
     flash[:success] = "Thanks for sharing with #{@contact[:email]}. Feel free to share as many times as you'd like!"
     redirect_to root_path
   end

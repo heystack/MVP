@@ -1,6 +1,6 @@
-<div class="below_the_fold_header">Share with other Alexandrians!</div>
-<div><em>Feel free to forward to other parents...the more of us who answer, the better the results. (<%= link_to "sample email", "/sample_email", :target => "_blank" %>)<br/></em></div>
-<%= form_tag "/send_stack_form" do -%>
+<div class="below_the_fold_header">Share with other Neighbors!</div>
+<div><em>Forward to other parents in your neighborhood...the more answers, the better the results. <!-- (<%= link_to "sample email", "/sample_email", :target => "_blank" %>) --><br/></em></div>
+<%= form_tag "/email_preview" do -%>
 <table class="share_form">
   <tr>
 	<td class="share_labels">
@@ -12,7 +12,7 @@
 	</td>
   </tr>
 </table>
-<input type="submit" value="Share with a Neighbor" style="margin-top: -15px" class="form_button round" />
+<input type="submit" value="Preview Message >>" style="margin-top: -15px" class="form_button round" />
 <% end -%>
 <br/>
 <div style="height: 150px; width: 308px;" class="shadow">

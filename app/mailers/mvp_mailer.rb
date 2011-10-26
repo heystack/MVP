@@ -9,6 +9,15 @@ class MvpMailer < ActionMailer::Base
     mail(:to => email, :subject => "Alexandria parenting question")
   end
 
+  def email_neighbor(topic, contact, from_email)
+    @topic = topic
+    @response = @topic.responses.new
+    @contact = contact
+    @email = @contact[:email]
+    @from_email = from_email
+    mail(:to => @email, :subject => "Alexandria parenting question")
+  end
+
   def suggestion_email(suggestion)
     @suggestion = suggestion
     mail(:to => "nycbrown@gmail.com", :subject => "Topic Suggestion!")

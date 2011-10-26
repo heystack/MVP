@@ -46,6 +46,10 @@ class ResponsesController < ApplicationController
   end
 
   def index
+    redirect_to root_path
+  end
+
+  def stkresponses
     @responses = Response.all(:order => 'id DESC')
     @count = Response.count
   end

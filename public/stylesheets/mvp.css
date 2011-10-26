@@ -40,6 +40,13 @@ div.padding_20px {
   padding: 20px;
 }
 
+div.gray_border {
+  border-style: solid;
+  border-width: 1px;
+  border-color: gray;
+  padding: 5px 0px 0px 5px;
+}
+
 /* Links */
 
 a {
@@ -192,13 +199,13 @@ tr.boldrow {
 div.legend {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   width: 100%;
   font-size: 85%;
 }
 
 table.legend {
-  width: 90%;
+  width: 75%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 10px;
@@ -210,12 +217,12 @@ table.legend {
 
 td.legend_header {
   vertical-align: top;
-  font-size: 120%;
+  font-size: 110%;
   font-weight: bold;
 }
 
 td.legend_series {
-  font-size: 120%;
+  font-size: 110%;
 }
 
 td.legend_all {
@@ -228,8 +235,19 @@ td.legend_lowest {
   border: 7px solid white;
 }
 
+table.legend_td {
+  margin-bottom: 5px;
+}
+
+/* Table Cell Formatting */
+
 tr.plain td.plain {
   background-color: white;
+}
+
+td.top_right {
+  vertical-align: top;
+  text-align: right;
 }
 
 /* Below the Fold */
@@ -341,6 +359,12 @@ div.new_topic_form {
 div.suggestion_form {
   padding-left: 30px;
   padding-bottom: 20px;
+}
+
+/* Preview Email */
+
+div.email_preview {
+  padding: 30px;
 }
 
 /* Errors */
