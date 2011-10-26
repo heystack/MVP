@@ -59,7 +59,7 @@ class MvpController < ApplicationController
   # end
 
   def suggestion
-    @suggestion = params[:suggested_topic]
+    @suggestion = params[:suggestion]
     MvpMailer.suggestion_email(@suggestion).deliver
     flash[:success] = "Thanks for the suggestion!"
     redirect_to root_path

@@ -1,15 +1,13 @@
-<div class="below_the_fold_header">Other Topics</div>
-<div><em>Here are some other potential topics of interest...</em></div>
+<div class="below_the_fold_header">See/Suggest Other Comparisons</div>
 <% if Topic.count > 1 %>
 <%= render @topics, :omit_topic => @topic %>
 <% else %>
 <%= link_to "Add a New Topic", new_topic_path %><br/>
 <% end %>
 <br/>
-<span class="de-em">And if you're interested in seeing other comparisons, just submit one and we'll give it a try...</span><br/>
+<span>Thought of other comparisons you'd like to see (more parenting questions, fitness, health, other)?</span><br/>
 <%= form_tag "/suggestion" do -%>
-<label for="How much">How much</label> <%= text_field "suggested_topic", "topic1", :size => 35 %>?<br/>
-<label for="At what age">At what age</label> <%= text_field "suggested_topic", "topic2", :size => 35 %>?<br/>
-<label for="At what age">Other</label> <%= text_field "suggested_topic", "topic3", :size => 40 %>?<br/>
-<input type="submit" value="Suggest a Topic" style="margin-top: 10px" class="form_button round" />
+<%= text_field "suggestion", "topic", :size => 50 %><br/>
+<span class="de-em text-75">(how much, how many, at what age? etc.)</span>
+<input type="submit" value="Suggest a Comparison" style="margin-top: 10px" class="form_button round" />
 <% end -%>
