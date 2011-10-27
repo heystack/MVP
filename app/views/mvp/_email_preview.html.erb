@@ -16,13 +16,14 @@ If you\'re interested too, it's super simple to see how you compare as well - ju
 <% end %>
 
 <div class="email_preview">
-<h1>Email Preview</h1>
-<br/>
 <%= form_tag "/share_with_neighbor" do -%>
 <table>
   <tr class="plain">
 	<td class="plain" style="text-align: right;"><label for="contact_email">To:</label></td>
-	<td class="plain"><%= text_field "contact", "email", :size => "50", :value => session[:to_email] %></td>
+	<td class="plain">
+		<%= text_field "contact", "email", :size => "50", :style => "color:lightgray",
+		:value => "neighbor@example.com", :id => "prefill",
+		:onclick => "this.value='';this.style.color = 'black'" %></td>
   </tr>
   <tr class="plain">
 	<td class="plain" style="text-align: right;"><label for="contact_subject">Subject:</label></td>

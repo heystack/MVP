@@ -1,20 +1,12 @@
-<div class="below_the_fold_header">Share with other Neighbors!</div>
+<div class="below_the_fold_header">Improve this Comparison!</div>
 <div><em>Forward to other parents in your neighborhood...the more answers, the better the results. <!-- (<%= link_to "sample email", "/sample_email", :target => "_blank" %>) --><br/></em></div>
-<%= form_tag "/email_preview" do -%>
-<table class="share_form">
-  <tr>
-	<td class="share_labels">
-	  <label for="email">Email:</label><br/>
-	  <!-- <label for="from_email">From:</label> -->
-	</td>
-	<td class="share_fields">
-	  <%= text_field "contact", "email", :size => 40 %><br/>
-	</td>
-  </tr>
-</table>
-<input type="submit" value="Preview Message >>" style="margin-top: -15px" class="form_button round" />
-<% end -%>
-<br/>
+
+<div class="facebox_button">
+	<a href="#info" rel="facebox"><input type="submit" value="Share with Neighbor >>" class="form_button round" /></a>
+</div>
+
+<div id="info" style="display:none;"><%= render 'mvp/email_preview' %></div>
+
 <div style="height: 150px; width: 308px;" class="shadow">
 <img src="/images/cityhall.png" height="150"/>
 </div>

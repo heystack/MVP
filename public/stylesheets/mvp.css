@@ -365,10 +365,34 @@ div.suggestion_form {
   padding-bottom: 20px;
 }
 
-/* Preview Email */
+/* Email Preview */
+
+div.facebox_button {
+  margin-top:	 20px;
+  margin-bottom: 30px;
+}
+
+div.facebox_button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+div.facebox_button a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+div.facebox_button a:visited {
+  color: #fff;
+  text-decoration: none;
+}
 
 div.email_preview {
   padding: 30px;
+}
+
+div.inactive {
+  color: #999;
 }
 
 /* Errors */

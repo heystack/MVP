@@ -18,19 +18,6 @@ class MvpController < ApplicationController
     end
   end
 
-  def contact
-  end
-
-  def send_stack_form
-    @contact = params[:contact]
-    @topic = Topic.find_by_id(session[:topic])
-    @from_email = session[:email]
-    session[:to_email] = @contact[:email]
-    MvpMailer.mvp_email(@topic, @contact[:email], @from_email).deliver
-    flash[:success] = "Thanks for sharing with #{@contact[:email]}. Feel free to share as many times as you'd like!"
-    redirect_to root_path
-  end
-
   def email_preview
     @contact = params[:contact]
     @topic = Topic.find_by_id(session[:topic])
@@ -47,26 +34,11 @@ class MvpController < ApplicationController
     redirect_to root_path
   end
 
-  def suggestion_form
-  end
-
-  # def send_suggestion
-  #   # @contact_email = params[:contact_email]
-  #   @contact = params[:contact]
-  #   MvpMailer.suggestion_email(@contact).deliver
-  #   flash[:success] = "Thanks for the suggestion!"
-  #   redirect_to root_path
-  # end
-
   def suggestion
     @suggestion = params[:suggestion]
     MvpMailer.suggestion_email(@suggestion).deliver
     flash[:success] = "Thanks for the suggestion!"
     redirect_to root_path
-  end
-
-  def sample_email
-    @topic = Topic.find_by_id(session[:topic])
   end
 
 end

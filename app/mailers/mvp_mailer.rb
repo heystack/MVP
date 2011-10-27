@@ -13,9 +13,8 @@ class MvpMailer < ActionMailer::Base
     @topic = topic
     @response = @topic.responses.new
     @contact = contact
-    @email = @contact[:email]
     @from_email = from_email
-    mail(:to => @email, :subject => "Alexandria parenting question")
+    mail(:to => @contact[:email], :subject => @contact[:email_subject])
   end
 
   def suggestion_email(suggestion)

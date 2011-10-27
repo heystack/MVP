@@ -15,11 +15,7 @@ Mvp::Application.routes.draw do
   get "mvp/home"
   get "mvp/contact"
   
-  match '/send_stack_form',     :to => 'mvp#send_stack_form'
-  match '/suggestion_form',     :to => 'mvp#suggestion_form'
-  match '/send_suggestion',     :to => 'mvp#send_suggestion'
   match '/suggestion',          :to => 'mvp#suggestion'
-  match '/sample_email',        :to => 'mvp#sample_email'
   match '/email_preview',       :to => 'mvp#email_preview'
   match '/share_with_neighbor', :to => 'mvp#share_with_neighbor'
 
