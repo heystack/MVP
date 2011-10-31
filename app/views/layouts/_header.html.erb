@@ -1,8 +1,21 @@
 <div class="header">
 <table>
   <tr>
-	<td class="header_logo"><%= link_to image_tag("/images/stkup_logo.png", :alt => "StkUp MVP"), root_path %></td>
-	<td class="header_tagline">Simple, Purposeful Comparisons</td>
+	<td class="header_logo"><%= link_to image_tag("/images/stkup_logo_typewriter_tagline.png", :alt => "StkUp - Purposeful Comparisons"), root_path %></td>
+	<td class="header_tagline">
+		<nav class="round">
+		<ul>
+		  <li><%= link_to "About", "#about", :rel => "facebox" %>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+		  <li><%= link_to "Stacks", "#stacks", :rel => "facebox" %>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+		  <li><%= link_to "Comments", "#comments", :rel => "facebox" %></li>
+		</ul>
+		</nav>
   </tr>
 </table>
 </div>
+
+<div id="about" style="display:none;">About StkUp</div>
+
+<div id="stacks" style="display:none;">Stacks</div>
+
+<div id="comments" style="display:none;">Comments</div>

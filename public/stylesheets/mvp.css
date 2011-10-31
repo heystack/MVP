@@ -124,10 +124,9 @@ td.header_logo {
 }
 
 td.header_tagline {
+  font-family: "American Typewriter";
   text-align: right;
-  font-style: italic;
-  font-size: 125%;
-  color: #999;
+  font-size: 12pt;
 }
 
 /* Above the Fold */
@@ -474,6 +473,40 @@ div.email_preview {
 
 div.inactive {
   color: #999;
+}
+
+/* Navigation */
+
+nav {
+  float: right;
+  background-color: white;
+  padding: 0 0.7em;
+  white-space: nowrap;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0.2em 0;
+}
+
+nav ul li a {
+  padding: 0 5px;
+  color: black;
+}
+
+nav ul li a:visited {
+  color: black;
+}
+
+nav ul li a:hover {
+  color: black;
+  text-decoration: underline;
 }
 
 /* Errors */
