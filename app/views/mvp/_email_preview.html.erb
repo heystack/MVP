@@ -1,17 +1,17 @@
 <% if @topic.name == 'Babysitter Pay Rate' %>
 <% @message = "Hey neighbor,\n
-When we're shelling out dough for babysitters, I\'m always wondering if we\'re overpaying, scrimping or getting it just right.  Since a call-athon to other parents isn\'t going to happen, I'm experimenting with a new way to see how our rate stacks up against what other folks like us are paying.\n
-If you\'re interested too, it's super simple to see how you compare as well - just give your rate below, then get back an immediate web comparison against other Alexandrians." %>
+I thought you'd be interested in this local resource for gathering helpful info for parents. Simple idea - quickly compare yourself against the rest of the community in topics that matter to you.\n
+I just tried it out on how much we pay our babysitter. If you\'re interested to see how you stack up, it\'s easy to participate - just give your rate below, then get back an immediate web comparison against other Alexandrians. The more who answer, the better the comparison." %>
 <% @email_subject = "Alexandria parenting question" %>
 <% elsif @topic.name == 'Mobilizers' %>
 <% @message = "Hey neighbor,\n
-As our kids are already growing up so fast, I\'m wondering when the right time is to let my child jump into the mobile world.  Since a call-athon to other parents isn't going to happen, I\'m experimenting with a new way to see how the age we plan to give our kids cell phones stacks up against what other folks are doing.\n
-If you're interested too, it\'s super simple to see how you compare as well - just give the age below, then get back an immediate web comparison against other Alexandrians." %>
+I thought you'd be interested in this local resource for gathering helpful info for parents. Simple idea - quickly compare yourself against the rest of the community in topics that matter to you.\n
+I just tried it out on when to give kids a cell phone. If you\'re interested to see how you stack up, it\'s easy to participate - just give your rate below, then get back an immediate web comparison against other Alexandrians. The more who answer, the better the comparison." %>
 <% @email_subject = "Alexandria parenting question" %>
 <% elsif @topic.name == 'Homework' %>
 <% @message = "Hey neighbor,\n
-If your house is anything like mine, homework is always a topic of conversation. So I wondered how my child\'s average homework load compared with other Alexandrians. I\'ve talked to a few neighbors, but I'm also experimenting with a new way to see how our homework load stacks up against what other folks are seeing.\n
-If you\'re interested too, it's super simple to see how you compare as well - just give the average homework load for one of your kids below, then get back an immediate web comparison against other Alexandrians." %>
+I thought you'd be interested in this local resource for gathering helpful info for parents. Simple idea - quickly compare yourself against the rest of the community in topics that matter to you.\n
+I just tried it out on how much homework our kids have each night. If you\'re interested to see how you stack up, it\'s easy to participate - just give your rate below, then get back an immediate web comparison against other Alexandrians. The more who answer, the better the comparison." %>
 <% @email_subject = "Alexandria parenting question" %>
 <% end %>
 
@@ -32,7 +32,7 @@ If you\'re interested too, it's super simple to see how you compare as well - ju
 	<tr class="plain">
 	<td class="plain top_right"><label for="comment_body">Message:</label></td>
 	<td class="plain"><%= text_area "contact", "message", :size => "30x8", :value => @message %>
-		<div class="inactive text-75">(the following question will be included at the bottom of the email)</div>
+		<div class="inactive text-75">followed by this question...</div>
 		<div class="field">
 		<label for="response_value"><%= @topic.question %></label><br />
 		<% if @topic.name == "Babysitter Pay Rate" %>
