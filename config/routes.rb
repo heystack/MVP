@@ -18,6 +18,7 @@ Mvp::Application.routes.draw do
   match '/suggestion',          :to => 'mvp#suggestion'
   match '/email_preview',       :to => 'mvp#email_preview'
   match '/share_with_neighbor', :to => 'mvp#share_with_neighbor'
+  match '/send_comment',        :to => 'mvp#send_comment'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

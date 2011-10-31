@@ -34,6 +34,13 @@ class MvpController < ApplicationController
     redirect_to root_path
   end
 
+  def send_comment
+    @contact = params[:contact]
+    MvpMailer.comment_email(@contact).deliver
+    flash[:success] = "Thanks for the comment!"
+    redirect_to root_path
+  end
+
   def suggestion
     @suggestion = params[:suggestion]
     MvpMailer.suggestion_email(@suggestion).deliver

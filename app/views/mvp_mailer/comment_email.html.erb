@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>User Comment!</h1>
+    <p>
+      From: <%= @contact[:email] %><br/>
+      Comment: <%= @contact[:message] %><br/>
+    </p>
+    <p><%= Time.now %></p>
+  </body>
+</html>

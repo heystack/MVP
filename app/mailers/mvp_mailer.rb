@@ -17,6 +17,11 @@ class MvpMailer < ActionMailer::Base
     mail(:to => @contact[:email], :subject => @contact[:email_subject])
   end
 
+  def comment_email(contact)
+    @contact = contact
+    mail(:to => "nycbrown@gmail.com", :subject => "User Comment!")
+  end
+
   def suggestion_email(suggestion)
     @suggestion = suggestion
     mail(:to => "nycbrown@gmail.com", :subject => "Topic Suggestion!")
