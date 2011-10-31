@@ -1,5 +1,5 @@
 .container {
-  width: 850px;
+  width: 900px;
   margin-bottom: 30px;
 }
 
@@ -198,7 +198,8 @@ td.stk_col_right {
   width: 40%;
   border-left: solid;
   border-width: 1px;
-  padding-left: 10px;
+  border-color: #0088ce;
+  padding-left: 15px;
 }
 
 div.stk_col_right_section {
