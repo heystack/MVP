@@ -64,6 +64,8 @@ class TopicsController < ApplicationController
 
     @count = @topic.responses.count
 
+    @tipping_point_progress = ("%.0f" % ((@count.to_f / TIPPING_POINT) * 100)).to_s + "%"
+    
     if @count > 0
       # Calculate all_neighbors
       @all_neighbors = @topic.responses.average(:value)
@@ -123,7 +125,7 @@ class TopicsController < ApplicationController
           @diff_text = "With four 5 hours sits per month, you spend <span class='em'>" + @diff_amt.to_s + @diff_text + " per year</span> than your lowest spending neighbors."
         end
         @lowest_desc = "Lowest Spenders"
-        @lowest_legend = "The lowest spending 20% from the ALL&nbsp;NEIGHBORS group."
+        @lowest_legend = "The&nbsp;lowest&nbsp;spending&nbsp;20% from&nbsp;ALL&nbsp;NEIGHBORS."
         @biggest_desc = "Biggest Spenders"
         @than_most_desc = "More&nbsp;Than&nbsp;Most"
         @hc_tooltip = "this.x +': $'+ this.y.toFixed(2).gsub(\".00\", \"\") +'/hr'"
@@ -151,7 +153,7 @@ class TopicsController < ApplicationController
           @diff_text = "Based on an average child's cell phone use, your child may spend up to <span class='em'>" + "6 hours per week" + "</span> on their cell phone."
         end
         @lowest_desc = "Earliest Mobilizers"
-        @lowest_legend = "The earliest mobilizing 20% from the ALL&nbsp;NEIGHBORS group."
+        @lowest_legend = "The&nbsp;earliest&nbsp;mobilizing&nbsp;20% of&nbsp;ALL&nbsp;NEIGHBORS."
         @biggest_desc = "Latest Mobilizers"
         @than_most_desc = "Later&nbsp;Than&nbsp;Most"
         @hc_tooltip = "this.x +': '+ this.y.toFixed(1).gsub(\".0\", \"\") +' yrs old'"
@@ -178,7 +180,7 @@ class TopicsController < ApplicationController
           @diff_text = "In a typical month, your child may spend up to <span class='em'>" + @diff_amt.to_s + @diff_text + "</span> hours on homework than their least loaded peers."
         end
         @lowest_desc = "Lightest Load"
-        @lowest_legend = "The least loaded 20% from the ALL&nbsp;NEIGHBORS group."
+        @lowest_legend = "The&nbsp;least&nbsp;loaded&nbsp;20% of&nbsp;ALL&nbsp;NEIGHBORS."
         @biggest_desc = "Heaviest Load"
         @than_most_desc = "More&nbsp;Than&nbsp;Most"
         @hc_tooltip = "this.x +': '+ this.y.toFixed(1).gsub(\".0\", \"\") +' hours'"

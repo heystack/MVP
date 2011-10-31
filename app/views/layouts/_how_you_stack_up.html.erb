@@ -1,6 +1,6 @@
-<div class="inset_title">How You Stack Up</div>
+<div class="stkup_table_title">How You Stack Up</div>
 
-<div class="inset round shadowlight">
+<div class="stkup_table round shadowlight">
   <table>
 	<tr class="plain <%= @user_rank == 'lowest' ? 'boldrow' : '' %>">
 	  <td class="plain"><%= @user_rank == "lowest" ? raw("You&nbsp;>") : "" %></td>
@@ -37,6 +37,4 @@
   </table>
 </div>
 
-<div class="assessment_inset round shadowlight">
-<%=raw @diff_text %>
 </div>

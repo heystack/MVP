@@ -1,0 +1,31 @@
+<script type="text/javascript">
+// validates that the field value string has one or more characters in it
+function isNotEmpty(elem) {
+  var str = elem.value;
+    var re = /.+/;
+    if(!str.match(re)) {
+        alert(elem.name + " cannot be blank.");
+        setTimeout("focusElement('" + elem.form.name + "', '" + elem.name + "')", 0);
+        return false;
+    } else {
+        return true;
+    }
+}
+
+// batch validation router
+function validateForm(form) {
+    if (isNotEmpty(form.suggestion_topic)) {
+		return true;
+    }
+    return false;
+}
+
+</script>
+
+<div class="stk_col_right_header">Suggest other Stacks</div>
+<span>Thought of other comparisons you'd like to see (more parenting questions, fitness, health, other)?</span><br/>
+<%= form_tag "/suggestion", :onsubmit => "return validateForm(this)" do -%>
+<%= text_field "suggestion", "topic", :size => 50 %><br/>
+<span class="de-em text-75">(how much, how many, at what age? etc.)</span>
+<input type="submit" value="Suggest a Comparison" style="margin-top: 10px" class="form_button round" />
+<% end -%>

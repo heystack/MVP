@@ -139,8 +139,11 @@ td.header_tagline {
 }
 
 .comparison {
-  font: 110% arial,sans-serif;
-  margin-left: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  padding: 5px;
+  margin: 20px 10px 0px 5px;
 }
 
 span.em {
@@ -153,28 +156,82 @@ span.de-em {
   font-style: italic;
 }
 
+div.de-em {
+  color: #555;
+  font-style: italic;
+}
+
 .text-75 {
   font-size: 75%;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.greyfade {
+  background: #000 url(/images/1x400greyfade.png) top center repeat;
 }
 
 /* Highchart */
 
 div.hc {
-  height:300px;
-  width: 400px;
+  height:250px;
+  width: 90%;
   clear:both;
 }
 
-/* Inset */
+/* Stk Main Table */
 
-div.inset {
+table.stk_table {
+  padding: 0px 20px 20px 20px;
+}
+
+td.stk_col_left {
+  width: 60%;
+}
+
+td.stk_col_right {
+  vertical-align: top;
+  width: 40%;
+  border-left: solid;
+  border-width: 1px;
+  padding-left: 10px;
+}
+
+div.stk_col_right_section {
+  margin-top: 30px;
+}
+
+div.stk_col_right_header {
+  font-weight: bold;
+  font-size: 125%;
+  margin-bottom: 10px;
+}
+
+/* Stk Headline */
+
+table.stk_headline {
+}
+
+td.stk_headline_left {
+  width: 70%;
+}
+
+td.stk_headline_right {
+  width: 30%;
+}
+
+div.stkup_table {
   border-style: solid;
   border-width: 1px;
   border-color: black;
   padding: 5px 0px 0px 5px;
 }
 
-div.inset_title {
+div.stkup_table_title {
   font-weight: bold;
 }
 
@@ -185,31 +242,55 @@ div.inset_title {
   padding-left: 10px;
 }
 
-div.assessment_inset {
+div.tip_progress {
   border-style: solid;
   border-width: 1px;
   border-color: black;
   padding: 5px;
-  margin: 20px 0px 0px 60px;	
+  margin: 0px 0px 0px 10px;
+}
+
+div.tip_progress_header {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+div.tip_progress_bar_border {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  width: 90%;
+  border: solid;
+  border-width: 1px;
+  background: #eee;
+}
+
+div.tip_progress_bar_fill {
+  background: #0088ce;
+  padding-left: 3px;
 }
 
 tr.boldrow {
-  font-weight: 900;
-  font-size: 120%;
+  font-weight: bold;
+  font-size: 100%;
 }
 
 /* Legend */
 
 div.legend {
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
   width: 100%;
-  font-size: 85%;
+  font-size: 75%;
 }
 
 table.legend {
-  width: 80%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 10px;
@@ -221,12 +302,12 @@ table.legend {
 
 td.legend_header {
   vertical-align: top;
-  font-size: 110%;
+/*  font-size: 110%;*/
   font-weight: bold;
 }
 
 td.legend_series {
-  font-size: 110%;
+/*  font-size: 110%;*/
 }
 
 td.legend_all {
@@ -369,7 +450,6 @@ div.suggestion_form {
 
 div.facebox_button {
   margin-top:	 20px;
-  margin-bottom: 30px;
 }
 
 div.facebox_button a {

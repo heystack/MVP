@@ -1,28 +1,18 @@
 <%= render 'layouts/hc_script' %>
 
-<div class="above_the_fold">
-
-<div class="comparison">Comparison  |  <%=raw @comparison_text %></div>
-
-<table>
+<table class="stk_table">
   <tr>
-	<td>
-	  <div id="hc" class="hc"></div>
+	<td class="stk_col_left">
+	  <%= render 'layouts/stk_headline' %>
+	  <div id="hc" class="hc centered"></div>
+	  <div class="comparison round"><%=raw @comparison_text %></div>
+	  <div class="comparison round"><%=raw @diff_text %></div>
+	  <div id="legend" class="legend"><%= render 'layouts/legend' %></div>
 	</td>
-	<td>
-	  <%= render 'layouts/inset' %>
+	<td class="stk_col_right">
+	  <div class="stk_col_right_section"><%= render 'layouts/share_stack' %></div>
+	  <div class="stk_col_right_section"><%= render 'layouts/suggest_stacks' %></div>
+	  <div class="stk_col_right_section"><%= render 'layouts/view_stacks' %></div>
 	</td>
   </tr>
 </table>
-
-<div id="legend" class="legend"><%= render 'layouts/legend' %></div>
-
-</div> <!-- above_the_fold -->
-
-<!-- <div id="action_steps" class="action_steps round shadowlight"><%= render 'layouts/action_steps' %></div> -->
-
-<div class="below_the_fold round_bottom">
-
-<%= render 'layouts/below_the_fold' %>
-
-</div>
