@@ -446,6 +446,15 @@ div.suggestion_form {
   padding-bottom: 20px;
 }
 
+textarea.suggestion_topics {
+  height: 30px;
+  width: 90%;
+}
+
+input.suggestion_email {
+  width: 90%;
+}
+
 /* Email Preview */
 
 div.facebox_button {

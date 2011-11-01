@@ -14,7 +14,8 @@ class MvpMailer < ActionMailer::Base
     @response = @topic.responses.new
     @contact = contact
     @from_email = from_email
-    mail(:to => @contact[:email], :subject => @contact[:email_subject])
+    @email = @contact[:email]
+    mail(:to => @email, :subject => @contact[:email_subject])
   end
 
   def comment_email(contact)

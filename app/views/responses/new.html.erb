@@ -1,7 +1,7 @@
 <div class="padding_20px">
-<h1>Parenting Topic</h1>
+<h1>Parenting</h1>
 
-<div class="padding_20px">
+<div>
 
 <% if @topic.name == "Babysitter Pay Rate" %>
 <div class="new_response_form">
@@ -12,6 +12,7 @@
     <%= f.label :value, @topic.question %><br />
     <span class="dollar_sign">$</span><%= f.text_field :value, :size => 3 %> per hour
   </div>
+  <br/>
   <div class="actions">
     <%= f.submit "Stack Me Up", :class => "form_button" %>
   </div>
@@ -28,6 +29,7 @@
     <%= f.label :value, @topic.question %><br />
     <span class="dollar_sign"></span><%= f.text_field :value, :size => 3 %> years old
   </div>
+  <br/>
   <div class="actions">
     <%= f.submit "Stack Me Up", :class => "form_button" %>
   </div>
@@ -44,6 +46,7 @@
     <%= f.label :value, @topic.question %><br />
     <span class="dollar_sign"></span><%= f.text_field :value, :size => 3 %> hours of homework per weeknight
   </div>
+  <br/>
   <div class="actions">
     <%= f.submit "Stack Me Up", :class => "form_button" %>
   </div>
