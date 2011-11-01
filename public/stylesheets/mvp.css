@@ -422,6 +422,7 @@ textarea.suggestion_topics {
 
 input.suggestion_email {
   width: 90%;
+  color: lightgray;
 }
 
 /* Email Preview */

@@ -27,6 +27,9 @@ function validateForm(form) {
 <%= form_tag "/suggestion", :onsubmit => "return validateForm(this)" do -%>
 <%= text_area "suggestion", "topic", :class => "suggestion_topics" %><br/>
 <span class="de-em text-75">Enter your email and we'll notify you of any new stacks:</span>
-<%= text_field "suggestion", "email", :value => session[:email], :class => "suggestion_email" %>
+<%= text_field "suggestion", "email",
+	:value => session[:email],
+	:class => "suggestion_email",
+	:onclick => "this.value='';this.style.color = 'black'" %>
 <input type="submit" value="Suggest a Stack" style="margin-top: 10px" class="form_button round" />
 <% end -%>
