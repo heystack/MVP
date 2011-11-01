@@ -23,10 +23,10 @@ function validateForm(form) {
 </script>
 
 <div class="stk_col_right_header">Suggest Other Stacks</div>
-<span>List topics (fitness, health, finances, etc.) you'd like to see comparisons (how much, how many, at what time, etc.) on below.</span><br/>
+<span>List topics (fitness, health, finances, etc.) you'd like to see comparisons on (how much, how many, at what time, etc):</span><br/>
 <%= form_tag "/suggestion", :onsubmit => "return validateForm(this)" do -%>
 <%= text_area "suggestion", "topic", :class => "suggestion_topics" %><br/>
-<span class="de-em text-75">Enter your email and we'll notify you of any new stacks:</span>
+<span class="de-em text-75">Enter your email and we'll also notify you of any new stacks:</span>
 <%= text_field "suggestion", "email",
 	:value => session[:email],
 	:class => "suggestion_email",
