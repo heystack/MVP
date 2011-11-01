@@ -5,8 +5,8 @@
 	<td class="plain" style="text-align: right;"><label for="contact_email">Your&nbsp;Email:</label></td>
 	<td class="plain">
 		<%= text_field "contact", "email", :size => "50", :style => "color:lightgray",
-		:value => session[:email], :id => "prefill",
-		:onclick => "this.value='';this.style.color = 'black'" %></td>
+		:value => session[:email],
+		:onclick => "this.style.color = 'black'" %></td>
   </tr>
   <tr class="plain">
 	<td class="plain" style="text-align: right;"><label for="contact_subject">Subject:</label></td>
