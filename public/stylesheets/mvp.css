@@ -71,8 +71,7 @@ td.header_logo {
 }
 
 td.header_tagline {
-  font-family: "American Typewriter", "Courier New", Courier, monospace;
-  font-weight: bold;
+  font-family: "American Typewriter", "Lucida Sans Typewriter", "Courier New", Courier, monospace;
   text-align: right;
   font-size: 12pt;
 }
@@ -98,7 +97,7 @@ nav ul li {
 }
 
 nav ul li a {
-  padding: 0 5px;
+  padding: 0 10px;
   color: black;
 }
 
