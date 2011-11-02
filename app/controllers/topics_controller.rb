@@ -32,7 +32,7 @@ class TopicsController < ApplicationController
     session[:topic] = @topic.id
 
     if !session[:you]
-      redirect_to new_topic_response_path(@topic)
+      redirect_to new_topic_response_path(@topic) and return
     else
       session[:you] ||= 0
     end
