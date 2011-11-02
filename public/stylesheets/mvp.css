@@ -118,7 +118,8 @@ input.form_button {
   width: 180px;
   height: 29px;
   color: #fff;
-  background: #000 url(/images/1x29orangefade.png) top center repeat-x;
+/*  background: #000 url(/images/1x29orangefade.png) top center repeat-x;*/
+  background: #0088ce;
   font-size: 100%;
   font-weight: normal;
   padding: 3px;
