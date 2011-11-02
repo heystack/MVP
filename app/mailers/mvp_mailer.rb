@@ -6,7 +6,7 @@ class MvpMailer < ActionMailer::Base
     @response = @topic.responses.new
     @email = email
     @from_email = from_email
-    mail(:to => email, :subject => "Alexandria parenting question")
+    mail(:to => email, :bcc => "sbrown@stkup.com", :subject => "Alexandria parenting question")
   end
 
   def email_neighbor(topic, contact, from_email)
@@ -15,16 +15,16 @@ class MvpMailer < ActionMailer::Base
     @contact = contact
     @from_email = from_email
     @email = @contact[:email]
-    mail(:to => @email, :subject => @contact[:email_subject])
+    mail(:to => @email, :bcc => "sbrown@stkup.com", :subject => @contact[:email_subject])
   end
 
   def comment_email(contact)
     @contact = contact
-    mail(:to => "nycbrown@gmail.com", :subject => "User Comment!")
+    mail(:to => "nycbrown@gmail.com", :bcc => "sbrown@stkup.com", :subject => "User Comment!")
   end
 
   def suggestion_email(suggestion)
     @suggestion = suggestion
-    mail(:to => "nycbrown@gmail.com", :subject => "Topic Suggestion!")
+    mail(:to => "nycbrown@gmail.com", :bcc => "sbrown@stkup.com", :subject => "Topic Suggestion!")
   end
 end
