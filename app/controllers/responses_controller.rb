@@ -52,7 +52,7 @@ class ResponsesController < ApplicationController
   def stkresponses
     @responses = Response.all(:order => 'id DESC')
     @count = Response.count
-    @topics = Topic.group('id', 'name')
+    @topics = Topic.select("id, name").group('id', 'name')
   end
 
 end
