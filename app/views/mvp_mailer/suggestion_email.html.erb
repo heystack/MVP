@@ -7,7 +7,7 @@
     <h1>Stack Suggestion!</h1>
     <p>
 	  Email: <%= @suggestion[:email] %><br/>
-      Stack: <%= @suggestion[:topic] %><br/>
+      Suggestion: <%=raw @suggestion[:topic].gsub("\n\r","<br />").gsub("\r", "").gsub("\n", "<br />") %><br/>
     </p>
     <p><%= Time.now %></p>
   </body>
