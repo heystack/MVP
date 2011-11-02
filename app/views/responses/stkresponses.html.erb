@@ -1,5 +1,18 @@
 <div class="responses">
-<h1>Responses (<%= @count %> Total)</h1>
+<table style="width:250px">
+<tr><td class="response_header">Topic</td><td class="response_header" style="text-align:right">Count</td></tr>
+<% @topics.map do |t| %>
+<tr class="plain">
+  <td class="plain"><%= t.name + " " %></td>
+  <td class="plain" style="text-align:right"><%= Response.count('topic_id', :conditions => "topic_id = #{t.id}").to_s %></td>
+</tr>
+<% end %>
+<tr>
+  <td class="response_header">Total</td>
+  <td class="response_header" style="text-align:right"><%= @count %></td>
+</tr>
+</table>
+
 <table>
   <tr>
 	<td class="response_header">Topic</td>
