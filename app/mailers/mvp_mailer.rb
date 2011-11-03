@@ -15,6 +15,9 @@ class MvpMailer < ActionMailer::Base
     @contact = contact
     @from_email = from_email
     @email = @contact[:email]
+    @form_capable = false
+    @host_url = "http://parenting-mvp.heroku.com"
+    @base_url = @host_url + "/topics/" + @topic.id.to_s + "/responses"
     mail(:to => @email, :bcc => "sbrown@stkup.com", :subject => @contact[:email_subject])
   end
 

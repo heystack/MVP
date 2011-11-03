@@ -1,28 +1,6 @@
 <%=raw @contact[:message].gsub("\n\r","<br />").gsub("\r", "").gsub("\n", "<br />") %>
 <br/>
 <br/>
-<form accept-charset="UTF-8" action="http://parenting-mvp.heroku.com/topics/<%= @topic.id %>/responses" class="new_response" id="new_response" method="post">
-  <div style="margin:0;padding:0;display:inline">
-  <input type="hidden" name="utf8" value="&#x2713;" />
-  <input type="hidden" id="response_email" name="response[email]" value="<%= @email %>" />
-  </div>
-  
-  <div class="field gray_border">
-    <label for="response_value"><%= @topic.question %></label><br />
-	<br/>
+<div class="new_response_question"><%= @topic.question %></div>
 
-<% if @topic.name == "Babysitter Pay Rate" %>
-    <span class="dollar_sign">$</span><input id="response_value" name="response[value]" size="3" type="text" /> per hour
-<% elsif @topic.name == "Mobilizers" %>
-    <span class="dollar_sign"></span><input id="response_value" name="response[value]" size="3" type="text" /> years old
-<% elsif @topic.name == "Homework" %>
-    <span class="dollar_sign"></span><input id="response_value" name="response[value]" size="3" type="text" /> hour(s) per night
-<% end %>
-</div>
-<br/>
-
-  <div class="actions">
-    <input class="form_button" id="response_submit" name="commit" type="submit" value="Stack Me Up" />
-  </div>
-</form>
-
+<%= render 'layouts/stk_buttons' %>

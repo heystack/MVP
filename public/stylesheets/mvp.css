@@ -392,6 +392,10 @@ div.new_response_form {
   vertical-align: top;
 }
 
+div.new_response_question {
+  font-size: 150%;
+}
+
 div.responses {
   padding: 0px 30px 10px 30px;
 }
@@ -452,6 +456,24 @@ div.email_preview {
 
 div.inactive {
   color: #999;
+}
+
+/* Stack Buttons */
+
+div.stk_buttons {
+  padding-top: 20px;
+  white-space: nowrap;
+}
+
+div.stk_buttons ul {
+  margin: 0;
+  padding: 0;
+}
+
+div.stk_buttons ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0.2em 10px;
 }
 
 /* Links */

@@ -34,5 +34,6 @@ Mvp::Application.configure do
       :authentication       => 'plain',
       :enable_starttls_auto => true  }
   
+  config.action_controller.asset_host = "parenting-mvp.heroku.com"
 end
 

@@ -1,59 +1,10 @@
 <div class="padding_20px">
-<h1>Parenting</h1>
-
-<div>
-
-<% if @topic.name == "Babysitter Pay Rate" %>
-<div class="new_response_form">
-<%= form_for(@response, :url => topic_responses_path) do |f| %>
-  <%= render 'shared/error_messages' %>
-  <%= f.hidden_field :email, :value => session[:email] %><br />
-  <div class="field">
-    <%= f.label :value, @topic.question %><br />
-    <span class="dollar_sign">$</span><%= f.text_field :value, :size => 3 %> per hour
-  </div>
-  <br/>
-  <div class="actions">
-    <%= f.submit "Stack Me Up", :class => "form_button" %>
-  </div>
-<% end %>
-</div>
-
-<% elsif @topic.name == "Mobilizers" %>
 
 <div class="new_response_form">
-<%= form_for(@response, :url => topic_responses_path) do |f| %>
-  <%= render 'shared/error_messages' %>
-  <%= f.hidden_field :email, :value => session[:email] %><br />
-  <div class="field">
-    <%= f.label :value, @topic.question %><br />
-    <span class="dollar_sign"></span><%= f.text_field :value, :size => 3 %> years old
-  </div>
-  <br/>
-  <div class="actions">
-    <%= f.submit "Stack Me Up", :class => "form_button" %>
-  </div>
-<% end %>
-</div>
 
-<% elsif @topic.name == "Homework" %>
+<div class="new_response_question"><%= @topic.question %></div>
 
-<div class="new_response_form">
-<%= form_for(@response, :url => topic_responses_path) do |f| %>
-  <%= render 'shared/error_messages' %>
-  <%= f.hidden_field :email, :value => session[:email] %><br />
-  <div class="field">
-    <%= f.label :value, @topic.question %><br />
-    <span class="dollar_sign"></span><%= f.text_field :value, :size => 3 %> hours of homework per weeknight
-  </div>
-  <br/>
-  <div class="actions">
-    <%= f.submit "Stack Me Up", :class => "form_button" %>
-  </div>
-<% end %>
-</div>
-
-<% end %>
+<%= render 'layouts/stk_buttons' %>
 
 </div>
 </div>
