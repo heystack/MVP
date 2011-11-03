@@ -3,16 +3,16 @@
 <div class="stk_buttons">
 <ul>
   <li style="list-style-type: none; display: inline-block; padding: 0.2em 10px;">
-	<%=raw link_to image_tag(@host_url + "/images/buttons/curr_5_dollars.png"),
+	<%=raw link_to image_tag("/images/buttons/curr_5_dollars.png"),
 		(@base_url + "?response[email]=" + @email + "&response[value]=5").html_safe %></li>
   <li style="list-style-type: none; display: inline-block; padding: 0.2em 10px;">
-	<%=raw link_to image_tag(@host_url + "/images/buttons/curr_10_dollars.png"),
+	<%=raw link_to image_tag("/images/buttons/curr_10_dollars.png"),
 		(@base_url + "?response[email]=" + @email + "&response[value]=10").html_safe %></li>
   <li style="list-style-type: none; display: inline-block; padding: 0.2em 10px;">
-	<%=raw link_to image_tag(@host_url + "/images/buttons/curr_15_dollars.png"),
+	<%=raw link_to image_tag("/images/buttons/curr_15_dollars.png"),
 		(@base_url + "?response[email]=" + @email + "&response[value]=15").html_safe %></li>
   <li style="list-style-type: none; display: inline-block; padding: 0.2em 10px;">
-	<%=raw link_to image_tag(@host_url + "/images/buttons/curr_20_dollars.png"),
+	<%=raw link_to image_tag("/images/buttons/curr_20_dollars.png"),
 		(@base_url + "?response[email]=" + @email + "&response[value]=20").html_safe %></li>
 </ul>
 </div>
@@ -31,23 +31,23 @@
 
 <div class="stk_buttons">
 <ul>
-  <li><%=raw link_to image_tag(@host_url + "/images/buttons/nbr_8.png"),
+  <li><%=raw link_to image_tag("/images/buttons/nbr_8.png"),
 		(@base_url + "?response[email]=" + @email + "&response[value]=8").html_safe %></li>
-  <li><%=raw link_to image_tag(@host_url + "/images/buttons/nbr_9.png"),
+  <li><%=raw link_to image_tag("/images/buttons/nbr_9.png"),
 		(@base_url + "?response[email]=" + @email + "&response[value]=9").html_safe %></li>
-  <li><%=raw link_to image_tag(@host_url + "/images/buttons/nbr_10.png"),
+  <li><%=raw link_to image_tag("/images/buttons/nbr_10.png"),
 		(@base_url + "?response[email]=" + @email + "&response[value]=10").html_safe %></li>
-  <li><%=raw link_to image_tag(@host_url + "/images/buttons/nbr_11.png"),
+  <li><%=raw link_to image_tag("/images/buttons/nbr_11.png"),
 		(@base_url + "?response[email]=" + @email + "&response[value]=11").html_safe %></li>
 </ul>
 <ul>
-  <li><%=raw link_to image_tag(@host_url + "/images/buttons/nbr_12.png"),
+  <li><%=raw link_to image_tag("/images/buttons/nbr_12.png"),
 		(@base_url + "?response[email]=" + @email + "&response[value]=12").html_safe %></li>
-  <li><%=raw link_to image_tag(@host_url + "/images/buttons/nbr_13.png"),
+  <li><%=raw link_to image_tag("/images/buttons/nbr_13.png"),
 		(@base_url + "?response[email]=" + @email + "&response[value]=13").html_safe %></li>
-  <li><%=raw link_to image_tag(@host_url + "/images/buttons/nbr_14.png"),
+  <li><%=raw link_to image_tag("/images/buttons/nbr_14.png"),
 		(@base_url + "?response[email]=" + @email + "&response[value]=14").html_safe %></li>
-  <li><%=raw link_to image_tag(@host_url + "/images/buttons/nbr_15.png"),
+  <li><%=raw link_to image_tag("/images/buttons/nbr_15.png"),
 		(@base_url + "?response[email]=" + @email + "&response[value]=15").html_safe %></li>
 </ul>
 </div>
@@ -55,7 +55,7 @@
 <% if @form_capable %>
 <%= form_for(@response, :url => @base_url) do |f| %>
   <%= render 'shared/error_messages' %>
-  <%= f.hidden_field :email, :value => @email %><br />
+  <%= f.hidden_field :email, :value => @email %>
   <div class="field">
     or enter a different age: <span class="dollar_sign"></span><%= f.text_field :value, :size => 3 %> years old <%= f.submit "Stack Me Up", :class => "form_button", :style => "display:inline;" %>
   </div>
@@ -67,30 +67,30 @@
 <div class="stk_buttons">
 <ul>
   <li style="list-style-type: none; display: inline-block; padding: 0.2em 10px;">
-	<%=raw link_to image_tag(@host_url + "/images/buttons/time_30m.png"),
+	<%=raw link_to image_tag("/images/buttons/time_30m.png"),
 		(@base_url + "?response[email]=" + @email + "&response[value]=0.5").html_safe %></li>
   <li style="list-style-type: none; display: inline-block; padding: 0.2em 10px;">
-	<%=raw link_to image_tag(@host_url + "/images/buttons/time_1h.png"),
+	<%=raw link_to image_tag("/images/buttons/time_1h.png"),
 		(@base_url + "?response[email]=" + @email + "&response[value]=1").html_safe %></li>
   <li style="list-style-type: none; display: inline-block; padding: 0.2em 10px;">
-	<%=raw link_to image_tag(@host_url + "/images/buttons/time_1h30m.png"),
+	<%=raw link_to image_tag("/images/buttons/time_1h30m.png"),
 		(@base_url + "?response[email]=" + @email + "&response[value]=1.5").html_safe %></li>
   <li style="list-style-type: none; display: inline-block; padding: 0.2em 10px;">
-	<%=raw link_to image_tag(@host_url + "/images/buttons/time_2h.png"),
+	<%=raw link_to image_tag("/images/buttons/time_2h.png"),
 		(@base_url + "?response[email]=" + @email + "&response[value]=2").html_safe %></li>
 </ul>
-
+<br/>
 <% if @form_capable %>
 <%= form_for(@response, :url => @base_url) do |f| %>
   <%= render 'shared/error_messages' %>
-  <%= f.hidden_field :email, :value => @email %><br />
+  <%= f.hidden_field :email, :value => @email %>
   <div class="field">
     or enter a different amount: <span class="dollar_sign"></span><%= f.text_field :value, :size => 3 %> hours of homework per weeknight  <%= f.submit "Stack Me Up", :class => "form_button", :style => "display:inline;" %>
   </div>
 <% end %>
 <% end %>
 
-<% if !@form_capable %>
-Or <a href="http://parenting-mvp.heroku.com">answer the question on the StkUp website</a>.
 <% end %>
+<% if !@form_capable %>
+Or <a href="<%= "http://parenting-mvp.heroku.com/topics/" + @topic.id.to_s + "/responses/new" %>">answer the question on the StkUp website</a>.
 <% end %>

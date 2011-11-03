@@ -57,6 +57,6 @@ Mvp::Application.configure do
     :password             => 'may18stkup',
     :authentication       => 'plain',
     :enable_starttls_auto => true  }
+  config.action_mailer.asset_host = "parenting-mvp.heroku.com"
 
-  config.action_controller.asset_host = "parenting-mvp.heroku.com"
 end
