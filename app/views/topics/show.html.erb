@@ -2,11 +2,14 @@
 
 <table class="stk_table">
   <tr>
-	<td class="stk_col_left">
+	<td class="stk_col_left shadowlight">
+	  <%= render 'layouts/tip_progress' %>
+	  <div id="hc" class="hc"></div>
 	  <%= render 'layouts/stk_headline' %>
-	  <div id="hc" class="hc centered"></div>
-	  <div class="comparison round"><%=raw @comparison_text %></div>
-	  <div class="comparison round"><%=raw @diff_text %></div>
+	  <table class="comparison_box"><tr><td>
+	  <div class="comparison-1 round"><%=raw @comparison_text %></div>
+	  <div class="comparison-2 round"><%=raw @diff_text %></div>
+	  </td></tr></table>
 	  <div id="legend" class="legend"><%= render 'layouts/legend' %></div>
 	</td>
 	<td class="stk_col_right">

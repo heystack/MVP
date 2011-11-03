@@ -13,6 +13,11 @@
 -webkit-box-shadow: 10px 15px 20px #ccc;
 }
 
+.shadowlight {
+-moz-box-shadow: 10px 15px 20px #ccc;
+-webkit-box-shadow: 10px 15px 20px #ccc;
+}
+
 body {
   background-image:url('/images/bluebg.png');
 }
@@ -116,11 +121,11 @@ input.form_button {
   display: block;
   text-align: center;
   width: 180px;
-  height: 29px;
+  height: 24px;
   color: #fff;
 /*  background: #000 url(/images/1x29orangefade.png) top center repeat-x;*/
   background: #0088ce;
-  font-size: 100%;
+  font-size: 80%;
   font-weight: normal;
   padding: 3px;
 }
@@ -134,14 +139,6 @@ div.gray_border {
   border-width: 1px;
   border-color: gray;
   padding: 5px 0px 0px 5px;
-}
-
-.comparison {
-  border-style: solid;
-  border-width: 1px;
-  border-color: black;
-  padding: 5px;
-  margin: 20px 10px 0px 5px;
 }
 
 span.em {
@@ -178,6 +175,7 @@ div.hc {
   height:250px;
   width: 90%;
   clear:both;
+  margin-bottom: 20px;
 }
 
 /* Stk Main Table */
@@ -188,19 +186,26 @@ table.stk_table {
 
 td.stk_col_left {
   width: 60%;
+  border: solid;
+  border-width: 1px;
+  border-color: #eee;
 }
 
 td.stk_col_right {
-  vertical-align: top;
   width: 40%;
-  border-left: solid;
+  border-left: none;
   border-width: 1px;
   border-color: #0088ce;
-  padding-left: 15px;
+  padding-left: 30px;
 }
 
 div.stk_col_right_section {
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 10px;
+  border: solid;
+  border-width: 1px;
+  border-color: #eee;
 }
 
 div.stk_col_right_header {
@@ -223,9 +228,13 @@ td.stk_headline_right {
 }
 
 div.stkup_table {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
   border-style: solid;
   border-width: 1px;
-  border-color: black;
+  border-color: #eee;
   padding: 5px 0px 0px 5px;
 }
 
@@ -236,16 +245,19 @@ div.stkup_table_title {
 .border_left {
   border-style: none none none solid;
   border-width: 1px;
-  border-color: black;
+  border-color: #ccc;
   padding-left: 10px;
 }
 
 div.tip_progress {
-  border-style: solid;
+  border-style: none;
   border-width: 1px;
   border-color: black;
-  padding: 5px;
-  margin: 0px 0px 0px 10px;
+  margin: 0px 20px -150px 0px;
+  display: inline-block;
+  float: right;
+  z-index: 1;
+  position: relative;
 }
 
 div.tip_progress_header {
@@ -276,10 +288,38 @@ tr.boldrow {
   font-size: 100%;
 }
 
+table.comparison_box {
+  margin-bottom: 0px;
+}
+
+div.comparison-1 {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ccc;
+  padding: 10px;
+  margin: 30px 0px 20px 15px;
+  display: inline-block;
+  width: 35%;
+  background: #ffe;
+  float: left;
+}
+
+div.comparison-2 {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ccc;
+  padding: 10px;
+  margin: 20px 15px 10px 0px;
+  display: inline-block;
+  width: 45%;
+  background: #ffe;
+  float: right;
+}
+
 /* Legend */
 
 div.legend {
-  margin-top: 20px;
+  margin-top: 0px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
@@ -293,19 +333,14 @@ table.legend {
   margin-right: auto;
   padding-top: 10px;
   padding-left: 10px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #eee;
 }
 
 td.legend_header {
   vertical-align: top;
-/*  font-size: 110%;*/
   font-weight: bold;
 }
 
 td.legend_series {
-/*  font-size: 110%;*/
 }
 
 td.legend_all {
