@@ -1,23 +1,26 @@
 <% if @topic.name == 'Babysitter Pay Rate' %>
-<% @message = "Hey neighbor,\n
+<% @message = "
 I thought you'd be interested in this local resource for gathering helpful info for parents. Simple idea - quickly compare yourself against the rest of the community in topics that matter to you.\n
-I just tried it out on how much we pay our babysitter. If you\'re interested to see how you stack up, it\'s easy to participate - just give your rate below, then get back an immediate web comparison against other Alexandrians. The more who answer, the better the comparison." %>
-<% @email_subject = "Alexandria parenting question" %>
+I just tried it out on how much we pay our babysitter. If you\'re interested to see how you stack up, it\'s easy to participate - just give your info below, then get back an immediate web comparison against other Alexandrians. The more who answer, the better the comparison." %>
 <% elsif @topic.name == 'Mobilizers' %>
-<% @message = "Hey neighbor,\n
+<% @message = "
 I thought you'd be interested in this local resource for gathering helpful info for parents. Simple idea - quickly compare yourself against the rest of the community in topics that matter to you.\n
-I just tried it out on when to give kids a cell phone. If you\'re interested to see how you stack up, it\'s easy to participate - just give your rate below, then get back an immediate web comparison against other Alexandrians. The more who answer, the better the comparison." %>
-<% @email_subject = "Alexandria parenting question" %>
+I just tried it out on when to give kids a cell phone. If you\'re interested to see how you stack up, it\'s easy to participate - just give your info below, then get back an immediate web comparison against other Alexandrians. The more who answer, the better the comparison." %>
 <% elsif @topic.name == 'Homework' %>
-<% @message = "Hey neighbor,\n
+<% @message = "
 I thought you'd be interested in this local resource for gathering helpful info for parents. Simple idea - quickly compare yourself against the rest of the community in topics that matter to you.\n
-I just tried it out on how much homework our kids have each night. If you\'re interested to see how you stack up, it\'s easy to participate - just give your rate below, then get back an immediate web comparison against other Alexandrians. The more who answer, the better the comparison." %>
-<% @email_subject = "Alexandria parenting question" %>
+I just tried it out on how much homework our kids have each night. If you\'re interested to see how you stack up, it\'s easy to participate - just give your info below, then get back an immediate web comparison against other Alexandrians. The more who answer, the better the comparison." %>
 <% end %>
+
+<% @email_subject = @topic.question + " -StkUp"%>
 
 <div class="email_preview">
 <%= form_tag "/share_with_neighbor" do -%>
 <table>
+  <tr class="plain">
+	<td class="plain" style="text-align: right;"><label for="contact_from_email">From:</label></td>
+	<td class="plain"><%= text_field "contact", "from_email", :size => "50", :value => session[:email] %></td>
+  </tr>
   <tr class="plain">
 	<td class="plain" style="text-align: right;"><label for="contact_email">To:</label></td>
 	<td class="plain">
@@ -32,16 +35,9 @@ I just tried it out on how much homework our kids have each night. If you\'re in
 	<tr class="plain">
 	<td class="plain top_right"><label for="comment_body">Message:</label></td>
 	<td class="plain"><%= text_area "contact", "message", :size => "30x8", :value => @message %>
-		<div class="inactive text-75">followed by this question...</div>
+		<div class="inactive text-75">followed by the question:</div>
 		<div class="field">
 		<label for="response_value"><%= @topic.question %></label><br />
-		<% if @topic.name == "Babysitter Pay Rate" %>
-		<span class="dollar_sign">$</span><input id="response_value" name="response[value]" size="3" type="text" /> per hour
-		<% elsif @topic.name == "Mobilizers" %>
-		<span class="dollar_sign"></span><input id="response_value" name="response[value]" size="3" type="text" /> years old
-		<% elsif @topic.name == "Homework" %>
-		<span class="dollar_sign"></span><input id="response_value" name="response[value]" size="3" type="text" /> hour(s) per night
-		<% end %>
 		</div>
 	</td>
   </tr>

@@ -11,7 +11,7 @@ class ResponsesController < ApplicationController
     end
     @response = @topic.responses.new
     @title = "New Response"
-    @form_capable = false
+    @form_capable = true
     @host_url = request.host_with_port
     @base_url = "/topics/" + @topic.id.to_s + "/responses"
     if session[:email]

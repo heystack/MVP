@@ -28,10 +28,12 @@ class MvpController < ApplicationController
   def share_with_neighbor
     @contact = params[:contact]
     @topic = Topic.find_by_id(session[:topic])
-    @from_email = session[:email]
-    MvpMailer.email_neighbor(@topic, @contact, @from_email).deliver
-    flash[:success] = "Thanks for sharing with #{@contact[:email]}. Feel free to share as many times as you'd like!"
-    redirect_to root_path
+    @from_email = @contact[:from_email]
+    respond_to do |format|  
+      MvpMailer.email_neighbor(@topic, @contact, @from_email).deliver
+      format.html { redirect_to(root_path, :notice => "Thanks for sharing with #{@contact[:email]}. Feel free to share as many times as you\'d like!") }  
+      format.xml  { render :location => root_path }  
+    end
   end
 
   def send_comment

@@ -1,0 +1,17 @@
+<nav class="round">
+<ul>
+  <!-- <li><%= link_to "About", "#about", :rel => "facebox" %>&nbsp;&nbsp;|&nbsp;&nbsp;</li> -->
+  <li><%= link_to image_tag("/images/nav_about.png", :name => "about"), "#about",
+							:rel => "facebox",
+							:onmouseover => "document.about.src='/images/nav_about_hover.png';",						
+							:onmouseout => "document.about.src='/images/nav_about.png';"%></li>
+  <li><%= link_to image_tag("/images/nav_stacks.png", :name => "stacks"), "#stacks",
+							:rel => "facebox",
+							:onmouseover => "document.stacks.src='/images/nav_stacks_hover.png';",						
+							:onmouseout => "document.stacks.src='/images/nav_stacks.png';"%></li>
+  <li><%= link_to image_tag("/images/nav_comments.png", :name => "comments"), "#comments",
+							:rel => "facebox",
+							:onmouseover => "document.comments.src='/images/nav_comments_hover.png';",						
+							:onmouseout => "document.comments.src='/images/nav_comments.png';"%></li>
+</ul>
+</nav>
