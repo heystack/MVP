@@ -4,17 +4,13 @@
   <tr class="plain">
 	<td class="plain" style="text-align: right;"><label for="contact_email">Your&nbsp;Email:</label></td>
 	<td class="plain">
-		<%= text_field "contact", "email", :size => "50", :style => "color:lightgray",
+		<%= text_field "contact", "from_email", :size => "50", :style => "color:lightgray",
 		:value => session[:email],
-		:onclick => "this.style.color = 'black'" %></td>
+		:onfocus => "this.style.color = 'black'" %></td>
   </tr>
   <tr class="plain">
-	<td class="plain" style="text-align: right;"><label for="contact_subject">Subject:</label></td>
-	<td class="plain"><%= text_field "contact", "email_subject", :size => "50", :value => "I have a comment/question/suggestion..." %></td>
-  </tr>
-	<tr class="plain">
 	<td class="plain top_right"><label for="comment_body">Comment:</label></td>
-	<td class="plain"><%= text_area "contact", "message", :size => "30x8" %>
+	<td class="plain"><%= text_area "contact", "comment" %>
 	</td>
   </tr>
   <tr class="plain">

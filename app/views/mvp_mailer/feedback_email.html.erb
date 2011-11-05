@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>User Feedback!</h1>
+    <p>
+      From: <%= @contact[:from_email] %><br/>
+	  Suggestions:<br/>
+		[<%= @contact[:suggestion1] %>] Additional info<br/>
+		[<%= @contact[:suggestion2] %>] Action steps<br/>
+		[<%= @contact[:suggestion3] %>] Forum<br/>
+		[<%= @contact[:suggestion4] %>] More specific group<br/>
+		[<%= @contact[:suggestion5] %>] Facebook<br/>
+		[<%= @contact[:suggestion6] %>] Create own Stack<br/>
+		[<%= @contact[:suggestion7] %>] More Stacks<br/>
+      Comment: <%=raw @contact[:message].gsub("\n\r","<br />").gsub("\r", "").gsub("\n", "<br />") %><br/>
+    </p>
+    <p><%= Time.now %></p>
+  </body>
+</html>

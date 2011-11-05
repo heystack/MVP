@@ -5,7 +5,7 @@
 	<td class="stk_col_left shadowlight">
 	  <%= render 'layouts/tip_progress' %>
 	  <div id="hc" class="hc"></div>
-	  <%= render 'layouts/stk_headline' %>
+	  <%= render 'layouts/how_you_stack_up' %>
 	  <table class="comparison_box"><tr><td>
 	  <div class="comparison-1 round"><%=raw @comparison_text %></div>
 	  <div class="comparison-2 round"><%=raw @diff_text %></div>
@@ -13,9 +13,9 @@
 	  <div id="legend" class="legend"><%= render 'layouts/legend' %></div>
 	</td>
 	<td class="stk_col_right">
-	  <div class="stk_col_right_section"><%= render 'layouts/share_stack' %></div>
-	  <div class="stk_col_right_section"><%= render 'layouts/suggest_stacks' %></div>
-	  <div class="stk_col_right_section"><%= render 'shared/view_stacks' %></div>
+	  <div class="stk_col_right_section greyfade"><%= render 'layouts/share_stack' %></div>
+	  <div class="stk_col_right_section greyfade"><%= render 'shared/view_stacks' %></div>
+	  <div class="stk_col_right_section greyfade"><%= render 'layouts/feedback' %></div>
 	</td>
   </tr>
 </table>

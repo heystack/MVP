@@ -1,0 +1,60 @@
+<script type="text/javascript">
+// validates that the field value string has one or more characters in it
+function isNotEmpty(elem) {
+  var str = elem.value;
+    var re = /.+/;
+    if(!str.match(re)) {
+        alert(elem.name + " cannot be blank.");
+        setTimeout("focusElement('" + elem.form.name + "', '" + elem.name + "')", 0);
+        return false;
+    } else {
+        return true;
+    }
+}
+
+// batch validation router
+function validateForm(form) {
+    if (isNotEmpty(form.suggestion_topic)) {
+		return true;
+    }
+    return false;
+}
+
+</script>
+
+<div class="stk_col_right_header">Give Feedback</div>
+
+<%= form_tag "/send_feedback" do -%>
+I would like to see...<br/>
+<div class="text-75">
+<%= check_box "contact", "suggestion1", {}, "X", " " %> Links to additional info related to the topic<br/>
+<%= check_box "contact", "suggestion2", {}, "X", " " %> Targeted recommendations related to the topic<br/>
+<%= check_box "contact", "suggestion3", {}, "X", " " %> An online discussion or forum on the topic<br/>
+<%= check_box "contact", "suggestion4", {}, "X", " " %> Comparisons to a more specific group<br/>
+<%= check_box "contact", "suggestion5", {}, "X", " " %> Option to share with Facebook friends<br/>
+<%= check_box "contact", "suggestion6", {}, "X", " " %> Ability to create my own Stack<br/>
+<%= check_box "contact", "suggestion7", {}, "X", " " %> More Stacks<br/>
+<%= text_area "contact", "message",
+	:class => "suggestion_topics",
+	:style => "color:lightgray",
+	:value => "Additional comments...",
+	:onfocus => "if (this.value == 'Additional comments...') {this.value='';this.style.color = 'black'}" %>
+Enter your email and we'll also notify you of any new stacks: <%= text_field "contact", "from_email", :size => "30", :style => "color:lightgray",
+		:value => session[:email],
+		:onfocus => "this.style.color = 'black'" %>
+</div>
+<br/>
+<input type="submit" value="Send Feedback" class="form_button round" />
+<% end -%>
+
+
+<!-- <span>List topics (fitness, health, finances, etc.) you'd like to see comparisons on (how much, how many, at what time, etc):</span><br/>
+<%= form_tag "/suggestion", :onsubmit => "return validateForm(this)" do -%>
+<%= text_area "suggestion", "topic", :class => "suggestion_topics" %><br/>
+<span class="de-em text-75">Enter your email and we'll also notify you of any new stacks:</span>
+<%= text_field "suggestion", "email",
+	:value => session[:email],
+	:class => "suggestion_email",
+	:onclick => "this.style.color = 'black'" %>
+<input type="submit" value="Suggest a Stack" style="margin-top: 10px" class="form_button round" />
+<% end -%> -->

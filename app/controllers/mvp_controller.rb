@@ -31,7 +31,7 @@ class MvpController < ApplicationController
     @from_email = @contact[:from_email]
     respond_to do |format|  
       MvpMailer.email_neighbor(@topic, @contact, @from_email).deliver
-      format.html { redirect_to(root_path, :notice => "Thanks for sharing with #{@contact[:email]}. Feel free to share as many times as you\'d like!") }  
+      format.html { redirect_to(root_path, :success => "Thanks for sharing with #{@contact[:email]}. Feel free to share as many times as you\'d like!") }  
       format.xml  { render :location => root_path }  
     end
   end
@@ -43,10 +43,10 @@ class MvpController < ApplicationController
     redirect_to root_path
   end
 
-  def suggestion
-    @suggestion = params[:suggestion]
-    MvpMailer.suggestion_email(@suggestion).deliver
-    flash[:success] = "Thanks for the suggestion!"
+  def send_feedback
+    @contact = params[:contact]
+    MvpMailer.feedback_email(@contact).deliver
+    flash[:success] = "Thanks for the feedback!"
     redirect_to root_path
   end
 

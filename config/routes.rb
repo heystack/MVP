@@ -15,9 +15,9 @@ Mvp::Application.routes.draw do
   get "mvp/home"
   get "mvp/contact"
   
-  match '/suggestion',          :to => 'mvp#suggestion'
   match '/email_preview',       :to => 'mvp#email_preview'
   match '/share_with_neighbor', :to => 'mvp#share_with_neighbor'
+  match '/send_feedback',       :to => 'mvp#send_feedback'
   match '/send_comment',        :to => 'mvp#send_comment'
 
   # The priority is based upon order of creation:

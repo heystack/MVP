@@ -26,7 +26,7 @@ I just tried it out on how much homework our kids have each night. If you\'re in
 	<td class="plain">
 		<%= text_field "contact", "email", :size => "50", :style => "color:lightgray",
 		:value => "neighbor@example.com", :id => "prefill",
-		:onclick => "this.value='';this.style.color = 'black'" %></td>
+		:onfocus => "if (this.value == 'neighbor@example.com') {this.value='';this.style.color = 'black'}" %></td>
   </tr>
   <tr class="plain">
 	<td class="plain" style="text-align: right;"><label for="contact_subject">Subject:</label></td>

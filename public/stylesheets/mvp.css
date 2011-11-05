@@ -69,6 +69,7 @@ div.header {
   padding-top:   10px;
   padding-right: 20px;
   padding-left:  20px;
+  margin-bottom: -15px;
 }
 
 td.header_logo {
@@ -190,6 +191,8 @@ td.stk_col_left {
   border: solid;
   border-width: 1px;
   border-color: #eee;
+  padding-top: 20px;
+  vertical-align: top;
 }
 
 td.stk_col_right {
@@ -210,6 +213,7 @@ div.stk_col_right_section {
 }
 
 div.stk_col_right_header {
+  color: #666;
   font-weight: bold;
   font-size: 125%;
   margin-bottom: 10px;
@@ -228,7 +232,7 @@ td.stk_headline_right {
   width: 30%;
 }
 
-div.stkup_table {
+div.hys_div {
   width: 75%;
   margin-left: auto;
   margin-right: auto;
@@ -236,11 +240,12 @@ div.stkup_table {
   border-style: solid;
   border-width: 1px;
   border-color: #eee;
-  padding: 5px 0px 0px 5px;
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
-div.stkup_table_title {
-  font-weight: bold;
+table.hys_table {
+  margin-bottom: 5px;
 }
 
 .border_left {
@@ -286,7 +291,7 @@ div.tip_progress_bar_fill {
 
 tr.boldrow {
   font-weight: bold;
-  font-size: 100%;
+  font-size: 110%;
 }
 
 table.comparison_box {
@@ -453,6 +458,10 @@ div.new_topic_form {
 div.suggestion_form {
   padding-left: 30px;
   padding-bottom: 20px;
+}
+
+div.suggestions {
+  font-size: 75%;
 }
 
 textarea.suggestion_topics {

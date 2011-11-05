@@ -23,7 +23,14 @@ class MvpMailer < ActionMailer::Base
 
   def comment_email(contact)
     @contact = contact
-    mail(:to => "nycbrown@gmail.com", :bcc => "sbrown@stkup.com", :subject => "User Comment!")
+    @from_email = @contact[:from_email]
+    mail(:to => "nycbrown@gmail.com", :from => @from_email, :bcc => "sbrown@stkup.com", :subject => "User Comment!")
+  end
+
+  def feedback_email(contact)
+    @contact = contact
+    @from_email = @contact[:from_email]
+    mail(:to => "nycbrown@gmail.com", :from => @from_email, :bcc => "sbrown@stkup.com", :subject => "User Feedback!")
   end
 
   def suggestion_email(suggestion)
