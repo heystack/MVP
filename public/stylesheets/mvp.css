@@ -160,6 +160,10 @@ div.de-em {
   font-size: 75%;
 }
 
+.text-1_25 {
+  font-size: 125%;
+}
+
 .centered {
   margin-left: auto;
   margin-right: auto;
@@ -168,6 +172,10 @@ div.de-em {
 
 .greyfade {
   background: #000 url(/images/1x400greyfade.png) top center repeat;
+}
+
+div.ie_align_top {
+  margin-top: -20px;
 }
 
 /* Highchart */
@@ -217,6 +225,16 @@ div.stk_col_right_header {
   font-weight: bold;
   font-size: 125%;
   margin-bottom: 10px;
+}
+
+div.float_top {
+  height: 100%;
+  position: relative;
+}
+
+div.float_top div {
+  position: absolute;
+  top: 0;
 }
 
 /* Stk Headline */
