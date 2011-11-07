@@ -49,6 +49,7 @@ class ResponsesController < ApplicationController
       # flash[:success] = "Response saved: " + @response.value.to_s + " email=" + @response.email
       session[:you] = @response.value
       session[:email] = @response.email
+      session[:response_id] = @response.id
       
       if @topic.name == "Babysitter Pay Rate"
         session[:babysitter_pay_rate] = session[:you]
@@ -71,6 +72,9 @@ class ResponsesController < ApplicationController
   end
 
   def edit
+    if !session[:response_id]
+      redirect_to root_path
+    end
     @response = Response.find(params[:id])
     @topic = Topic.find(@response.topic_id)
     @form_capable = true
@@ -98,6 +102,7 @@ class ResponsesController < ApplicationController
   def update
     @response = Response.find(params[:id])
     @topic = Topic.find(@response.topic_id)
+    session[:response_id] = @response.id
     if @response.update_attributes(params[:response])
       redirect_to @topic
     else
@@ -107,6 +112,7 @@ class ResponsesController < ApplicationController
   
   def show
     @response = Response.find(params[:id])
+    session[:response_id] = @response.id
   end
 
   def index

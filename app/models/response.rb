@@ -10,7 +10,7 @@
 #
 
 class Response < ActiveRecord::Base
-  attr_accessible :value, :email, :neighborhood, :zipcode
+  attr_accessible :value, :email, :neighborhood, :zipcode, :qualifier1
   
   validates :value, :presence => true
   
