@@ -47,21 +47,21 @@ Mvp::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
   
-  # # Action Mailer settings for StkUp
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.smtp_settings = {
-  #   :address              => "smtp.gmail.com",
-  #   :port                 => 587,
-  #   :domain               => 'mail.stkup.com',
-  #   :user_name            => 'parenting@stkup.com',
-  #   :password             => 'may18stkup',
-  #   :authentication       => 'plain',
-  #   :enable_starttls_auto => true  }
+  # Action Mailer settings for StkUp
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => 'mail.stkup.com',
+    :user_name            => 'parenting@stkup.com',
+    :password             => 'may18stkup',
+    :authentication       => 'plain',
+    :enable_starttls_auto => true  }
   config.action_mailer.asset_host = "parenting-mvp.heroku.com"
 
   # amazonses = AmazonSes::Mailer.new(:secret_key => 'rW8Pb+EyMz44dhblptIHRmQ8tRU/LvJ9yRufihnR', :access_key => 'AKIAJYA3KQ32M2TNRERQ')
   # config.action_mailer.delivery_method = amazonses
 
-  config.action_mailer.delivery_method = :ses
+  # config.action_mailer.delivery_method = :ses
 
 end

@@ -1,5 +1,5 @@
 class MvpMailer < ActionMailer::Base
-  default :from => "parenting@stkup.com"
+  default :from => "'DC Parents StkUp' <parenting@stkup.com>"
 
   def mvp_email(topic, email, from_email)
     @topic = topic
@@ -9,11 +9,11 @@ class MvpMailer < ActionMailer::Base
     mail(:to => email, :bcc => "sbrown@stkup.com", :subject => "Alexandria parenting question")
   end
 
-  def email_neighbor(topic, contact, from_email)
+  def email_neighbor(topic, contact, from_name)
     @topic = topic
     @response = @topic.responses.new
     @contact = contact
-    @from_email = from_email
+    @from_email = from_name + " \<parenting@stkup.com\>"
     @email = @contact[:email]
     @form_capable = false
     @host_url = "http://parenting-mvp.heroku.com"

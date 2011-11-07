@@ -209,5 +209,4 @@ class TopicsController < ApplicationController
       @smiley_biggest = "<img src=\"/images/smiley_4.png\" height=\"25\">"
     end
   end
-
 end

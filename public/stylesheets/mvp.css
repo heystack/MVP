@@ -82,6 +82,12 @@ td.header_tagline {
   font-size: 12pt;
 }
 
+div.breadcrumbs {
+  color: #999;
+  font-size: 75%;
+  margin-left: 20px;
+}
+
 /* Navigation */
 
 nav {
@@ -172,6 +178,10 @@ div.de-em {
 
 .greyfade {
   background: #000 url(/images/1x400greyfade.png) top center repeat;
+}
+
+.bluefade {
+  background: #000 url(/images/1x407bluefade.png) top center repeat;
 }
 
 div.ie_align_top {
@@ -453,6 +463,7 @@ div.new_response_form {
 
 div.new_response_question {
   font-size: 150%;
+  margin-bottom: 20px;
 }
 
 div.responses {

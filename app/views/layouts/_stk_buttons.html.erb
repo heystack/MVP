@@ -17,15 +17,6 @@
 </ul>
 </div>
 <br/>
-<% if @form_capable %>
-<%= form_for(@response, :url => @base_url) do |f| %>
-  <%= render 'shared/error_messages' %>
-  <%= f.hidden_field :email, :value => @email %>
-  <div class="field">
-    or enter a different amount: <span class="dollar_sign">$</span><%= f.text_field :value, :size => 3 %> per hour  <%= f.submit "Stack Me Up", :class => "form_button", :style => "display:inline;" %>
-  </div>
-<% end %>
-<% end %>
 
 <% elsif @topic.name == "Mobilizers" %>
 
@@ -60,15 +51,6 @@
 </ul>
 </div>
 <br/>
-<% if @form_capable %>
-<%= form_for(@response, :url => @base_url) do |f| %>
-  <%= render 'shared/error_messages' %>
-  <%= f.hidden_field :email, :value => @email %>
-  <div class="field">
-    or enter a different age: <span class="dollar_sign"></span><%= f.text_field :value, :size => 3 %> years old <%= f.submit "Stack Me Up", :class => "form_button", :style => "display:inline;" %>
-  </div>
-<% end %>
-<% end %>
 
 <% elsif @topic.name == "Homework" %>
 
@@ -88,17 +70,9 @@
 		(@base_url + "?response[email]=" + @email + "&response[value]=2").html_safe %></li>
 </ul>
 <br/>
-<% if @form_capable %>
-<%= form_for(@response, :url => @base_url) do |f| %>
-  <%= render 'shared/error_messages' %>
-  <%= f.hidden_field :email, :value => @email %>
-  <div class="field">
-    or enter a different amount: <span class="dollar_sign"></span><%= f.text_field :value, :size => 3 %> hours of homework per weeknight  <%= f.submit "Stack Me Up", :class => "form_button", :style => "display:inline;" %>
-  </div>
-<% end %>
-<% end %>
 
 <% end %>
+
 <% if !@form_capable %>
 Or <a href="<%= "http://parenting-mvp.heroku.com/topics/" + @topic.id.to_s + "/responses/new" %>">answer the question on the StkUp website</a>.
 <% end %>

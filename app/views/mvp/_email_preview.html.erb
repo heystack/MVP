@@ -18,15 +18,19 @@ I just tried it out on how much homework our kids have each night. If you\'re in
 <%= form_tag "/share_with_neighbor" do -%>
 <table>
   <tr class="plain">
-	<td class="plain" style="text-align: right;"><label for="contact_from_email">From:</label></td>
-	<td class="plain"><%= text_field "contact", "from_email", :size => "50", :value => session[:email] %></td>
+	<td class="plain" style="text-align: right;"><label for="contact_from_name">From:</label></td>
+	<td class="plain"><%= text_field "contact", "from_name", :size => "50", :style => "color:lightgray",
+		:value => "Your name",
+		:onfocus => "if (this.value == 'Your name') {this.value='';this.style.color = 'black'}" %>
+	</td>
   </tr>
   <tr class="plain">
 	<td class="plain" style="text-align: right;"><label for="contact_email">To:</label></td>
 	<td class="plain">
 		<%= text_field "contact", "email", :size => "50", :style => "color:lightgray",
 		:value => "neighbor@example.com", :id => "prefill",
-		:onfocus => "if (this.value == 'neighbor@example.com') {this.value='';this.style.color = 'black'}" %></td>
+		:onfocus => "if (this.value == 'neighbor@example.com') {this.value='';this.style.color = 'black'}" %>
+	</td>
   </tr>
   <tr class="plain">
 	<td class="plain" style="text-align: right;"><label for="contact_subject">Subject:</label></td>

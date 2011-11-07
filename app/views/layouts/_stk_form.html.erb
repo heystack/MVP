@@ -1,0 +1,9 @@
+<%= form_for(@response, :url => @base_url) do |f| %>
+  <%= render 'shared/error_messages' %>
+  <%= f.hidden_field :email, :value => @email %>
+  <div class="field">
+    <%=raw @topic_form_prefix %>
+	<%= f.text_field :value, :size => 3, :value => "#{session[:value]}" %><%= @topic_form_units %>
+	<%= f.submit "Stack Me Up", :class => "form_button", :style => "display:inline;" %>
+  </div>
+<% end %>

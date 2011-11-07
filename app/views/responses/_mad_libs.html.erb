@@ -1,0 +1,36 @@
+<div class="mad-libs">
+<%= form_for(@response) do |f| %>
+<%= f.hidden_field :email, :value => @email %>
+<table class="mad_libs_table">
+  <tr>
+    <td style="vertical-align:top"><div class="begin-quote">&#8220;</div></td>
+    <td class="madlibs-content round greyfade">
+    <%=raw @mad_libs_intro %>
+    <label>
+		<%= f.text_field :value, :size => 3, :value => "#{@response_value}" %>
+    </label>
+    <%= @mad_libs_units %>
+	<% if @ask_location %>
+	, and I live in the 
+    <label>
+		<select name="response[neighborhood]">
+		<option value="Old Town">Old Town</option>
+		<option value="Del Ray" selected="selected">Del Ray</option>
+		<option value="Rosemont">Rosemont</option>
+		<option value="Arlandria">Arlandria</option>
+		<option value="The Berg">The Berg</option>
+		<option value="West End">West End</option>
+		<option value="Ridge">North Ridge</option>
+		</select>
+    </label>
+	neighborhood.
+	<% else %>
+	.
+	<% end %>
+    </td>
+    <td style="vertical-align:bottom"><div class="end-quote">&#8221;</div></td>
+  </tr>
+</table>
+<%= f.submit "Stack Me Up", :class => "submit_button round" %>
+</div>
+<% end %>
