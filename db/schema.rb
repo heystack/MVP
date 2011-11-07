@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111107051128) do
+ActiveRecord::Schema.define(:version => 20111107053322) do
 
   create_table "responses", :force => true do |t|
     t.float    "value"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20111107051128) do
     t.integer  "topic_id"
     t.string   "neighborhood"
     t.string   "zipcode"
+    t.string   "qualifier1"
   end
 
   create_table "sessions", :force => true do |t|

@@ -13,7 +13,7 @@ class MvpMailer < ActionMailer::Base
     @topic = topic
     @response = @topic.responses.new
     @contact = contact
-    @from_email = from_name + " \<parenting@stkup.com\>"
+    @from_email = from_name + " <parenting@stkup.com>"
     @email = @contact[:email]
     @form_capable = false
     @host_url = "http://parenting-mvp.heroku.com"
@@ -36,5 +36,10 @@ class MvpMailer < ActionMailer::Base
   def suggestion_email(suggestion)
     @suggestion = suggestion
     mail(:to => "nycbrown@gmail.com", :bcc => "sbrown@stkup.com", :subject => "Topic Suggestion!")
+  end
+
+  def stack_request_email(request)
+    @request = request
+    mail(:to => "nycbrown@gmail.com", :bcc => "sbrown@stkup.com", :subject => "Stack Request!")
   end
 end

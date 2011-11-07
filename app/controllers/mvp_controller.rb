@@ -48,4 +48,11 @@ class MvpController < ApplicationController
     redirect_to root_path
   end
 
+  def stack_request
+    @request = params[:request]
+    MvpMailer.stack_request_email(@request).deliver
+    flash[:success] = "Thanks for the stack request! If you provided your email, we'll get back to you shortly."
+    redirect_to root_path
+  end
+
 end

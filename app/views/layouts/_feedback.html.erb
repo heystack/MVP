@@ -22,30 +22,22 @@ function validateForm(form) {
 
 </script>
 
-<div class="stk_col_right_header">Give Feedback</div>
+<div class="stk_col_right_header">Request a Stack</div>
 
-<%= form_tag "/send_feedback" do -%>
-I would like to see...<br/>
-<div class="text-75">
-<%= check_box "contact", "suggestion1", {}, "X", " " %> Links to additional info related to the topic<br/>
-<%= check_box "contact", "suggestion2", {}, "X", " " %> Targeted recommendations related to the topic<br/>
-<%= check_box "contact", "suggestion3", {}, "X", " " %> An online discussion or forum on the topic<br/>
-<%= check_box "contact", "suggestion4", {}, "X", " " %> Comparisons to a more specific group<br/>
-<%= check_box "contact", "suggestion5", {}, "X", " " %> Option to share with Facebook friends<br/>
-<%= check_box "contact", "suggestion6", {}, "X", " " %> Ability to create my own Stack<br/>
-<%= check_box "contact", "suggestion7", {}, "X", " " %> More Stacks<br/>
-<%= text_area "contact", "message",
-	:class => "suggestion_topics",
+<%= form_tag "/stack_request" do -%>
+<%= text_area "request", "message",
+	:class => "stack_request",
 	:style => "color:lightgray",
-	:value => "Additional comments...",
-	:onfocus => "if (this.value == 'Additional comments...') {this.value='';this.style.color = 'black'}" %>
-Enter your email and we'll also notify you of any new stacks: <%= text_field "contact", "from_email", :size => "30", :style => "color:lightgray",
+	:value => "List topics (fitness, health, finances, ...) you'd like to see comparisons on (how much, how many, at what time)...",
+	:onfocus => "if (this.value.substring(0, 11) == 'List topics') {this.value='';this.style.color = 'black'}" %>
+Your email: <%= text_field "request", "from_email", :size => "30", :style => "color:lightgray",
 		:value => session[:email],
 		:onfocus => "this.style.color = 'black'" %>
-</div>
 <br/>
-<input type="submit" value="Send Feedback" class="form_button round" />
+<div><%= check_box "request", "opt_in" %> Add me to the StkUp mailing list</div>
+<input type="submit" value="Send Stack Request" class="form_button round" />
 <% end -%>
+</div>
 
 
 <!-- <span>List topics (fitness, health, finances, etc.) you'd like to see comparisons on (how much, how many, at what time, etc):</span><br/>

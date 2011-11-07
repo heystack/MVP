@@ -107,6 +107,15 @@ class TopicsController < ApplicationController
         @percent_diff = ("%.f" % @percent).to_s + "%"
       end
 
+      # Calculate mult_diff
+      if @user_rank == "lowest"
+        @mult = ( @lowest_amt / session[:you] ).round
+        @mult_diff = ("%.f" % @mult).to_s + " times"
+      else
+        @mult = ( session[:you] / @lowest_amt ).round
+        @mult_diff = ("%.f" % @mult).to_s + " times"
+      end
+
       # Generate topic-specific text for display
       if @topic.name == "Babysitter Pay Rate"
         if @user_rank == "lowest"
@@ -139,17 +148,17 @@ class TopicsController < ApplicationController
 
       elsif @topic.name == "Mobilizers"
         if @user_rank == "lowest"
-          @diff_amt = (( @lowest_amt - session[:you] ) * 240).round
-          @diff_text = "&nbsp;earlier"
+          @diff_amt = ( @lowest_amt - session[:you] ).round
+          @diff_text = "about " + help.pluralize(@diff_amt, 'year') + " earlier"
         else
-          @diff_amt = (( session[:you] - @lowest_amt ) * 240).round
-          @diff_text = "&nbsp;later"
+          @diff_amt = ( session[:you] - @lowest_amt ).round
+          @diff_text = "about " + help.pluralize(@diff_amt, 'year') + " later"
         end
         if @diff_amt == 0
           @comparison_text = "You gave your child a mobile phone <span class='em'>" + "at the same age" + "</span> as your earliest mobilizing neighbors"
           @diff_text = "Some interesting observation goes <span class='em'>" + "here" + "</span> based on earliest mobilizing neighbors."
         else
-          @comparison_text = "You gave your child a mobile phone <span class='em'>" + @percent_diff + @diff_text + "</span> than your earliest mobilizing neighbors."
+          @comparison_text = "You gave your child a mobile phone <span class='em'>" + @diff_text + "</span> than your earliest mobilizing neighbors."
           @diff_text = "Based on an average child's cell phone use, your child may spend up to <span class='em'>" + "6 hours per week" + "</span> on their cell phone."
         end
         @lowest_desc = "Earliest Mobilizers"
@@ -176,7 +185,7 @@ class TopicsController < ApplicationController
           @comparison_text = "Your child's homework load is <span class='em'>" + "the same as" + "</span> as their least loaded peers."
           @diff_text = "Some interesting observation goes <span class='em'>" + "here" + "</span> based on least loaded neighbors."
         else
-          @comparison_text = "Your child's homework load is <span class='em'>" + @percent_diff + @diff_text + "</span> than their least loaded peers."
+          @comparison_text = "Your child's homework load is <span class='em'>" + @mult_diff + @diff_text + "</span> than their least loaded peers."
           @diff_text = "In a typical month, your child may spend up to <span class='em'>" + @diff_amt.to_s + @diff_text + "</span> hours on homework than their least loaded peers."
         end
         @lowest_desc = "Lightest Load"

@@ -3,25 +3,25 @@
 	<td class="legend_header">WHO&nbsp;ARE&nbsp;YOUR "NEIGHBORS"?</td>
 	<td>
 	<table class="legend_td">
-	  <tr class="plain">
+	  <tr class="">
 		<td class="legend_all"></td>
-		<td class="plain legend_series">ALL NEIGHBORS</td>
+		<td class="legend_series">ALL NEIGHBORS</td>
 	  </tr>
-	  <tr class="plain">
-		<td class="plain"></td>
-		<td class="plain legend_def">Approx&nbsp;<%= "%.f" % ((@count * 0.1).ceil.to_f / 0.1) %>&nbsp;parents&nbsp;in Alexandria,&nbsp;Virginia.</td>
+	  <tr class="">
+		<td class=""></td>
+		<td class="legend_def">Parents&nbsp;in <%= session[:neighborhood] %>, Alexandria.</td>
 	  </tr>
 	</table>
 	</td>
 	<td>
 	<table class="legend_td">
-	  <tr class="plain">
+	  <tr class="">
 		<td class="legend_lowest"></td>
-		<td class="plain legend_series"><%= @lowest_desc.upcase %></td>
+		<td class="legend_series"><%= @lowest_desc.upcase %></td>
 	  </tr>
-	  <tr class="plain">
-		<td class="plain"></td>
-		<td class="plain legend_def"><%=raw @lowest_legend %></td>
+	  <tr class="">
+		<td class=""></td>
+		<td class="legend_def"><%=raw @lowest_legend %></td>
 	  </tr>
 	</table>
 	</td>

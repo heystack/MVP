@@ -19,6 +19,7 @@ Mvp::Application.routes.draw do
   match '/share_with_neighbor', :to => 'mvp#share_with_neighbor'
   match '/send_feedback',       :to => 'mvp#send_feedback'
   match '/send_comment',        :to => 'mvp#send_comment'
+  match '/stack_request',       :to => 'mvp#stack_request'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

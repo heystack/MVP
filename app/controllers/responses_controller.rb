@@ -31,7 +31,21 @@ class ResponsesController < ApplicationController
       @mad_libs_units = " years old"
     elsif @topic.name == "Homework"
       @response_value = session[:homework] ? ("%.1f" % session[:homework]).to_s : ""
-      @mad_libs_intro = "My child gets "
+      @mad_libs_intro = 'My child in the 
+        <label>
+    		<select name="response[qualifier1]">
+    		<option value="3rd grade">3rd grade</option>
+    		<option value="4th grade">4th grade</option>
+    		<option value="5th grade">5th grade</option>
+    		<option value="6th grade" selected="selected">6th grade</option>
+    		<option value="7th grade">7th grade</option>
+    		<option value="8th grade">8th grade</option>
+    		<option value="9th grade">9th grade</option>
+    		<option value="10th grade">10th grade</option>
+    		<option value="11th grade">11th grade</option>
+    		<option value="12th grade">12th grade</option>
+    		</select>
+        </label> gets '.html_safe
       @mad_libs_label = "hours"
       @mad_libs_units = " hours of homework per weeknight"
     end
@@ -39,6 +53,11 @@ class ResponsesController < ApplicationController
       @email = session[:email]
     else
       @email = ""
+    end
+    if session[:neighborhood]
+      @neighborhood = session[:neighborhood]
+    else
+      @neighborhood = ""
     end
   end
 
@@ -50,6 +69,7 @@ class ResponsesController < ApplicationController
       session[:you] = @response.value
       session[:email] = @response.email
       session[:response_id] = @response.id
+      session[:neighborhood] = @response.neighborhood
       
       if @topic.name == "Babysitter Pay Rate"
         session[:babysitter_pay_rate] = session[:you]
@@ -79,21 +99,37 @@ class ResponsesController < ApplicationController
     @topic = Topic.find(@response.topic_id)
     @form_capable = true
     @ask_location = true
+    @neighborhood = session[:neighborhood]
+    @email = session[:email]
     @host_url = request.host_with_port
     @base_url = "/topics/" + @topic.id.to_s + "/responses"
     if @topic.name == "Babysitter Pay Rate"
-      @response_value = ("%.2f" % session[:you]).to_s
+      @response_value = ("%.2f" % session[:babysitter_pay_rate]).to_s
       @mad_libs_intro = "I pay my babysitter <span class=\"dollar_sign\">$</span>"
       @mad_libs_label = "$ per hour"
       @mad_libs_units = " per hour"
     elsif @topic.name == "Mobilizers"
-      @response_value = ("%.f" % session[:you]).to_s
+      @response_value = ("%.f" % session[:mobilizers]).to_s
       @mad_libs_intro = "My child got/will get a cell phone at "
       @mad_libs_label = "age"
       @mad_libs_units = " years old"
     elsif @topic.name == "Homework"
-      @response_value = ("%.1f" % session[:you]).to_s
-      @mad_libs_intro = "My child gets "
+      @response_value = ("%.1f" % session[:homework]).to_s
+      @mad_libs_intro = 'My child in the 
+        <label>
+    		<select name="response[qualifier1]">
+    		<option value="3rd grade">3rd grade</option>
+    		<option value="4th grade">4th grade</option>
+    		<option value="5th grade">5th grade</option>
+    		<option value="6th grade" selected="selected">6th grade</option>
+    		<option value="7th grade">7th grade</option>
+    		<option value="8th grade">8th grade</option>
+    		<option value="9th grade">9th grade</option>
+    		<option value="10th grade">10th grade</option>
+    		<option value="11th grade">11th grade</option>
+    		<option value="12th grade">12th grade</option>
+    		</select>
+        </label> gets '.html_safe
       @mad_libs_label = "hours"
       @mad_libs_units = " hours of homework per weeknight"
     end
@@ -104,6 +140,18 @@ class ResponsesController < ApplicationController
     @topic = Topic.find(@response.topic_id)
     session[:response_id] = @response.id
     if @response.update_attributes(params[:response])
+      session[:you] = @response.value
+      session[:email] = @response.email
+      session[:response_id] = @response.id
+      session[:neighborhood] = @response.neighborhood
+      
+      if @topic.name == "Babysitter Pay Rate"
+        session[:babysitter_pay_rate] = session[:you]
+      elsif @topic.name == "Mobilizers"
+        session[:mobilizers] = session[:you]
+      elsif @topic.name == "Homework"
+        session[:homework] = session[:you]
+      end
       redirect_to @topic
     else
       render 'edit'

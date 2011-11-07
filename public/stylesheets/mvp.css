@@ -86,6 +86,7 @@ div.breadcrumbs {
   color: #999;
   font-size: 75%;
   margin-left: 20px;
+  margin-bottom: 5px;
 }
 
 /* Navigation */
@@ -135,6 +136,7 @@ input.form_button {
   font-size: 80%;
   font-weight: normal;
   padding: 3px;
+  margin-top: 15px;
 }
 
 div.padding_20px {
@@ -144,13 +146,14 @@ div.padding_20px {
 div.gray_border {
   border-style: solid;
   border-width: 1px;
-  border-color: gray;
+  border-color: #eee;
   padding: 5px 0px 0px 5px;
 }
 
 span.em {
-  color: #0088ce;
+/*  color: #10ae11; #0088ce*/
   font-weight: bold;
+  font-size: 110%;
 }
 
 span.de-em {
@@ -219,6 +222,7 @@ td.stk_col_right {
   border-width: 1px;
   border-color: #0088ce;
   padding-left: 30px;
+  vertical-align: top;
 }
 
 div.stk_col_right_section {
@@ -405,7 +409,7 @@ td.top_right {
 /* Below the Fold */
 
 div.below_the_fold {
-  padding: 20px;
+  width: 100%;
   background: #000 url(/images/1x400greyfade.png) top center repeat;
   text-align: top;
 }
@@ -430,19 +434,23 @@ td.share_labels {
 /* Action Steps */
 
 div.action_steps {
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
   width: 80%;
   background: #000 url(/images/1x151bluefade.png) top center repeat-x;
-/*  background-color: #ffc;*/
   padding: 10px 10px 1px 10px;
-  margin-bottom: 40px;
 }
 
 td.action_steps {
   color: #fff;
   font-weight: bold;
   font-size: 125%;
+  border-right-style: solid;
+  border-right-color: white;
+  border-right-width: 1px;
+  text-align: right;
 }
 
 td.action_links {
@@ -495,6 +503,11 @@ div.suggestions {
 
 textarea.suggestion_topics {
   height: 30px;
+  width: 90%;
+}
+
+textarea.stack_request {
+  height: 60px;
   width: 90%;
 }
 
@@ -553,20 +566,31 @@ div.stk_buttons ul li {
 /* Links */
 
 a {
-/*  color: #09c;*/
   color: #0088ce;
   text-decoration: none;
 }
 
 a:hover {
-/*  color: #069;*/
   color: #0088ce;
   text-decoration: underline;
 }
 
 a:visited {
-/*  color: #069;*/
   color: #0088ce;
+}
+
+td.action_links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+td.action_links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+td.action_links a:visited {
+  color: #fff;
 }
 
 /* Errors */

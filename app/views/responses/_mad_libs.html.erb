@@ -1,6 +1,7 @@
 <div class="mad-libs">
 <%= form_for(@response) do |f| %>
 <%= f.hidden_field :email, :value => @email %>
+<%= f.hidden_field :neighborhood, :value => @neighborhood %>
 <table class="mad_libs_table">
   <tr>
     <td style="vertical-align:top"><div class="begin-quote">&#8220;</div></td>
@@ -14,13 +15,13 @@
 	, and I live in the 
     <label>
 		<select name="response[neighborhood]">
-		<option value="Old Town">Old Town</option>
-		<option value="Del Ray" selected="selected">Del Ray</option>
-		<option value="Rosemont">Rosemont</option>
-		<option value="Arlandria">Arlandria</option>
-		<option value="The Berg">The Berg</option>
-		<option value="West End">West End</option>
-		<option value="Ridge">North Ridge</option>
+		<option value="Old Town" <%= @neighborhood == "Old Town" ? 'selected="selected"' : nil %> >Old Town</option>
+		<option value="Del Ray" <%= @neighborhood == "Del Ray" ? 'selected="selected"' : nil %> >Del Ray</option>
+		<option value="Rosemont" <%= @neighborhood == "Rosemont" ? 'selected="selected"' : nil %> >Rosemont</option>
+		<option value="Arlandria" <%= @neighborhood == "Arlandria" ? 'selected="selected"' : nil %> >Arlandria</option>
+		<option value="The Berg" <%= @neighborhood == "The Berg" ? 'selected="selected"' : nil %> >The Berg</option>
+		<option value="West End" <%= @neighborhood == "West End" ? 'selected="selected"' : nil %> >West End</option>
+		<option value="North Ridge" <%= @neighborhood == "North Ridge" ? 'selected="selected"' : nil %> >North Ridge</option>
 		</select>
     </label>
 	neighborhood.

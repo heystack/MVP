@@ -7,11 +7,13 @@
 	  <!--[if IE]><div class="ie_align_top"></div><![endif]-->
 	  <%= render 'layouts/tip_progress' %>
 	  <div id="hc" class="hc"></div>
+	  <hr/>
 	  <%= render 'layouts/how_you_stack_up' %>
 	  <table class="comparison_box"><tr><td>
 	  <div class="comparison-1 round"><%=raw @comparison_text %></div>
 	  <div class="comparison-2 round"><%=raw @diff_text %></div>
 	  </td></tr></table>
+	  <%= render 'layouts/action_steps' %>
 	  <div id="legend" class="legend"><%= render 'layouts/legend' %></div>
 	</td>
 	<td class="stk_col_right">
