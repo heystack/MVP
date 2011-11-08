@@ -10,7 +10,7 @@
 box-shadow: 10px 15px 20px #222;
 filter: progid:DXImageTransform.Microsoft.Shadow(color='#222', Direction=135, Strength=4)
 		progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.10,Direction=135);
-        -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30,Direction=135)";
+        -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.10,Direction=135)";
         zoom: 1;
 }
 .shadow .content {
@@ -25,7 +25,7 @@ filter: progid:DXImageTransform.Microsoft.Shadow(color='#222', Direction=135, St
 box-shadow: 10px 15px 20px #ccc;
 filter: progid:DXImageTransform.Microsoft.Shadow(color='#ccc', Direction=135, Strength=4)
 		progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.10,Direction=135);
-        -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30,Direction=135)";
+        -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.10,Direction=135)";
         zoom: 1;
 }
 .shadowlight .content {
