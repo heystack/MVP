@@ -7,7 +7,6 @@
     background-color: #fff; /* Needed for IEs */
 -moz-box-shadow: 10px 15px 20px #222;
 -webkit-box-shadow: 10px 15px 20px #222;
-box-shadow: 10px 15px 20px #222;
 filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=5,MakeShadow=true,ShadowOpacity=0.10);
         -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=5,MakeShadow=true,ShadowOpacity=0.10)";
         zoom: 1;
@@ -21,7 +20,6 @@ filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=5,MakeShadow=true,Sha
     background-color: #fff; /* Needed for IEs */
 -moz-box-shadow: 10px 15px 20px #ccc;
 -webkit-box-shadow: 10px 15px 20px #ccc;
-box-shadow: 10px 15px 20px #ccc;
 filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=5,MakeShadow=true,ShadowOpacity=0.10);
         -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=5,MakeShadow=true,ShadowOpacity=0.10)";
         zoom: 1;
