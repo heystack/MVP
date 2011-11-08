@@ -1,5 +1,6 @@
 <% topic = Topic.find_by_id(response.topic_id) %>
 <tr>
+  <td><%= response.id %></td>
   <td><%= topic.nil? ? "" : topic.name %></td>
   <td><%= response.value %></td>
   <td><%= response.email %></td>

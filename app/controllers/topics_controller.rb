@@ -42,18 +42,21 @@ class TopicsController < ApplicationController
         redirect_to new_topic_response_path(@topic)
       else
         session[:you] = session[:babysitter_pay_rate]
+        session[:response_id] = session[:babysitter_id]
       end
     elsif @topic.name == "Mobilizers"
       if !session[:mobilizers]
         redirect_to new_topic_response_path(@topic)
       else
         session[:you] = session[:mobilizers]
+        session[:response_id] = session[:mobilizers_id]
       end
     elsif @topic.name == "Homework"
       if !session[:homework]
         redirect_to new_topic_response_path(@topic)
       else
         session[:you] = session[:homework]
+        session[:response_id] = session[:homework_id]
       end
     end
 

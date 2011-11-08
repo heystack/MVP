@@ -12,7 +12,7 @@
     </label>
     <%= @mad_libs_units %>
 	<% if @ask_location %>
-	, and I live in the 
+	, and I live in the neighborhood of 
     <label>
 		<select name="response[neighborhood]" style="font-size: 110%">
 			<option value="Arlandria" <%= @neighborhood == "Arlandria" ? 'selected="selected"' : nil %> >Arlandria</option>
@@ -24,7 +24,7 @@
 			<option value="West End" <%= @neighborhood == "West End" ? 'selected="selected"' : nil %> >West End</option>
 		</select>
     </label>
-	neighborhood.
+	in Alexandria, Virginia.
 	<% else %>
 	.
 	<% end %>
@@ -33,5 +33,15 @@
   </tr>
 </table>
 <%= f.submit "Stack Me Up", :class => "submit_button round" %>
+<br/>
+<% if @ask_location %>
+<div class="centered text-75"><a href="#not_alexandria" rel="facebox">Is StkUp available for my community?</a></div>
+<% end %>
+
+<div id="not_alexandria" style="display:none;">
+StkUp is currently testing in Alexandria, Virginia<br/>
+only. If you'd like us to expand, send us a comment!
+</div>
+
 </div>
 <% end %>

@@ -74,5 +74,5 @@
 <% end %>
 
 <% if !@form_capable %>
-Or <a href="<%= "http://parenting-mvp.heroku.com/topics/" + @topic.id.to_s + "/responses/new" %>">answer the question on the StkUp website</a>.
+Or <a href="<%= @base_url + "/new" %>">answer the question on the StkUp website</a>.
 <% end %>

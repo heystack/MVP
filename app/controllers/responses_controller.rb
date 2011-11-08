@@ -3,10 +3,11 @@ class ResponsesController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
   def new
-    if !session[:topic]
+    if !params[:topic_id]
       @topic = Topic.first
       session[:topic] = @topic.id
     else
+      session[:topic] = params[:topic_id]
       @topic = Topic.find_by_id(session[:topic])
     end
     @response = @topic.responses.new
@@ -31,7 +32,7 @@ class ResponsesController < ApplicationController
       @mad_libs_units = " years old"
     elsif @topic.name == "Homework"
       @response_value = session[:homework] ? ("%.1f" % session[:homework]).to_s : ""
-      @mad_libs_intro = 'My child in the&nbsp;&nbsp;
+      @mad_libs_intro = 'My child in the 
         <label>
     		<select name="response[qualifier1]" style="font-size: 110%">
     		<option value="3rd grade">3rd grade</option>
@@ -45,7 +46,7 @@ class ResponsesController < ApplicationController
     		<option value="11th grade">11th grade</option>
     		<option value="12th grade">12th grade</option>
     		</select>
-        </label>&nbsp;&nbsp;gets '.html_safe
+        </label> gets '.html_safe
       @mad_libs_label = "hours"
       @mad_libs_units = " hours of homework per weeknight"
     end
@@ -69,10 +70,13 @@ class ResponsesController < ApplicationController
       
       if @topic.name == "Babysitter Pay Rate"
         session[:babysitter_pay_rate] = session[:you]
+        session[:babysitter_id] = @response.id
       elsif @topic.name == "Mobilizers"
         session[:mobilizers] = session[:you]
+        session[:mobilizers_id] = @response.id
       elsif @topic.name == "Homework"
         session[:homework] = session[:you]
+        session[:homework_id] = @response.id
       end
 
       # Session vars must be set since we might be coming from an external form submission
@@ -143,10 +147,13 @@ class ResponsesController < ApplicationController
       
       if @topic.name == "Babysitter Pay Rate"
         session[:babysitter_pay_rate] = session[:you]
+        session[:babysitter_id] = @response.id
       elsif @topic.name == "Mobilizers"
         session[:mobilizers] = session[:you]
+        session[:mobilizers_id] = @response.id
       elsif @topic.name == "Homework"
         session[:homework] = session[:you]
+        session[:homework_id] = @response.id
       end
       redirect_to @topic
     else
@@ -175,10 +182,13 @@ class ResponsesController < ApplicationController
       
       if @topic.name == "Babysitter Pay Rate"
         session[:babysitter_pay_rate] = session[:you]
+        session[:babysitter_id] = @response.id
       elsif @topic.name == "Mobilizers"
         session[:mobilizers] = session[:you]
+        session[:mobilizers_id] = @response.id
       elsif @topic.name == "Homework"
         session[:homework] = session[:you]
+        session[:homework_id] = @response.id
       end
 
       # Session vars must be set since we might be coming from an email form submission
