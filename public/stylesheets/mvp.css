@@ -10,6 +10,11 @@ filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,Sha
         -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
         zoom: 1;
 }
+.shadow .content {
+        position: relative; /* This protects the inner element from being blurred */
+        padding: 100px;
+        background-color: #222;
+}
 
 .shadowlight {
 -moz-box-shadow: 10px 15px 20px #ccc;
@@ -17,6 +22,11 @@ filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,Sha
 filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
         -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
         zoom: 1;
+}
+.shadowlight .content {
+        position: relative; /* This protects the inner element from being blurred */
+        padding: 100px;
+        background-color: #ccc;
 }
 
 .smallshadow {
