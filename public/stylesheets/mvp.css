@@ -4,7 +4,7 @@
 }
 
 .shadow {
-    background-color: #222; /* Needed for IEs */
+    background-color: #fff; /* Needed for IEs */
 -moz-box-shadow: 10px 15px 20px #222;
 -webkit-box-shadow: 10px 15px 20px #222;
 filter: progid:DXImageTransform.Microsoft.Shadow(color='#222', Direction=135, Strength=4);
@@ -16,7 +16,7 @@ filter: progid:DXImageTransform.Microsoft.Shadow(color='#222', Direction=135, St
 }
 
 .shadowlight {
-    background-color: #ccc; /* Needed for IEs */
+    background-color: #fff; /* Needed for IEs */
 -moz-box-shadow: 10px 15px 20px #ccc;
 -webkit-box-shadow: 10px 15px 20px #ccc;
 filter: progid:DXImageTransform.Microsoft.Shadow(color='#ccc', Direction=135, Strength=4);
