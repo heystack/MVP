@@ -164,37 +164,6 @@ class ResponsesController < ApplicationController
   end
 
   def index
-    # Create new response from URL-based GET form submission
-    flash[:notice] = "params[:response] =" + params[:topic_id].to_s
-    if !params[:response]
-      redirect_to root_path and return
-    end
-    @topic = Topic.find_by_id(params[:topic_id])
-    @response = @topic.responses.build(params[:response])
-    if @response.save
-      # flash[:success] = "Your response, " + @response.value.to_s + ", has been added to the stack!"
-      session[:you] = @response.value
-      session[:email] = @response.email
-      
-      if @topic.name == "Babysitter Pay Rate"
-        session[:babysitter_pay_rate] = session[:you]
-      elsif @topic.name == "Mobilizers"
-        session[:mobilizers] = session[:you]
-      elsif @topic.name == "Homework"
-        session[:homework] = session[:you]
-      end
-
-      # Session vars must be set since we might be coming from an email form submission
-      session[:topic] = @topic.id
-      if session[:topic]
-        redirect_to edit_response_path(@response.id)
-        # redirect_to topic_path(session[:topic])
-      else
-        redirect_to root_path
-      end
-    else
-      render 'new'
-    end
   end
 
   def stkresponses
