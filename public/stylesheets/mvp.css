@@ -8,9 +8,10 @@ background: #fff;
 -moz-box-shadow: 10px 15px 20px #222;
 -webkit-box-shadow: 10px 15px 20px #222;
 /* For IE 8 */
--ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=0, Color='#222')";
+filter: Shadow(Color=#ccc,Direction=135,Strength=4);
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#222')";
 /* For IE 5.5 - 7 */
-filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=0, Color='#222');
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#222');
 }
 
 .shadowlight {
@@ -18,9 +19,10 @@ background: #fff;
 -moz-box-shadow: 10px 15px 20px #ccc;
 -webkit-box-shadow: 10px 15px 20px #ccc;
 /* For IE 8 */
--ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=0, Color='#ccc')";
+filter: Shadow(Color=#ccc,Direction=135,Strength=4);
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#ccc')";
 /* For IE 5.5 - 7 */
-filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=0, Color='#ccc');
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#ccc');
 }
 
 .smallshadow {
