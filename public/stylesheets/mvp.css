@@ -13,8 +13,6 @@ filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10,MakeShadow=true,Sh
         zoom: 1;
 }
 .shadow .content {
-        position: relative; /* This protects the inner element from being blurred */
-		width: 100%;
         background-color: #fff;
 }
 
@@ -28,8 +26,6 @@ filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10,MakeShadow=true,Sh
         zoom: 1;
 }
 .shadowlight .content {
-        position: relative; /* This protects the inner element from being blurred */
-		width: 100%;
         background-color: #fff;
 }
 
