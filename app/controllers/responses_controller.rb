@@ -31,9 +31,9 @@ class ResponsesController < ApplicationController
       @mad_libs_units = " years old"
     elsif @topic.name == "Homework"
       @response_value = session[:homework] ? ("%.1f" % session[:homework]).to_s : ""
-      @mad_libs_intro = 'My child in the 
+      @mad_libs_intro = 'My child in the&nbsp;&nbsp;
         <label>
-    		<select name="response[qualifier1]">
+    		<select name="response[qualifier1]" style="font-size: 150%">
     		<option value="3rd grade">3rd grade</option>
     		<option value="4th grade">4th grade</option>
     		<option value="5th grade">5th grade</option>
@@ -45,15 +45,11 @@ class ResponsesController < ApplicationController
     		<option value="11th grade">11th grade</option>
     		<option value="12th grade">12th grade</option>
     		</select>
-        </label> gets '.html_safe
+        </label>&nbsp;&nbsp;gets '.html_safe
       @mad_libs_label = "hours"
       @mad_libs_units = " hours of homework per weeknight"
     end
-    if session[:email]
-      @email = session[:email]
-    else
-      @email = ""
-    end
+    @email = ( session[:email] ? session[:email] : "" )
     if session[:neighborhood]
       @neighborhood = session[:neighborhood]
     else
@@ -117,7 +113,7 @@ class ResponsesController < ApplicationController
       @response_value = ("%.1f" % session[:homework]).to_s.gsub(/.0/,"")
       @mad_libs_intro = 'My child in the 
         <label>
-    		<select name="response[qualifier1]">
+    		<select name="response[qualifier1]" style="font-size: 150%">
     		<option value="3rd grade">3rd grade</option>
     		<option value="4th grade">4th grade</option>
     		<option value="5th grade">5th grade</option>
