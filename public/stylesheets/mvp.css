@@ -12,7 +12,7 @@ filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,Sha
 }
 .shadow .content {
         position: relative; /* This protects the inner element from being blurred */
-        background-color: #000;
+        background-color: #fff;
 }
 
 .shadowlight {
@@ -24,7 +24,7 @@ filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,Sha
 }
 .shadowlight .content {
         position: relative; /* This protects the inner element from being blurred */
-        background-color: #000;
+        background-color: #fff;
 }
 
 .smallshadow {
