@@ -33,7 +33,7 @@ class ResponsesController < ApplicationController
       @response_value = session[:homework] ? ("%.1f" % session[:homework]).to_s : ""
       @mad_libs_intro = 'My child in the&nbsp;&nbsp;
         <label>
-    		<select name="response[qualifier1]" style="font-size: 150%">
+    		<select name="response[qualifier1]" style="font-size: 110%">
     		<option value="3rd grade">3rd grade</option>
     		<option value="4th grade">4th grade</option>
     		<option value="5th grade">5th grade</option>
@@ -113,7 +113,7 @@ class ResponsesController < ApplicationController
       @response_value = ("%.1f" % session[:homework]).to_s.gsub(/.0/,"")
       @mad_libs_intro = 'My child in the 
         <label>
-    		<select name="response[qualifier1]" style="font-size: 150%">
+    		<select name="response[qualifier1]" style="font-size: 110%">
     		<option value="3rd grade">3rd grade</option>
     		<option value="4th grade">4th grade</option>
     		<option value="5th grade">5th grade</option>
