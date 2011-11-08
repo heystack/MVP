@@ -22,10 +22,10 @@ td.madlibs-content {
 }
 .mad-libs label {
 	white-space: nowrap;
-	padding: 0 0 .5em;
+	padding: 0 0 .25em;
     display: -moz-inline-stack;
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
     zoom: 1;
     *display: inline;
 }
