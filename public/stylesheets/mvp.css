@@ -4,6 +4,8 @@
 }
 
 .shadow {
+    margin: 40px;
+    background-color: rgb(68,68,68); /* Needed for IEs */
 -moz-box-shadow: 10px 15px 20px #222;
 -webkit-box-shadow: 10px 15px 20px #222;
 filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
@@ -16,6 +18,8 @@ filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,Sha
 }
 
 .shadowlight {
+    margin: 40px;
+    background-color: rgb(68,68,68); /* Needed for IEs */
 -moz-box-shadow: 10px 15px 20px #ccc;
 -webkit-box-shadow: 10px 15px 20px #ccc;
 filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
