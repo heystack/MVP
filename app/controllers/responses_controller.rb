@@ -109,12 +109,12 @@ class ResponsesController < ApplicationController
       @mad_libs_label = "$ per hour"
       @mad_libs_units = " per hour"
     elsif @topic.name == "Mobilizers"
-      @response_value = ("%.f" % session[:mobilizers]).to_s
+      @response_value = ("%.1f" % session[:mobilizers]).to_s.gsub(/".0"/,"")
       @mad_libs_intro = "My child got/will get a cell phone at "
       @mad_libs_label = "age"
       @mad_libs_units = " years old"
     elsif @topic.name == "Homework"
-      @response_value = ("%.1f" % session[:homework]).to_s
+      @response_value = ("%.1f" % session[:homework]).to_s.gsub(/".0"/,"")
       @mad_libs_intro = 'My child in the 
         <label>
     		<select name="response[qualifier1]">
@@ -165,7 +165,6 @@ class ResponsesController < ApplicationController
 
   def index
     # Create new response from URL-based GET form submission
-    flash[:notice] = "params[:response] =" + params[:topic_id].to_s
     if !params[:response]
       redirect_to root_path and return
     end
@@ -175,6 +174,8 @@ class ResponsesController < ApplicationController
       # flash[:success] = "Your response, " + @response.value.to_s + ", has been added to the stack!"
       session[:you] = @response.value
       session[:email] = @response.email
+      session[:response_id] = @response.id
+      session[:neighborhood] = ""
       
       if @topic.name == "Babysitter Pay Rate"
         session[:babysitter_pay_rate] = session[:you]
@@ -187,11 +188,9 @@ class ResponsesController < ApplicationController
       # Session vars must be set since we might be coming from an email form submission
       session[:topic] = @topic.id
       if session[:topic]
-        flash[:notice] = "Redirecting to edit_response_path"
         redirect_to edit_response_path(@response.id)
         # redirect_to topic_path(session[:topic])
       else
-        flash[:notice] = "Redirecting to root_path"
         redirect_to root_path
       end
     else
