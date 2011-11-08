@@ -31,6 +31,7 @@ td.madlibs-content {
 }
 .mad-libs input {
 	font: inherit;
+	padding: 0 0.5em 0 0.5em;
 	background: transparent;
 	border: none;
 	border-bottom: 1px dashed #111;

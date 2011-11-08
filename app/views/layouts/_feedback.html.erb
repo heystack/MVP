@@ -30,9 +30,10 @@ function validateForm(form) {
 	:style => "color:lightgray",
 	:value => "List topics (fitness, health, finances, ...) you'd like to see comparisons on (how much, how many, at what time)...",
 	:onfocus => "if (this.value.substring(0, 11) == 'List topics') {this.value='';this.style.color = 'black'}" %>
-Your email: <%= text_field "request", "from_email", :size => "30", :style => "color:lightgray",
+Your email: <%= text_field "request", "from_email", :size => "20", :style => "color:lightgray",
 		:value => session[:email],
 		:onfocus => "this.style.color = 'black'" %>
+
 <br/>
 <div><%= check_box "request", "opt_in" %> Add me to the StkUp mailing list</div>
 <input type="submit" value="Send Stack Request" class="form_button round" />

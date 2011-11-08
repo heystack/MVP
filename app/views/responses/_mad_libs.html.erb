@@ -12,7 +12,7 @@
     </label>
     <%= @mad_libs_units %>
 	<% if @ask_location %>
-	, and I live in the&nbsp;&nbsp;
+	, and I live in the 
     <label>
 		<select name="response[neighborhood]" style="font-size: 110%">
 			<option value="Arlandria" <%= @neighborhood == "Arlandria" ? 'selected="selected"' : nil %> >Arlandria</option>
@@ -24,7 +24,7 @@
 			<option value="West End" <%= @neighborhood == "West End" ? 'selected="selected"' : nil %> >West End</option>
 		</select>
     </label>
-	&nbsp;&nbsp;neighborhood.
+	neighborhood.
 	<% else %>
 	.
 	<% end %>
