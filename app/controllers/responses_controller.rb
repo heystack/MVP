@@ -165,6 +165,7 @@ class ResponsesController < ApplicationController
 
   def index
     # Create new response from URL-based GET form submission
+    flash[:notice] = "params[:response] =" + params[:topic_id].to_s
     if !params[:response]
       redirect_to root_path and return
     end

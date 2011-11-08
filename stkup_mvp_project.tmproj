@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/views/topics/show.html.erb</string>
+	<string>app/views/layouts/_action_steps.html.erb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -26,46 +26,60 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>31</integer>
 				<key>line</key>
-				<integer>90</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>60</integer>
-		</dict>
-		<key>app/views/layouts/_inset.html.erb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>40</integer>
+				<integer>135</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>13</integer>
+			<integer>121</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>30</integer>
 				<key>line</key>
-				<integer>39</integer>
+				<integer>135</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>31</integer>
 				<key>line</key>
-				<integer>40</integer>
+				<integer>135</integer>
 			</dict>
 		</dict>
-		<key>app/views/topics/show.html.erb</key>
+		<key>app/views/layouts/_action_steps.html.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>30</integer>
+				<key>line</key>
+				<integer>3</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>app/views/layouts/_legend.html.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>46</integer>
+				<key>line</key>
+				<integer>11</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>app/views/layouts/_stylesheets.html.erb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -79,27 +93,13 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>public/stylesheets/mvp.css</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>13</integer>
-				<key>line</key>
-				<integer>331</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>303</integer>
-		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>public/stylesheets/mvp.css</string>
+		<string>app/views/layouts/_stylesheets.html.erb</string>
+		<string>app/views/layouts/_legend.html.erb</string>
+		<string>app/views/layouts/_action_steps.html.erb</string>
 		<string>app/controllers/topics_controller.rb</string>
-		<string>app/views/topics/show.html.erb</string>
-		<string>app/views/layouts/_inset.html.erb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
