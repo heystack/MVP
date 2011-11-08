@@ -4,6 +4,7 @@
 }
 
 .shadow {
+background: #000;
 -moz-box-shadow: 10px 15px 20px #222;
 -webkit-box-shadow: 10px 15px 20px #222;
 /* For IE 8 */
@@ -13,6 +14,7 @@ filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Colo
 }
 
 .shadowlight {
+background: #000;
 -moz-box-shadow: 10px 15px 20px #ccc;
 -webkit-box-shadow: 10px 15px 20px #ccc;
 /* For IE 8 */
