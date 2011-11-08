@@ -8,8 +8,8 @@
 -moz-box-shadow: 10px 15px 20px #222;
 -webkit-box-shadow: 10px 15px 20px #222;
 box-shadow: 10px 15px 20px #222;
-filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10,MakeShadow=true,ShadowOpacity=0.10);
-        -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=10,MakeShadow=true,ShadowOpacity=0.10)";
+filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10,MakeShadow=true,ShadowOpacity=0.50);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=10,MakeShadow=true,ShadowOpacity=0.50)";
         zoom: 1;
 }
 .shadow .content {
@@ -22,8 +22,8 @@ filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10,MakeShadow=true,Sh
 -moz-box-shadow: 10px 15px 20px #ccc;
 -webkit-box-shadow: 10px 15px 20px #ccc;
 box-shadow: 10px 15px 20px #ccc;
-filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10,MakeShadow=true,ShadowOpacity=0.10);
-        -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=10,MakeShadow=true,ShadowOpacity=0.10)";
+filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10,MakeShadow=true,ShadowOpacity=0.50);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=10,MakeShadow=true,ShadowOpacity=0.50)";
         zoom: 1;
 }
 .shadowlight .content {
