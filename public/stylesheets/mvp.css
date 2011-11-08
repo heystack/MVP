@@ -226,7 +226,7 @@ table.stk_table {
 
 td.stk_col_left {
   width: 60%;
-  padding-top: 20px;
+/*  padding-top: 20px; Screws up IE shadow */
   border: none;
   border-width: 1px;
   border-color: #eee;
