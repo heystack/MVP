@@ -11,10 +11,6 @@
 /* For IE 5.5 - 7 */
 filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#222');
 }
-.shadow .content {
-        position: relative; /* This protects the inner element from being blurred */
-        background-color: #fff;
-}
 
 .shadowlight {
 -moz-box-shadow: 10px 15px 20px #ccc;
@@ -23,10 +19,6 @@ filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Colo
 -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#ccc')";
 /* For IE 5.5 - 7 */
 filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#ccc');
-}
-.shadowlight .content {
-        position: relative; /* This protects the inner element from being blurred */
-        background-color: #fff;
 }
 
 .smallshadow {
