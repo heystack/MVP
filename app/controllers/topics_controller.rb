@@ -148,6 +148,7 @@ class TopicsController < ApplicationController
         @smiley_average = "<img src=\"/images/smiley_2.png\" height=\"25\">"
         @smiley_more_than_most = "<img src=\"/images/smiley_3.png\" height=\"25\">"
         @smiley_biggest = "<img src=\"/images/smiley_4.png\" height=\"25\">"
+        @action_step = "<a href='http://bit.ly/o1WtS9' target='_blank'>Find a babysitter in the DC area >></a><br/>"
 
       elsif @topic.name == "Mobilizers"
         if @user_rank == "lowest"
@@ -175,6 +176,7 @@ class TopicsController < ApplicationController
         @smiley_average = "<img src=\"/images/smiley_2.png\" height=\"25\">"
         @smiley_more_than_most = "<img src=\"/images/smiley_5.png\" height=\"25\">"
         @smiley_biggest = "<img src=\"/images/smiley_4.png\" height=\"25\">"
+        @action_step = "<a href='http://b.qr.ae/stkup-cell-phone' target='_blank'>Quora: What is the right age for a cell phone? >></a><br/>"
 
       elsif @topic.name == "Homework"
         if @user_rank == "lowest"
@@ -202,6 +204,7 @@ class TopicsController < ApplicationController
         @smiley_average = "<img src=\"/images/smiley_2.png\" height=\"25\">"
         @smiley_more_than_most = "<img src=\"/images/smiley_3.png\" height=\"25\">"
         @smiley_biggest = "<img src=\"/images/smiley_4.png\" height=\"25\">"
+        @action_step = "<a href='http://usat.ly/stkup-hw' target='_blank'>USA Today: What is the right amount of homework? >></a><br/>"
 
       end
 

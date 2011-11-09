@@ -492,6 +492,7 @@ td.action_steps {
 }
 
 td.action_links {
+  line-height: 2em;
 }
 
 /* Responses */
