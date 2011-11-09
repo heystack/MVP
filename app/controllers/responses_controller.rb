@@ -3,11 +3,10 @@ class ResponsesController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
   def new
-    if !params[:topic_id]
+    if !session[:topic]
       @topic = Topic.first
       session[:topic] = @topic.id
     else
-      session[:topic] = params[:topic_id]
       @topic = Topic.find_by_id(session[:topic])
     end
     @response = @topic.responses.new
@@ -89,7 +88,7 @@ class ResponsesController < ApplicationController
       end
     else
       flash[:error] = "You first need to enter a response!"
-      redirect_to new_response_path
+      redirect_to new_topic_response_path(@topic.id)
     end
   end
 
