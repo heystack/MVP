@@ -97,7 +97,7 @@ class ResponsesController < ApplicationController
     end
     @response = Response.find(params[:id])
     if @response.email != session[:email]
-      flash[:error] = "You do not have permission to refine this answer."
+      flash[:error] = "You do not have permission."
       redirect_to root_path
     end
     @topic = Topic.find(@response.topic_id)
@@ -161,7 +161,7 @@ class ResponsesController < ApplicationController
       end
       redirect_to @topic
     else
-      flash[:error] = "You can't leave it blank!"
+      flash[:error] = "Please enter a response."
       redirect_to edit_response_path(@response.id)
     end
   end
