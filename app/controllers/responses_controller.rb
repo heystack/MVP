@@ -50,7 +50,8 @@ class ResponsesController < ApplicationController
       @mad_libs_label = "hours"
       @mad_libs_units = " hours of homework per weeknight"
     end
-    @email = ( session[:email] ? session[:email] : "parenting@stkup.com" )
+    session[:email] ||= "parenting@stkup.com"
+    @email = session[:email]
     if session[:neighborhood]
       @neighborhood = session[:neighborhood]
     else
