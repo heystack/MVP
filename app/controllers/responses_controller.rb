@@ -161,7 +161,7 @@ class ResponsesController < ApplicationController
       end
       redirect_to @topic
     else
-      flash[:error] = "Please enter a response."
+      flash[:error] = "Please enter a valid response."
       redirect_to edit_response_path(@response.id)
     end
   end
