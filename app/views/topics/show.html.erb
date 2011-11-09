@@ -10,7 +10,9 @@
 	  <div id="hc" class="hc"></div>
 	  <div class="comparison-1 round"><%=raw @comparison_text %></div>
 	  <%= render 'layouts/how_you_stack_up' %>
+	  <% if @diff_text != "" %>
 	  <div class="comparison-2 round"><%=raw @diff_text %></div>
+	  <% end %>
 	  <%= render 'layouts/action_steps' %>
 	  <div id="legend" class="legend"><%= render 'layouts/legend' %></div>
 	  <!--[if IE]></div><![endif]-->

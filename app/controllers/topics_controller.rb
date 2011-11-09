@@ -131,7 +131,7 @@ class TopicsController < ApplicationController
         @diff_amt = number_to_currency(@diff_amt, :strip_insignificant_zeros => true)
         if @diff_amt == 0
           @comparison_text = "You spend <span class='em'>" + "the same as" + "</span> your lowest spending neighbors."
-          @diff_text = "Some interesting observation goes <span class='em'>" + "here" + "</span> based on lowest spending neighbors."
+          @diff_text = ""
         else
           @comparison_text = "You spend <span class='em'>" + @percent_diff + @diff_text + "</span> than your lowest spending neighbors."
           @diff_text = "With four 5 hours sits per month, you spend <span class='em'>" + @diff_amt.to_s + @diff_text + " per year</span> than your lowest spending neighbors."
@@ -160,7 +160,7 @@ class TopicsController < ApplicationController
         end
         if @diff_amt == 0
           @comparison_text = "You gave your child a mobile phone <span class='em'>" + "at the same age" + "</span> as your earliest mobilizing neighbors"
-          @diff_text = "Some interesting observation goes <span class='em'>" + "here" + "</span> based on earliest mobilizing neighbors."
+          @diff_text = ""
         else
           @comparison_text = "You gave your child a mobile phone <span class='em'>" + @diff_text + "</span> than your earliest mobilizing neighbors."
           @diff_text = "Based on an average child's cell phone use, your child may spend up to <span class='em'>" + "6 hours per week" + "</span> on their cell phone."
@@ -188,7 +188,7 @@ class TopicsController < ApplicationController
         end
         if @diff_amt == 0
           @comparison_text = "Your child's homework load is <span class='em'>" + "the same as" + "</span> as their least loaded peers."
-          @diff_text = "Some interesting observation goes <span class='em'>" + "here" + "</span> based on least loaded neighbors."
+          @diff_text = ""
         else
           @comparison_text = "Your child's homework load is <span class='em'>" + @mult_diff + @diff_text + "</span> than their least loaded peers."
           @diff_text = "In a typical month, your child may spend up to <span class='em'>" + @diff_amt.to_s + @diff_text + "</span> hours on homework than their least loaded peers."
