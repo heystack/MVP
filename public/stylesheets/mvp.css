@@ -294,7 +294,7 @@ div.hys_div {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
-  border-style: solid;
+  border-style: none;
   border-width: 1px;
   border-color: #eee;
   padding-top: 5px;
@@ -303,6 +303,10 @@ div.hys_div {
 
 table.hys_table {
   margin-bottom: 5px;
+}
+
+td.hys_you {
+  text-align: right;
 }
 
 .border_left {
@@ -366,7 +370,7 @@ div.comparison-1 {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
-  width: 90%;
+  width: 80%;
   text-align: center;
   background: #000 url(/images/1x400greyfade.png) top center repeat;
 }
