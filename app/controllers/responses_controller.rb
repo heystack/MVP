@@ -88,7 +88,7 @@ class ResponsesController < ApplicationController
         redirect_to root_path
       end
     else
-      flash[:error] = "You first need to enter a response to proceed!"
+      flash[:error] = "You first need to enter a response!"
       redirect_to new_response_path
     end
   end
