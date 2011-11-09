@@ -49,6 +49,7 @@ td.madlibs-content {
   margin-left: auto;
   margin-right: auto;
   display: block;
+  border-bottom: none;
   text-align: center;
   width: 200px;
   color: #fff;

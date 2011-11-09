@@ -50,7 +50,7 @@ class ResponsesController < ApplicationController
       @mad_libs_label = "hours"
       @mad_libs_units = " hours of homework per weeknight"
     end
-    @email = ( session[:email] ? session[:email] : "" )
+    @email = ( session[:email] ? session[:email] : "parenting@stkup.com" )
     if session[:neighborhood]
       @neighborhood = session[:neighborhood]
     else
@@ -96,6 +96,10 @@ class ResponsesController < ApplicationController
       redirect_to root_path
     end
     @response = Response.find(params[:id])
+    if @response.email != session[:email]
+      flash[:error] = "You do not have permission to refine this answer."
+      redirect_to root_path
+    end
     @topic = Topic.find(@response.topic_id)
     @form_capable = true
     @ask_location = true
@@ -157,7 +161,8 @@ class ResponsesController < ApplicationController
       end
       redirect_to @topic
     else
-      render 'edit'
+      flash[:error] = "You can't leave it blank!"
+      redirect_to edit_response_path(@response.id)
     end
   end
   
@@ -205,9 +210,15 @@ class ResponsesController < ApplicationController
   end
 
   def stkresponses
-    @responses = Response.all(:order => 'id DESC')
-    @count = Response.count
-    @topics = Topic.select("id, name").group('id', 'name')
+    @auth_key = params[:auth_key]
+    if @auth_key == "waterford"
+      @responses = Response.all(:order => 'id DESC')
+      @count = Response.count
+      @topics = Topic.select("id, name").group('id', 'name')
+    else
+      flash[:error] = "You do not have permission."
+      redirect_to root_path
+    end
   end
 
 end

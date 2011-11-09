@@ -201,8 +201,16 @@ div.de-em {
   background: #000 url(/images/1x400greyfade.png) top center repeat;
 }
 
+.greyfadeup {
+  background: #000 url(/images/1x250greyfadeup.png) bottom center repeat;
+}
+
 .bluefade {
   background: #000 url(/images/1x407bluefade.png) top center repeat;
+}
+
+.bluefadeup {
+  background: #000 url(/images/1x240bluefadeup.png) bottom center repeat;
 }
 
 div.ie_align_top {
@@ -282,7 +290,7 @@ td.stk_headline_right {
 }
 
 div.hys_div {
-  width: 75%;
+  width: 85%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
@@ -352,11 +360,15 @@ div.comparison-1 {
   border-width: 1px;
   border-color: #ccc;
   padding: 10px;
-  margin: 20px 0px 20px 15px;
+/*  margin: 20px 0px 20px 15px;
   display: inline-block;
-  width: 35%;
-  background: #ffe;
-  float: left;
+  float: left;*/
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  width: 90%;
+  text-align: center;
+  background: #000 url(/images/1x400greyfade.png) top center repeat;
 }
 
 div.comparison-2 {
@@ -364,11 +376,16 @@ div.comparison-2 {
   border-width: 1px;
   border-color: #ccc;
   padding: 10px;
-  margin: 20px 15px 10px 0px;
+/*  margin: 20px 15px 10px 0px;
   display: inline-block;
-  width: 45%;
-  background: #ffe;
-  float: right;
+  float: right;*/
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  width: 90%;
+  text-align: center;
+  background: #000 url(/images/1x400greyfade.png) top center repeat;
 }
 
 /* Legend */
@@ -455,9 +472,13 @@ div.action_steps {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
-  width: 80%;
+  width: 90%;
   background: #000 url(/images/1x151bluefade.png) top center repeat-x;
   padding: 10px 10px 1px 10px;
+}
+
+table.action_steps {
+  margin-bottom: 10px;
 }
 
 td.action_steps {
@@ -613,7 +634,7 @@ td.action_links a:visited {
 
 /* Errors */
 
-.field_with_errors {
+/*.field_with_errors {
   margin-top: 10px;
   padding: 2px;
   background-color: red;
@@ -623,7 +644,7 @@ td.action_links a:visited {
 .field_with_errors label {
   color: #fff;
 }
-
+*/
 #error_explanation {
   width: 400px;
   border: 2px solid red;

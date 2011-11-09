@@ -173,7 +173,7 @@ class TopicsController < ApplicationController
         @legend_icon = "<img src=\"/images/cell_phone_icon.png\" width=\"15\">"
         @smiley_lowest = "<img src=\"/images/smiley_4.png\" height=\"25\">"
         @smiley_average = "<img src=\"/images/smiley_2.png\" height=\"25\">"
-        @smiley_more_than_most = "<img src=\"/images/smiley_3.png\" height=\"25\">"
+        @smiley_more_than_most = "<img src=\"/images/smiley_5.png\" height=\"25\">"
         @smiley_biggest = "<img src=\"/images/smiley_4.png\" height=\"25\">"
 
       elsif @topic.name == "Homework"
