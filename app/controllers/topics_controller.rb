@@ -61,7 +61,7 @@ class TopicsController < ApplicationController
     end
 
     # Not sure what would cause a zero, but seems to be happening, so check for it
-    if session[:you] == 0
+    if session[:you] == 0 || session[:you] == ""
       redirect_to new_topic_response_path(@topic)
     end
 
