@@ -112,7 +112,7 @@ class TopicsController < ApplicationController
 
 
       flash[:error] = "session[:you] = " + session[:you].to_s
-      redirect_to @topic
+      redirect_to new_topic_response_path(@topic)
 
       # Calculate mult_diff
       if @user_rank == "lowest"
