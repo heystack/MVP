@@ -24,15 +24,17 @@ class ResponsesController < ApplicationController
       @mad_libs_intro = "I pay my babysitter <span class=\"dollar_sign\">$</span>"
       @mad_libs_label = "$ per hour"
       @mad_libs_units = " per hour"
+      @mad_libs_label = "hourly rate"
     elsif @topic.name == "Mobilizers"
       @response_value = session[:mobilizers] ? ("%.f" % session[:mobilizers]).to_s.gsub(/.0/,"") : ""
       @mad_libs_intro = "My child got/will get a cell phone at "
       @mad_libs_label = "age"
       @mad_libs_units = " years old"
+      @mad_libs_label = "age"
     elsif @topic.name == "Homework"
       @response_value = session[:homework] ? ("%.1f" % session[:homework]).to_s.gsub(/.0/,"") : ""
       @mad_libs_intro = 'My child in the 
-        <label>
+        <label class="label_select">
     		<select name="response[qualifier1]" style="font-size: 110%">
     		<option value="3rd grade">3rd grade</option>
     		<option value="4th grade">4th grade</option>
@@ -48,8 +50,9 @@ class ResponsesController < ApplicationController
         </label> gets '.html_safe
       @mad_libs_label = "hours"
       @mad_libs_units = " hours of homework per weeknight"
+      @mad_libs_label = "hours"
     end
-    session[:email] ||= "parenting@stkup.com"
+    session[:email] ||= "feedback@stkup.com"
     @email = session[:email]
     if session[:neighborhood]
       @neighborhood = session[:neighborhood]
@@ -113,15 +116,17 @@ class ResponsesController < ApplicationController
       @mad_libs_intro = "I pay my babysitter <span class=\"dollar_sign\">$</span>"
       @mad_libs_label = "$ per hour"
       @mad_libs_units = " per hour"
+      @mad_libs_label = "hourly rate"
     elsif @topic.name == "Mobilizers"
       @response_value = ("%.1f" % session[:mobilizers]).to_s.gsub(/.0/,"")
       @mad_libs_intro = "My child got/will get a cell phone at "
       @mad_libs_label = "age"
       @mad_libs_units = " years old"
+      @mad_libs_label = "age"
     elsif @topic.name == "Homework"
       @response_value = ("%.1f" % session[:homework]).to_s.gsub(/.0/,"")
       @mad_libs_intro = 'My child in the 
-        <label>
+        <label class="label_select">
     		<select name="response[qualifier1]" style="font-size: 110%">
     		<option value="3rd grade">3rd grade</option>
     		<option value="4th grade">4th grade</option>
@@ -137,6 +142,7 @@ class ResponsesController < ApplicationController
         </label> gets '.html_safe
       @mad_libs_label = "hours"
       @mad_libs_units = " hours of homework per weeknight"
+      @mad_libs_label = "hours"
     end
   end
 

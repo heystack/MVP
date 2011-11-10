@@ -53,7 +53,7 @@ Mvp::Application.configure do
     :address              => "smtp.gmail.com",
     :port                 => 587,
     :domain               => 'mail.stkup.com',
-    :user_name            => 'parenting@stkup.com',
+    :user_name            => 'feedback@stkup.com',
     :password             => 'may18stkup',
     :authentication       => 'plain',
     :enable_starttls_auto => true  }

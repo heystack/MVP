@@ -22,26 +22,40 @@ td.madlibs-content {
 }
 .mad-libs label {
 	white-space: nowrap;
-	padding: 0 0 .25em;
+	padding: 0 0 0em;
     display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
+	text-align: center;
     zoom: 1;
     *display: inline;
 }
-.mad-libs input {
+.mad-libs label.label_select {
+	margin-top: -.5em;
+}
+.mad-libs select {
+	font: inherit;
+	background: #ddd;
+	border: none;
+	text-align: center;
+	outline: 0;
+	vertical-align: middle;
+	display: block;
+}
+.mad-libs input.fill_in_the_blank {
 	font: inherit;
 	padding: 0 0.5em 0 0.5em;
 	background: transparent;
 	border: none;
 	border-bottom: 1px dashed #111;
 	text-align: center;
+	margin-bottom: -.5em;
 	outline: 0;
 	display: block;
 }
 .mad-libs label span {
-	font-size: .8em;
-	line-height: 1em;
+	font-size: .5em;
+	font-weight: normal;
 	opacity: .7;
 	filter: alpha(opacity = 70);
 }

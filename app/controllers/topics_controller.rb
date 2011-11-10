@@ -148,7 +148,8 @@ class TopicsController < ApplicationController
         @smiley_average = "<img src=\"/images/smiley_2.png\" height=\"25\">"
         @smiley_more_than_most = "<img src=\"/images/smiley_3.png\" height=\"25\">"
         @smiley_biggest = "<img src=\"/images/smiley_4.png\" height=\"25\">"
-        @action_step = "<a href='http://bit.ly/o1WtS9' target='_blank'>Find a babysitter in the DC area >></a><br/>"
+        @action_step = "<a href='http://bit.ly/o1WtS9' target='_blank'>Find a babysitter in the DC area >> <span class='text-75'>SitterCity</span></a><br/>
+          <a href='http://bit.ly/vk65wE' target='_blank'>Factors to consider in paying a babysitter >> <span class='text-75'>StackExchange</span></a><br/>"
 
       elsif @topic.name == "Mobilizers"
         if @user_rank == "lowest"
@@ -176,7 +177,7 @@ class TopicsController < ApplicationController
         @smiley_average = "<img src=\"/images/smiley_2.png\" height=\"25\">"
         @smiley_more_than_most = "<img src=\"/images/smiley_5.png\" height=\"25\">"
         @smiley_biggest = "<img src=\"/images/smiley_4.png\" height=\"25\">"
-        @action_step = "<a href='http://b.qr.ae/stkup-cell-phone' target='_blank'>Quora: What is the right age for a cell phone? >></a><br/>"
+        @action_step = "<a href='http://bit.ly/tshjGn' target='_blank'>What's the right age for a cellphone? >> <span class='text-75'>MSNBC RedTape</span></a><br/>"
 
       elsif @topic.name == "Homework"
         if @user_rank == "lowest"
@@ -204,7 +205,8 @@ class TopicsController < ApplicationController
         @smiley_average = "<img src=\"/images/smiley_2.png\" height=\"25\">"
         @smiley_more_than_most = "<img src=\"/images/smiley_3.png\" height=\"25\">"
         @smiley_biggest = "<img src=\"/images/smiley_4.png\" height=\"25\">"
-        @action_step = "<a href='http://usat.ly/stkup-hw' target='_blank'>USA Today: What is the right amount of homework? >></a><br/>"
+        @action_step = "<a href='http://usat.ly/stkup-hw' target='_blank'>What is the right amount of homework? >> <span class='text-75'>USA Today</span></a><br/>
+          <a href='http://nyti.ms/s5SC9x' target='_blank'>Parents Embrace \"Race to Nowhere\" >> <span class='text-75'>NY Times</span></a><br/>"
 
       end
 

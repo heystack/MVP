@@ -8,11 +8,15 @@
 	  <!--[if IE]><div class="ie_align_top"></div><![endif]-->
 	  <%= render 'layouts/tip_progress' %>
 	  <div id="hc" class="hc"></div>
-	  <div class="comparison-1 round"><%=raw @comparison_text %></div>
-	  <%= render 'layouts/how_you_stack_up' %>
-	  <% if @diff_text != "" %>
-	  <div class="comparison-2 round"><%=raw @diff_text %></div>
-	  <% end %>
+	  <table class="below_the_fold">
+		<tr><td width="60%"><%= render 'layouts/how_you_stack_up' %></td>
+		<td>
+		  <div class="comparison-1 round"><%=raw @comparison_text %></div>
+		  <% if @diff_text != "" %>
+		  <div class="comparison-2 round"><%=raw @diff_text %></div>
+		  <% end %>
+		</td></tr>
+	  </table>	  
 	  <%= render 'layouts/action_steps' %>
 	  <div id="legend" class="legend"><%= render 'layouts/legend' %></div>
 	  <!--[if IE]></div><![endif]-->

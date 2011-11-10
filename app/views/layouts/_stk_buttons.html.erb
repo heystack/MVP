@@ -1,16 +1,24 @@
 <% if @topic.name == "Babysitter Pay Rate" %>
-<div class="new_response_question">($ per hour)</div>
 <div class="stk_buttons">
 <ul>
   <li style="list-style-type: none; display: inline-block; padding: 0.2em 10px;">
 	<%=raw link_to '<img alt="$5" src="http://parenting-mvp.heroku.com/images/buttons/curr_5_dollars.png">'.html_safe,
 		(@base_url + "?response[email]=" + @email + "&response[value]=5").html_safe %></li>
   <li style="list-style-type: none; display: inline-block; padding: 0.2em 10px;">
+	<%=raw link_to '<img alt="$7.50" src="http://parenting-mvp.heroku.com/images/buttons/curr_7_50_dollars.png">'.html_safe,
+		(@base_url + "?response[email]=" + @email + "&response[value]=7.5").html_safe %></li>
+  <li style="list-style-type: none; display: inline-block; padding: 0.2em 10px;">
 	<%=raw link_to '<img alt="$10" src="http://parenting-mvp.heroku.com/images/buttons/curr_10_dollars.png">'.html_safe,
 		(@base_url + "?response[email]=" + @email + "&response[value]=10").html_safe %></li>
   <li style="list-style-type: none; display: inline-block; padding: 0.2em 10px;">
+	<%=raw link_to '<img alt="$12.50" src="http://parenting-mvp.heroku.com/images/buttons/curr_12_50_dollars.png">'.html_safe,
+		(@base_url + "?response[email]=" + @email + "&response[value]=12.5").html_safe %></li>
+  <li style="list-style-type: none; display: inline-block; padding: 0.2em 10px;">
 	<%=raw link_to '<img alt="$15" src="http://parenting-mvp.heroku.com/images/buttons/curr_15_dollars.png">'.html_safe,
 		(@base_url + "?response[email]=" + @email + "&response[value]=15").html_safe %></li>
+  <li style="list-style-type: none; display: inline-block; padding: 0.2em 10px;">
+	<%=raw link_to '<img alt="$17.50" src="http://parenting-mvp.heroku.com/images/buttons/curr_17_50_dollars.png">'.html_safe,
+		(@base_url + "?response[email]=" + @email + "&response[value]=17.5").html_safe %></li>
   <li style="list-style-type: none; display: inline-block; padding: 0.2em 10px;">
 	<%=raw link_to '<img alt="$20" src="http://parenting-mvp.heroku.com/images/buttons/curr_20_dollars.png">'.html_safe,
 		(@base_url + "?response[email]=" + @email + "&response[value]=20").html_safe %></li>
@@ -71,8 +79,4 @@
 </ul>
 <br/>
 
-<% end %>
-
-<% if !@form_capable %>
-Or <a href="<%= @base_url + "/new" %>">answer the question on the StkUp website</a>.
 <% end %>

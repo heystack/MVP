@@ -1,36 +1,36 @@
 <div class="hys_div round">
   <table class="hys_table">
 	<tr class=" <%= @user_rank == 'lowest' ? 'boldrow' : '' %>">
-	  <td class="hys_you"><%= @user_rank == "lowest" ? raw("You&nbsp;>") : "" %></td>
+	  <td class="hys_you"><%= @user_rank == "lowest" ? raw(">") : "" %></td>
 	  <td class="hys_desc border_left"><%=raw @lowest_desc %></td>
-	  <td class="hys_icon"><%=raw @legend_icon %></td>
 	  <td class="hys_smiley"><% if @user_rank == "lowest" %>
 		<%=raw @smiley_lowest %>
 		<% end %></td>
+	  <td class="hys_icon"><%=raw @legend_icon %></td>
 	</tr>	
 	<tr class=" <%= @user_rank == 'average' ? 'boldrow' : '' %>">
-	  <td class="hys_you"><%= @user_rank == "average" ? raw("You&nbsp;>") : "" %></td>
+	  <td class="hys_you"><%= @user_rank == "average" ? raw(">") : "" %></td>
 	  <td class="hys_desc border_left">Average</td>
-	  <td class="hys_icon"><%=raw @legend_icon %><%=raw @legend_icon %></td>
 	  <td class="hys_smiley"><% if @user_rank == "average" %>
 		<%=raw @smiley_average %>
 		<% end %></td>
+	  <td class="hys_icon"><%=raw @legend_icon %><%=raw @legend_icon %></td>
 	</tr>
 	<tr class=" <%= @user_rank == 'more than most' ? 'boldrow' : '' %>">
-	  <td class="hys_you"><%= @user_rank == "more than most" ? raw("You&nbsp;>") : "" %></td>
+	  <td class="hys_you"><%= @user_rank == "more than most" ? raw(">") : "" %></td>
 	  <td class="hys_desc border_left"><%=raw @than_most_desc %></td>
-	  <td class="hys_icon"><%=raw @legend_icon %><%=raw @legend_icon %><%=raw @legend_icon %></td>
 	  <td class="hys_smiley"><% if @user_rank == "more than most" %>
 		<%=raw @smiley_more_than_most %>
 		<% end %></td>
+	  <td class="hys_icon"><%=raw @legend_icon %><%=raw @legend_icon %><%=raw @legend_icon %></td>
 	</tr>
 	<tr class=" <%= @user_rank == 'biggest' ? 'boldrow' : '' %>">
-	  <td class="hys_you"><%= @user_rank == "biggest" ? raw("You&nbsp;>") : "" %></td>
+	  <td class="hys_you"><%= @user_rank == "biggest" ? raw(">") : "" %></td>
 	  <td class="hys_desc border_left"><%=raw @biggest_desc %></td>
-	  <td class="hys_icon"><%=raw @legend_icon %><%=raw @legend_icon %><%=raw @legend_icon %><%=raw @legend_icon %></td>
 	  <td class="hys_smiley"><% if @user_rank == "biggest" %>
 		<%=raw @smiley_biggest %>
 		<% end %></td>
+	  <td class="hys_icon"><%=raw @legend_icon %><%=raw @legend_icon %><%=raw @legend_icon %><%=raw @legend_icon %></td>
 	</tr>
   </table>
 </div>

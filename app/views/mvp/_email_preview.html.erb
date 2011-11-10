@@ -12,16 +12,21 @@ I thought you'd be interested in this local resource for gathering helpful info 
 I just tried it out on how much homework our kids have each night. If you\'re interested to see how you stack up, it\'s easy to participate - just give your info below, then get back an immediate web comparison against other Alexandrians. The more who answer, the better the comparison." %>
 <% end %>
 
-<% @email_subject = @topic.question + " -StkUp"%>
+<% @email_subject = @topic.question %>
 
 <div class="email_preview">
 <%= form_tag "/share_with_neighbor" do -%>
 <table>
   <tr class="plain">
-	<td class="plain" style="text-align: right;"><label for="contact_from_name">From:</label></td>
-	<td class="plain"><%= text_field "contact", "from_name", :size => "50", :style => "color:lightgray",
-		:value => "Your name",
-		:onfocus => "if (this.value == 'Your name') {this.value='';this.style.color = 'black'}" %>
+	<td class="plain" style="text-align: right;"><label for="contact_from_name">Your&nbsp;Name:</label></td>
+	<td class="plain"><%= text_field "contact", "from_name", :size => "50" %> via StkUp
+	</td>
+  </tr>
+  <tr class="plain">
+	<td class="plain" style="text-align: right;"><label for="contact_user_email">Your&nbsp;Email:</label></td>
+	<td class="plain"><%= text_field "contact", "user_email", :size => "50", :style => "color:lightgray",
+		:value => session[:email],
+		:onfocus => "this.style.color = 'black'" %>
 	</td>
   </tr>
   <tr class="plain">
@@ -41,13 +46,13 @@ I just tried it out on how much homework our kids have each night. If you\'re in
 	<td class="plain"><%= text_area "contact", "message", :size => "30x8", :value => @message %>
 		<div class="inactive text-75">followed by the question:</div>
 		<div class="field">
-		<label for="response_value"><%= @topic.question %></label><br />
+		<label for="response_value"><%= @topic.question %></label>
 		</div>
 	</td>
   </tr>
   <tr class="plain">
 	<td class="plain"></td>
-	<td class="plain text-1_25"><br/><input type="submit" value="Share with Neighbor" class="form_button round" /></td>
+	<td class="plain text-1_25"><input type="submit" value="Share with Neighbor" class="form_button round" /></td>
   </tr>
 </table>
 

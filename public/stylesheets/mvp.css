@@ -219,10 +219,10 @@ div.ie_align_top {
 /* Highchart */
 
 div.hc {
-  height:250px;
+  height:225px;
   width: 90%;
   clear:both;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 150%;
 }
 
@@ -291,11 +291,9 @@ td.stk_headline_right {
 }
 
 div.hys_div {
-  width: 85%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
-  border-style: none;
+  width: 100%;
+  font-size: 80%;
+  border-style: solid;
   border-width: 1px;
   border-color: #eee;
   padding-top: 5px;
@@ -361,36 +359,32 @@ table.comparison_box {
 }
 
 div.comparison-1 {
+  font-size: 75%;
   border-style: solid;
   border-width: 1px;
   border-color: #ccc;
-  padding: 10px;
-/*  margin: 20px 0px 20px 15px;
-  display: inline-block;
-  float: left;*/
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-  width: 80%;
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 100%;
   text-align: center;
-  background: #000 url(/images/1x400greyfade.png) top center repeat;
+/*  background: #000 url(/images/1x400greyfade.png) top center repeat;*/
 }
 
 div.comparison-2 {
+  font-size: 75%;
   border-style: solid;
   border-width: 1px;
   border-color: #ccc;
-  padding: 10px;
-/*  margin: 20px 15px 10px 0px;
-  display: inline-block;
-  float: right;*/
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
-  width: 90%;
+  margin-bottom: 5px;
+  padding: 5px;
+  width: 100%;
   text-align: center;
-  background: #000 url(/images/1x400greyfade.png) top center repeat;
+/*  background: #000 url(/images/1x400greyfade.png) top center repeat;*/
+}
+
+td.hys_icon img {
+  width: 15px;
+  margin-right: -3px;
 }
 
 /* Legend */
@@ -447,10 +441,7 @@ td.top_right {
 
 /* Below the Fold */
 
-div.below_the_fold {
-  width: 100%;
-  background: #000 url(/images/1x400greyfade.png) top center repeat;
-  text-align: top;
+table.below_the_fold {
 }
 
 /* Share Stack */

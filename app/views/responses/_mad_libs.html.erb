@@ -8,13 +8,14 @@
     <td class="madlibs-content round greyfade">
     <%=raw @mad_libs_intro %>
     <label>
-		<%= f.text_field :value, :size => 2, :value => "#{@response_value}" %>
+		<%= f.text_field :value, :size => 2, :value => "#{@response_value}", :class => "fill_in_the_blank" %>
+		<span><%= @mad_libs_label %></span>
     </label>
     <%= @mad_libs_units %>
 	<% if @ask_location %>
-	, and I live in the neighborhood of 
-    <label>
-		<select name="response[neighborhood]" style="font-size: 110%">
+	, and I live in 
+    <label class="label_select">
+		<select name="response[neighborhood]">
 			<option value="Arlandria" <%= @neighborhood == "Arlandria" ? 'selected="selected"' : nil %> >Arlandria</option>
 			<option value="Del Ray" <%= @neighborhood == "Del Ray" ? 'selected="selected"' : nil %> >Del Ray</option>
 			<option value="North Ridge" <%= @neighborhood == "North Ridge" ? 'selected="selected"' : nil %> >North Ridge</option>
@@ -22,12 +23,11 @@
 			<option value="Rosemont" <%= @neighborhood == "Rosemont" ? 'selected="selected"' : nil %> >Rosemont</option>
 			<option value="The Berg" <%= @neighborhood == "The Berg" ? 'selected="selected"' : nil %> >The Berg</option>
 			<option value="West End" <%= @neighborhood == "West End" ? 'selected="selected"' : nil %> >West End</option>
+			<option value="Other" <%= @neighborhood == "Other" ? 'selected="selected"' : nil %> >Other</option>
 		</select>
     </label>
-	in Alexandria, Virginia.
-	<% else %>
-	.
 	<% end %>
+	.
     </td>
     <td style="vertical-align:bottom"><div class="end-quote">&#8221;</div></td>
   </tr>
