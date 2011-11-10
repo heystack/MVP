@@ -15,7 +15,9 @@
 		  <% if @diff_text != "" %>
 		  <div class="comparison-2 round"><%=raw @diff_text %></div>
 		  <% end %>
-		</td></tr>
+		</td>
+	  <!--[if IE]><td>&nbsp;</td><![endif]-->
+		</tr>
 	  </table>	  
 	  <%= render 'layouts/action_steps' %>
 	  <div id="legend" class="legend"><%= render 'layouts/legend' %></div>
