@@ -115,6 +115,7 @@ class TopicsController < ApplicationController
       if @user_rank == "lowest"
         flash[:error] = "session[:you] = " + session[:you].to_s
         redirect_to new_topic_response_path(@topic)
+        @mult = 2.0
 
         @mult_diff = ("%.f" % @mult).to_s + " times"
       else
