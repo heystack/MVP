@@ -1,10 +1,10 @@
 <% if @from_name != "" %>
 <%= @from_name %>
+<%- end -%>
+<%- if @user_email != "" -%>
+(<%= @user_email %>)
 <% end %>
-<% if @user_email != "" %>
-, <%= @user_email %>,
-<% end %>
- has shared a local resource with you:<br/>
+has shared a local resource with you:<br/>
 <br/>
 <%=raw @contact[:message].gsub("\n\r","<br />").gsub("\r", "").gsub("\n", "<br />") %>
 <br/>
