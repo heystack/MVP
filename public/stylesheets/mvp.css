@@ -13,8 +13,9 @@ filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10,MakeShadow=true,Sh
         zoom: 1;
 }
 .shadow .content {
-        position: relative; /* This protects the inner element from being blurred */
-        background-color: #fff;
+  position: relative; /* This protects the inner element from being blurred */
+  background-color: #fff;
+  margin-bottom: -30px;
 }
 
 .shadowlight {
@@ -238,6 +239,7 @@ td.stk_col_left {
   border: none;
   border-width: 1px;
   border-color: #eee;
+  vertical-align: top;
 }
 
 td.stk_col_right {
