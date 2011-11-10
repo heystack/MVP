@@ -117,7 +117,12 @@ class TopicsController < ApplicationController
 
       # Calculate mult_diff
       if @user_rank == "lowest"
-        @mult = ( @lowest_amt / session[:you] ).round
+        # Not sure what would cause a zero, but seems to be happening, so check for it
+        if session[:you] < 0.0001
+          @mult = 0.0
+        else
+          @mult = ( @lowest_amt / session[:you] ).round
+        end
         @mult_diff = ("%.f" % @mult).to_s + " times"
       else
         @mult = ( session[:you] / @lowest_amt ).round
