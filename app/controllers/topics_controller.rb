@@ -60,11 +60,6 @@ class TopicsController < ApplicationController
       end
     end
 
-    # Not sure what would cause a zero, but seems to be happening, so check for it
-    if session[:you] == 0 || session[:you] == ""
-      redirect_to new_topic_response_path(@topic)
-    end
-
     @lowest_color = LOWEST_COLOR
     @all_neighbors_color = ALL_NEIGHBORS_COLOR
     @you_color = YOU_COLOR
@@ -114,6 +109,10 @@ class TopicsController < ApplicationController
         @percent = (( session[:you] - @lowest_amt ) / @lowest_amt) * 100
         @percent_diff = ("%.f" % @percent).to_s + "%"
       end
+
+
+      flash[:error] = "session[:you] = " + session[:you].to_s
+      redirect_to @topic
 
       # Calculate mult_diff
       if @user_rank == "lowest"
