@@ -39,15 +39,3 @@ Your email: <%= text_field "request", "from_email", :size => "20", :style => "co
 <input type="submit" value="Send Stack Request" class="form_button round" />
 <% end -%>
 </div>
-
-
-<!-- <span>List topics (fitness, health, finances, etc.) you'd like to see comparisons on (how much, how many, at what time, etc):</span><br/>
-<%= form_tag "/suggestion", :onsubmit => "return validateForm(this)" do -%>
-<%= text_area "suggestion", "topic", :class => "suggestion_topics" %><br/>
-<span class="de-em text-75">Enter your email and we'll also notify you of any new stacks:</span>
-<%= text_field "suggestion", "email",
-	:value => session[:email],
-	:class => "suggestion_email",
-	:onclick => "this.style.color = 'black'" %>
-<input type="submit" value="Suggest a Stack" style="margin-top: 10px" class="form_button round" />
-<% end -%> -->
