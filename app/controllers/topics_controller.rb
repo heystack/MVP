@@ -177,7 +177,7 @@ class TopicsController < ApplicationController
         @smiley_average = "<img src=\"/images/smiley_2.png\" height=\"25\">"
         @smiley_more_than_most = "<img src=\"/images/smiley_5.png\" height=\"25\">"
         @smiley_biggest = "<img src=\"/images/smiley_4.png\" height=\"25\">"
-        @action_step = "<a href='http://bit.ly/tshjGn' target='_blank'>What's the right age for a cellphone? >> <span class='text-75'>MSNBC RedTape</span></a><br/>"
+        @action_step = "<a href='http://bit.ly/tshjGn' target='_blank'>What's the right age for a cellphone? >> <span class='text-75'>MSNBC Red Tape</span></a><br/>"
 
       elsif @topic.name == "Homework"
         if @user_rank == "lowest"
