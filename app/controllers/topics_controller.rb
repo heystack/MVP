@@ -60,6 +60,11 @@ class TopicsController < ApplicationController
       end
     end
 
+    # Not sure what would cause a zero, but seems to be happening, so check for it
+    if session[:you] == 0
+      redirect_to new_topic_response_path(@topic)
+    end
+
     @lowest_color = LOWEST_COLOR
     @all_neighbors_color = ALL_NEIGHBORS_COLOR
     @you_color = YOU_COLOR
