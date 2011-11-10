@@ -111,12 +111,11 @@ class TopicsController < ApplicationController
       end
 
 
-      flash[:error] = "session[:you] = " + session[:you].to_s
-      redirect_to new_topic_response_path(@topic)
-
       # Calculate mult_diff
       if @user_rank == "lowest"
-        @mult = ( @lowest_amt / session[:you] ).round
+        flash[:error] = "session[:you] = " + session[:you].to_s
+        redirect_to new_topic_response_path(@topic)
+
         @mult_diff = ("%.f" % @mult).to_s + " times"
       else
         @mult = ( session[:you] / @lowest_amt ).round
