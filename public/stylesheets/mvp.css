@@ -15,7 +15,6 @@ filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10,MakeShadow=true,Sh
 .shadow .content {
   position: relative; /* This protects the inner element from being blurred */
   background-color: #fff;
-  margin-bottom: -30px;
 }
 
 .shadowlight {
@@ -215,6 +214,10 @@ div.de-em {
 }
 
 div.ie_align_top {
+}
+
+div.ie_align_top {
+  height: 30px;
 }
 
 /* Highchart */
