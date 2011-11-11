@@ -10,8 +10,8 @@ class MvpMailer < ActionMailer::Base
     @email = @contact[:email]
     @user_email = user_email
     @form_capable = false
-    # @host_url = "http://stkup.com"
-    @host_url = "http://localhost:3000"
+    @host_url = "http://stkup.com"
+    # @host_url = "http://localhost:3000"
     @base_url = @host_url + "/topics/" + @topic.id.to_s + "/responses"
     mail(:to => @email, :from => @from_email, :bcc => "feedback@stkup.com", :subject => @contact[:email_subject])
   end
