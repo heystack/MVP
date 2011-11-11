@@ -139,11 +139,11 @@ class TopicsController < ApplicationController
           @diff_amt = (( session[:you] - @lowest_amt ) * 240).round
           @diff_text = "&nbsp;more"
         end
-        @diff_amt = number_to_currency(@diff_amt, :strip_insignificant_zeros => true)
         if @diff_amt == 0
           @comparison_text = "You spend <span class='em'>" + "the same as" + "</span> your lowest spending neighbors."
           @diff_text = ""
         else
+          @diff_amt = number_to_currency(@diff_amt, :strip_insignificant_zeros => true)
           @comparison_text = "You spend <span class='em'>" + @percent_diff + @diff_text + "</span> than your lowest spending neighbors."
           @diff_text = "With four 5 hours sits per month, you spend <span class='em'>" + @diff_amt.to_s + @diff_text + " per year</span> than your lowest spending neighbors."
         end
