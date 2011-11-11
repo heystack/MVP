@@ -7,5 +7,9 @@ class Topic < ActiveRecord::Base
     count = self.responses.count
     (count / TIPPING_POINT ) >= 1
   end
-  
+
+  def answered?(user_email)
+    self.responses.find_by_email(user_email) && user_email != "feedback@stkup.com"
+  end
+
 end
