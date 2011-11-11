@@ -489,7 +489,7 @@ td.action_steps {
   border-right-color: white;
   border-right-width: 1px;
   text-align: right;
-  line-height: 2em;
+  line-height: 1em;
 }
 
 td.action_links {
