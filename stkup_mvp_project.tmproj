@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/views/layouts/_action_steps.html.erb</string>
+	<string>app/controllers/mvp_controller.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,85 +21,39 @@
 	<integer>286</integer>
 	<key>metaData</key>
 	<dict>
-		<key>app/controllers/topics_controller.rb</key>
+		<key>app/controllers/mvp_controller.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>31</integer>
+				<integer>106</integer>
 				<key>line</key>
-				<integer>135</integer>
+				<integer>33</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>121</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>30</integer>
-				<key>line</key>
-				<integer>135</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>31</integer>
-				<key>line</key>
-				<integer>135</integer>
-			</dict>
+			<integer>24</integer>
 		</dict>
-		<key>app/views/layouts/_action_steps.html.erb</key>
+		<key>public/stylesheets/mvp.css</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>30</integer>
+				<integer>14</integer>
 				<key>line</key>
-				<integer>3</integer>
+				<integer>219</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>app/views/layouts/_legend.html.erb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>46</integer>
-				<key>line</key>
-				<integer>11</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>app/views/layouts/_stylesheets.html.erb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>42</integer>
-				<key>line</key>
-				<integer>4</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>198</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>app/views/layouts/_stylesheets.html.erb</string>
-		<string>app/views/layouts/_legend.html.erb</string>
-		<string>app/views/layouts/_action_steps.html.erb</string>
-		<string>app/controllers/topics_controller.rb</string>
+		<string>public/stylesheets/mvp.css</string>
+		<string>app/controllers/mvp_controller.rb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>

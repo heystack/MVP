@@ -31,7 +31,7 @@ class MvpController < ApplicationController
     @from_name = @contact[:from_name]
     @user_email = @contact[:user_email]
     MvpMailer.email_neighbor(@topic, @contact, @from_name, @user_email).deliver
-    flash[:success] = "Thanks for sharing with #{@contact[:email]}. Feel free to share as many times as you\'d like!"
+    flash[:success] = "Thanks for sharing with #{@contact[:email]}. Feel free to share with as many people as you\'d like!"
     redirect_to root_path
   end
 
