@@ -32,6 +32,7 @@ class TopicsController < ApplicationController
     session[:topic] = @topic.id
 
     if !session[:you]
+      session[:email] ||= params[:email]
       redirect_to new_topic_response_path(@topic) and return
     else
       session[:you] ||= 0
