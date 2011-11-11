@@ -203,7 +203,7 @@ class ResponsesController < ApplicationController
     @topic = Topic.find_by_id(params[:topic_id])
     if @topic.answered?(params[:response][:email])
       # flash[:notice] = "Stack already answered by " + params[:response][:email]
-      @response = Response.find_by_email(params[:response][:email])
+      @response = @topic.response.find_by_email(params[:response][:email])
       @save = @response.update_attributes(params[:response])
     else
       # flash[:notice] = "New stack response"
@@ -232,7 +232,6 @@ class ResponsesController < ApplicationController
       session[:topic] = @topic.id
       if session[:topic]
         redirect_to edit_response_path(@response.id)
-        # redirect_to topic_path(session[:topic])
       else
         redirect_to root_path
       end
