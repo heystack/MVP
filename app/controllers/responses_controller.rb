@@ -129,19 +129,19 @@ class ResponsesController < ApplicationController
     @host_url = request.host_with_port
     @base_url = "/topics/" + @topic.id.to_s + "/responses"
     if @topic.name == "Babysitter Pay Rate"
-      @response_value = ("%.2f" % session[:babysitter_pay_rate]).to_s.gsub(/.00/,"")
+      @response_value = ("%.2f" % session[:babysitter_pay_rate]).to_s.gsub(/\.00/,"")
       @mad_libs_intro = "I pay my babysitter <span class=\"dollar_sign\">$</span>"
       @mad_libs_label = "$ per hour"
       @mad_libs_units = " per hour"
       @mad_libs_label = "hourly rate"
     elsif @topic.name == "Mobilizers"
-      @response_value = ("%.1f" % session[:mobilizers]).to_s.gsub(/.0/,"")
+      @response_value = ("%.1f" % session[:mobilizers]).to_s.gsub(/\.0/,"")
       @mad_libs_intro = "My child got/will get a cell phone at "
       @mad_libs_label = "age"
       @mad_libs_units = " years old"
       @mad_libs_label = "age"
     elsif @topic.name == "Homework"
-      @response_value = ("%.1f" % session[:homework]).to_s.gsub(/.0/,"")
+      @response_value = ("%.1f" % session[:homework]).to_s.gsub(/\.0/,"")
       @mad_libs_intro = 'My child in the 
         <label class="label_select">
     		<select name="response[qualifier1]" style="font-size: 110%">
