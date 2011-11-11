@@ -619,17 +619,17 @@ a:visited {
   color: #0088ce;
 }
 
-td.action_links a {
+table.action_steps a {
   color: #fff;
   text-decoration: none;
 }
 
-td.action_links a:hover {
+table.action_steps a:hover {
   color: #fff;
   text-decoration: underline;
 }
 
-td.action_links a:visited {
+table.action_steps a:visited {
   color: #fff;
 }
 
