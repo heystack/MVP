@@ -11,23 +11,23 @@ class ResponsesController < ApplicationController
     end
     session[:email] ||= "feedback@stkup.com"
     @email = session[:email]
-    if @topic.answered?(@email)
-      @response = @topic.responses.find_by_email(@email)
-      session[:you] = @response.value
-      session[:response_id] = @response.id
-      if @topic.name == "Babysitter Pay Rate"
-        session[:babysitter_pay_rate] = @response.value
-        session[:babysitter_id] = @response.id
-      elsif @topic.name == "Mobilizers"
-        session[:mobilizers] = @response.value
-        session[:mobilizers_id] = @response.id
-      elsif @topic.name == "Homework"
-        session[:homework] = @response.value
-        session[:homework_id] = @response.id
-      end
-      session[:neighborhood] = @response.neighborhood
-      redirect_to @topic
-    end
+    # if @topic.answered?(@email)
+    #   @response = @topic.responses.find_by_email(@email)
+    #   session[:you] = @response.value
+    #   session[:response_id] = @response.id
+    #   if @topic.name == "Babysitter Pay Rate"
+    #     session[:babysitter_pay_rate] = @response.value
+    #     session[:babysitter_id] = @response.id
+    #   elsif @topic.name == "Mobilizers"
+    #     session[:mobilizers] = @response.value
+    #     session[:mobilizers_id] = @response.id
+    #   elsif @topic.name == "Homework"
+    #     session[:homework] = @response.value
+    #     session[:homework_id] = @response.id
+    #   end
+    #   session[:neighborhood] = @response.neighborhood
+    #   redirect_to @topic
+    # end
     @response = @topic.responses.new
     @title = "New Response"
     @form_capable = true
@@ -201,15 +201,15 @@ class ResponsesController < ApplicationController
       redirect_to root_path and return
     end
     @topic = Topic.find_by_id(params[:topic_id])
-    if @topic.answered?(params[:response][:email])
-      # flash[:notice] = "Stack already answered by " + params[:response][:email]
-      @response = @topic.responses.find_by_email(params[:response][:email])
-      @save = @response.update_attributes(params[:response])
-    else
+    # if @topic.answered?(params[:response][:email])
+    #   # flash[:notice] = "Stack already answered by " + params[:response][:email]
+    #   @response = @topic.responses.find_by_email(params[:response][:email])
+    #   @save = @response.update_attributes(params[:response])
+    # else
       # flash[:notice] = "New stack response"
       @response = @topic.responses.build(params[:response])
       @save = @response.save
-    end
+    # end
     if @save
       # flash[:success] = "Your response, " + @response.value.to_s + ", has been added to the stack!"
       session[:you] = @response.value

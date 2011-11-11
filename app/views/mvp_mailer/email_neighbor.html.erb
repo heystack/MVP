@@ -20,7 +20,7 @@ number of hours
 <% end %>
 </strong>
 <% if !@form_capable %>
-or <a href="<%= @host_url + "/topics/" + @topic.id.to_s + "?email=" + @email %>">answer the question on the StkUp website</a>.
+or <a href="<%= @base_url + "/new" %>answer the question on the StkUp website</a>.
 <% end %>
 </div>
 
