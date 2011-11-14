@@ -13,7 +13,14 @@ class MvpMailer < ActionMailer::Base
     @host_url = "http://stkup.com"
     # @host_url = "http://localhost:3000"
     @base_url = @host_url + "/topics/" + @topic.id.to_s + "/responses"
-    mail(:to => @email, :from => @from_email, :bcc => "feedback@stkup.com", :subject => @contact[:email_subject])
+    # Validate reply-to email address
+    email_regex = /\A([\w\.\-\+]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
+    @reply_to_email = ( @user_email =~ email_regex ) ? @user_email : "feedback@stkup.com"
+    mail( :to => @email,
+          :from => @from_email,
+          :reply_to => @reply_to_email,
+          :bcc => "feedback@stkup.com",
+          :subject => @contact[:email_subject])
   end
 
   def comment_email(contact)
