@@ -240,6 +240,13 @@ class ResponsesController < ApplicationController
     end
   end
 
+  def destroy
+    @response = Response.find(params[:id])
+    flash[:notice] = "Response \##{@response.id} deleted."
+    @response.destroy
+    redirect_to root_path
+  end
+
   def stkresponses
     @auth_key = params[:auth_key]
     if @auth_key == "waterford"
