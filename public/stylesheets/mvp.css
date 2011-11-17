@@ -320,7 +320,7 @@ td.hys_you {
 }
 
 div.tip_progress {
-  border-style: none;
+/*  border-style: none;
   border-width: 1px;
   border-color: black;
   margin: 0px 20px -150px 0px;
@@ -328,6 +328,12 @@ div.tip_progress {
   float: right;
   z-index: 1;
   position: relative;
+*/
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  width: 75%;
 }
 
 div.tip_progress_header {
@@ -554,6 +560,18 @@ textarea.stack_request {
 input.suggestion_email {
   width: 90%;
   color: lightgray;
+}
+
+a.unanswered_topic {
+  font-weight: bold;
+}
+
+a.unanswered_topic:hover {
+  font-weight: bold;
+}
+
+a.unanswered_topic:visited {
+  font-weight: bold;
 }
 
 /* Email Preview */

@@ -2,12 +2,11 @@
 <% if @topic.tipped? %>
   <!-- <img src="/images/green_checkmark.jpg" height="20">&nbsp;Stack&nbsp;<a href="#tip_info" rel="facebox">tipped</a>&nbsp;at<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= TIPPING_POINT %>&nbsp;responses! -->
 <% else %>
-  <div class="tip_progress_header"><%= @count %> responded</div>
+  <!-- <div class="tip_progress_header"><%= @count %> responded</div> -->
   <div class="tip_progress_bar_border">
 	<div class="tip_progress_bar_fill text-75" style="width:<%= @tipping_point_progress %>;color:#ccc"><%= @tipping_point_progress %></div>
   </div>
-  <div class="de-em text-75 centered"><%= TIPPING_POINT - @count %> more needed to<br/>
-	<a href="#tip_info" rel="facebox">tip the stack</a>.</div>
+  <div class="de-em text-75 centered"><%= TIPPING_POINT - @count %> more needed to <a href="#tip_info" rel="facebox">tip the stack</a>.</div>
 <% end %>
 </div>
 
