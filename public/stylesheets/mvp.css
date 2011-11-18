@@ -227,10 +227,6 @@ td.top_right {
 div.ie_align_top {
 }
 
-div.ie_align_top {
-  height: 30px;
-}
-
 /* Highchart */
 
 div.hc {
@@ -244,13 +240,13 @@ div.hc {
 /* Stk Main Table */
 
 table.stk_table {
-  padding: 0px 20px 40px 20px;
+  padding: 10px 20px 40px 20px;
 }
 
 td.stk_col_left {
   width: 60%;
 /*  padding-top: 20px; Screws up IE shadow */
-  border: none;
+  border: solid;
   border-width: 1px;
   border-color: #eee;
   vertical-align: top;
