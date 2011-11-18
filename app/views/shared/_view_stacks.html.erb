@@ -1,7 +1,9 @@
 <div class="stk_col_right_header">View Other Stacks</div>
 <% if Topic.count > 1 %>
+<ul class="stack_list">
 <%= render Topic.all, :omit_topic => @topic %>
+</ul>
 <% else %>
 <%= link_to "Add a New Topic", new_topic_path %><br/>
 <% end %>
-<div class="de-em text-75" style="line-height:1em;"><br/>And more coming...</div>
+<div class="de-em text-75" style="line-height:1em;margin-top:-5px"><br/>And more coming...</div>

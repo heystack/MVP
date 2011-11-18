@@ -1,9 +1,12 @@
-<div class="stk_col_right_header">Help Tip this Stack</div>
-<div>Forward to parents in your neighborhood. The more answers, the better the results.<br/></div>
+<div>Forward to parents in your neighborhood.<br/>More answers, better results.<br/></div>
 <%= render 'layouts/tip_progress' %>
 
-<div class="facebox_button">
+<a href="#info" rel="facebox"><img src="/images/share_email.png"></a> 
+<img src="/images/share_t_inactive.png"> 
+<img src="/images/share_fb_inactive.png"><br/> 
+
+<!-- <div class="facebox_button">
 <a href="#info" rel="facebox"><input type="submit" value="Share with Neighbors" class="form_button round" /></a>
-</div>
+</div> -->
 
 <div id="info" style="display:none;"><%= render 'mvp/email_preview' %></div>

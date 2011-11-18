@@ -8,7 +8,7 @@
 	  <!--[if IE]><div class="ie_align_top"></div><![endif]-->
 	  <div id="hc" class="hc"></div>
 	  <table class="below_the_fold">
-		<tr><td width="60%"><%= render 'layouts/how_you_stack_up' %></td>
+		<tr><td width="60%"><div class="share_stack round"><%= render 'layouts/share_stack' %></div></td>
 		<td>
 		  <div class="comparison-1 round"><%=raw @comparison_text %></div>
 		  <% if @diff_text != "" %>
@@ -18,13 +18,12 @@
 		<!--[if IE]><td>&nbsp;</td><![endif]-->
 		</tr>
 	  </table>	  
-	  <%= render 'layouts/action_steps' %>
+	  <!-- <%= render 'layouts/action_steps' %> -->
 	  <div id="legend" class="legend"><%= render 'layouts/legend' %></div>
 	  <!--[if IE]><div class="ie_align_bottom"><br/></div><![endif]-->
 	  <!--[if IE]></div><![endif]-->
 	</td>
 	<td class="stk_col_right">
-	  <div class="stk_col_right_section greyfadeup"><%= render 'layouts/share_stack' %></div>
 	  <div class="stk_col_right_section greyfadeup"><%= render 'shared/view_stacks' %></div>
 	  <div class="stk_col_right_section greyfadeup"><%= render 'layouts/feedback' %></div>
 	</td>

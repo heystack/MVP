@@ -1,8 +1,10 @@
 <% if topic != omit_topic %>
+<li>
 <% if topic.answered?(session[:email]) %>
 <% css_class = "answered_topic" %>
 <% else %>
 <% css_class = "unanswered_topic" %>
 <% end %>
-<%= link_to topic.question, topic_path(topic.id), :class => css_class %><br/>
+<%= link_to topic.question, topic_path(topic.id), :class => css_class %>
+</li>
 <% end %>
