@@ -15,7 +15,7 @@
 	<% if @ask_location %>
 	, and I live in zip code&nbsp;
     <label>
-		<%= f.text_field :neighborhood, :size => 4, :value => "#{@neighborhood}", :class => "fill_in_the_blank" %>
+		<%= f.text_field :neighborhood, :size => 5, :value => "#{@neighborhood}", :class => "fill_in_the_blank" %>
 		<span>zip code</span>
     </label>
     <!-- <label class="label_select">
