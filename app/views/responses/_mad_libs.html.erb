@@ -13,8 +13,12 @@
     </label>
     <%= @mad_libs_units %>
 	<% if @ask_location %>
-	, and I live in&nbsp;
-    <label class="label_select">
+	, and I live in zip code&nbsp;
+    <label>
+		<%= f.text_field :neighborhood, :size => 4, :value => "#{@neighborhood}", :class => "fill_in_the_blank" %>
+		<span>zip code</span>
+    </label>
+    <!-- <label class="label_select">
 		<select name="response[neighborhood]">
 			<option value="Arlandria" <%= @neighborhood == "Arlandria" ? 'selected="selected"' : nil %> >Arlandria</option>
 			<option value="Del Ray" <%= @neighborhood == "Del Ray" ? 'selected="selected"' : nil %> >Del Ray</option>
@@ -25,7 +29,7 @@
 			<option value="West End" <%= @neighborhood == "West End" ? 'selected="selected"' : nil %> >West End</option>
 			<option value="Other" <%= @neighborhood == "Other" ? 'selected="selected"' : nil %> >Other</option>
 		</select>
-    </label>
+    </label> -->
 	<% end %>
 	.
     </td>
