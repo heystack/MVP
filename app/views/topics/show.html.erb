@@ -5,17 +5,19 @@
   <tr>
 	<td class="stk_col_left shadowlight">
 	  <!--[if IE]><div class="content"><![endif]-->
-	  <!--[if IE]><div class="ie_align_top"></div><![endif]-->
 	  <div id="hc" class="hc"></div>
 	  <table class="below_the_fold">
-		<tr><td width="60%"><div class="share_stack round"><%= render 'layouts/share_stack' %></div></td>
-		<td>
-		  <div class="comparison-1 round"><%=raw @comparison_text %></div>
-		  <% if @diff_text != "" %>
-		  <div class="comparison-2 round"><%=raw @diff_text %></div>
-		  <% end %>
-		</td>
-		<!--[if IE]><td>&nbsp;</td><![endif]-->
+		<tr>
+		  <td width="60%">
+			<div class="share_stack round"><%= render 'layouts/share_stack' %></div>
+		  </td>
+		  <td>
+			<div class="comparison-1 round"><%=raw @comparison_text %></div>
+			<% if @diff_text != "" %>
+			<div class="comparison-2 round"><%=raw @diff_text %></div>
+			<% end %>
+		  </td>
+		  <!--[if IE]><td>&nbsp;</td><![endif]-->
 		</tr>
 	  </table>	  
 	  <!-- <%= render 'layouts/action_steps' %> -->

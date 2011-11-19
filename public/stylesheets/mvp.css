@@ -233,6 +233,7 @@ div.hc {
   height:225px;
   width: 90%;
   clear:both;
+  margin-top: 5px;
   margin-bottom: 10px;
   font-size: 150%;
 }
@@ -293,7 +294,7 @@ div.float_top div {
 div.share_stack {
   font-size: 75%;
   padding: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   border: solid;
   border-width: 1px;
   border-color: #eee;
