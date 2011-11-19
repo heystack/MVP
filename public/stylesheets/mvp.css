@@ -224,9 +224,6 @@ td.top_right {
   background: #000 url(/images/1x240bluefadeup.png) bottom center repeat;
 }
 
-div.ie_align_top {
-}
-
 /* Highchart */
 
 div.hc {
@@ -318,6 +315,7 @@ div.tip_progress {
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 10px;
   width: 60%;
 }
 
