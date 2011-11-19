@@ -224,6 +224,10 @@ td.top_right {
   background: #000 url(/images/1x240bluefadeup.png) bottom center repeat;
 }
 
+div.ie_align_top {
+  margin: 5px;
+}
+
 /* Highchart */
 
 div.hc {
