@@ -300,6 +300,11 @@ div.share_stack {
   text-align: center;
 }
 
+div.share_button_box {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 div.tip_progress {
 /*  border-style: none;
   border-width: 1px;
@@ -312,8 +317,7 @@ div.tip_progress {
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10px;
-  width: 75%;
+  width: 60%;
 }
 
 div.tip_progress_header {
