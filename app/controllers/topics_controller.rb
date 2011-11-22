@@ -34,19 +34,19 @@ class TopicsController < ApplicationController
     # Admin back door
     if params[:auth_key]
       session[:email] = "nycbrown@gmail.com"
+      session[:babysitter_pay_rate] = 15
+      session[:babysitter_id] = 1
+      session[:mobilizers] = 11.5
+      session[:mobilizers_id] = 2
+      session[:homework] = 3
+      session[:homework_id] = 3
       if @topic.name == "Babysitter Pay Rate"
-        session[:babysitter_pay_rate] = 15
-        session[:babysitter_id] = 1
         session[:you] = session[:babysitter_pay_rate]
         session[:response_id] = session[:babysitter_id]
       elsif @topic.name == "Mobilizers"
-        session[:mobilizers] = 11.5
-        session[:mobilizers_id] = 2
         session[:you] = session[:mobilizers]
         session[:response_id] = session[:mobilizers_id]
       elsif @topic.name == "Homework"
-        session[:homework] = 3
-        session[:homework_id] = 3
         session[:you] = session[:homework]
         session[:response_id] = session[:homework_id]
       end
