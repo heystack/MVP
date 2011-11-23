@@ -1,7 +1,6 @@
 .container {
   width: 900px;
   margin-bottom: 30px;
-  padding-bottom: 30px;
 }
 
 .shadow {
@@ -267,7 +266,7 @@ div.hc {
 /* Stk Main Table */
 
 table.stk_table {
-  padding: 10px 20px 0px 20px;
+  padding: 10px 20px 30px 20px;
 }
 
 td.stk_col_left {
