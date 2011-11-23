@@ -20,6 +20,12 @@ function validateForm(form) {
     return false;
 }
 
+function unhide(divID) {
+	var item = document.getElementById(divID);
+	if (item) {
+		item.className='unhidden';
+	}
+}
 </script>
 
 <div class="stk_col_right_header">Suggest a Stack</div>
@@ -29,13 +35,13 @@ function validateForm(form) {
 	:class => "stack_request",
 	:style => "color:lightgray",
 	:value => "List topics (fitness, health, finances, ...) you'd like to see comparisons on (how much, how many, at what time)...",
-	:onfocus => "if (this.value.substring(0, 11) == 'List topics') {this.value='';this.style.color = 'black'}" %>
+	:onfocus => "if (this.value.substring(0, 11) == 'List topics') {this.value='';this.style.color = 'black'}; unhide('submit_div')" %>
 Your email: <%= text_field "request", "from_email", :size => "20", :style => "color:lightgray",
 		:value => 'you@example.com',
-		:onfocus => "this.style.color = 'black'; if (this.value == 'feedback@stkup.com') {this.value='';}" %>
+		:onfocus => "this.style.color = 'black'; if (this.value == 'feedback@stkup.com') {this.value='';}; unhide('submit_div')" %>
 
 <br/>
-<div><%= check_box "request", "opt_in" %> Keep me posted on new stack info</div>
-<input type="submit" value="Send Stack Request" class="form_button round" />
+<div><%= check_box "request", "opt_in", :onclick => "unhide('submit_div')" %> Keep me posted on new stack info</div>
+<div id="submit_div" class="hidden"><input type="submit" value="Send Suggestion" class="form_button round" /></div>
 <% end -%>
 </div>

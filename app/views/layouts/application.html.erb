@@ -26,11 +26,12 @@
   <div class="container round shadow">
 	<!--[if IE]><div class="content round"><![endif]-->
 	<section class="round">
-      <%= render 'layouts/header' %>
+      <%= render 'shared/header' %>
 	  <% flash.each do |key, value| %>
 	    <div class="flash <%= key %>"><%= value %></div>
 	  <% end %>
 	  <%= yield %>
+      <%= render 'shared/footer' %>
 	</section>
 	<!--[if IE]></div><![endif]-->
   </div>

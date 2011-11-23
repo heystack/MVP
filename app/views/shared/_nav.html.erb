@@ -1,6 +1,5 @@
 <nav class="round">
-<ul>
-  <!-- <li><%= link_to "About", "#about", :rel => "facebox" %>&nbsp;&nbsp;|&nbsp;&nbsp;</li> -->
+<!-- <ul>
   <li><%= link_to image_tag("/images/nav_about.png", :name => "about"), "#about",
 							:rel => "facebox",
 							:onmouseover => "document.about.src='/images/nav_about_hover.png';",						
@@ -13,5 +12,13 @@
 							:rel => "facebox",
 							:onmouseover => "document.comments.src='/images/nav_comments_hover.png';",						
 							:onmouseout => "document.comments.src='/images/nav_comments.png';"%></li>
+</ul> -->
+<ul>
+<li><%= link_to image_tag("/images/login_stkup.png", :name => "StkUp Login"), "#coming_soon", :rel => "facebox" %></li>
+<li><%= link_to image_tag("/images/login_fb.png", :name => "Facebook Login"), "#coming_soon", :rel => "facebox" %></li>
 </ul>
 </nav>
+
+<div id="coming_soon" style="display:none;">
+Coming soon!
+</div>

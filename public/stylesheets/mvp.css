@@ -141,6 +141,27 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
+/* Footer */
+
+div.footer {
+  text-align: center;
+  padding-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+}
+
+div.footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+div.footer ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0 10px;
+}
+
 /* General Formatting */
 
 input.form_button {
@@ -228,6 +249,9 @@ div.ie_align_top {
   line-height: 1em;
 }
 
+.hidden { display: none; }
+.unhidden { display: block; }
+
 /* Highchart */
 
 div.hc {
@@ -242,7 +266,7 @@ div.hc {
 /* Stk Main Table */
 
 table.stk_table {
-  padding: 10px 20px 40px 20px;
+  padding: 10px 20px 0px 20px;
 }
 
 td.stk_col_left {
@@ -467,10 +491,10 @@ div.new_response_img {
 }
 
 div.new_response_form {
-  margin-left: 20px;
+  width: 650px;			/* Same width as .mad-libs */
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
-  display: inline-block;
-  vertical-align: top;
 }
 
 div.new_response_question {
