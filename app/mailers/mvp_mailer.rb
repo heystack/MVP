@@ -26,22 +26,22 @@ class MvpMailer < ActionMailer::Base
   def comment_email(contact)
     @contact = contact
     @from_email = @contact[:from_email]
-    mail(:to => "nycbrown@gmail.com", :from => @from_email, :subject => "User Comment!")
+    mail(:to => "feedback@stkup.com", :cc => "nycbrown@gmail.com", :from => @from_email, :subject => "User Comment!")
   end
 
   def feedback_email(contact)
     @contact = contact
     @from_email = @contact[:from_email]
-    mail(:to => "nycbrown@gmail.com", :from => @from_email, :subject => "User Feedback!")
+    mail(:to => "feedback@stkup.com", :cc => "nycbrown@gmail.com", :from => @from_email, :subject => "User Feedback!")
   end
 
   def suggestion_email(suggestion)
     @suggestion = suggestion
-    mail(:to => "nycbrown@gmail.com", :subject => "Topic Suggestion!")
+    mail(:to => "feedback@stkup.com", :cc => "nycbrown@gmail.com", :subject => "Topic Suggestion!")
   end
 
   def stack_request_email(request)
     @request = request
-    mail(:to => "nycbrown@gmail.com", :subject => "Stack Request!")
+    mail(:to => "feedback@stkup.com", :cc => "nycbrown@gmail.com", :subject => "Stack Request!")
   end
 end
