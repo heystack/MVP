@@ -328,7 +328,7 @@ div.share_stack {
 
 div.share_button_box {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 div.tip_progress {
@@ -344,7 +344,7 @@ div.tip_progress {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
-  width: 60%;
+  width: 70%;
 }
 
 div.tip_progress_header {

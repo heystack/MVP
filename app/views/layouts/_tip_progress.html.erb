@@ -1,8 +1,7 @@
 <div class="tip_progress round">
 <% if @topic.tipped? %>
-  <!-- <div class="stk_col_right_header">
-  <img src="/images/green_checkmark.jpg" height="20">&nbsp;Stack&nbsp;has&nbsp;<a href="#tip_info" rel="facebox">tipped</a>!
-  </div> -->
+  <!-- <div class="stk_col_right_header"><img src="/images/green_checkmark.jpg" height="20">&nbsp;Stack&nbsp;has&nbsp;<a href="#tip_info" rel="facebox">tipped</a>!</div> -->
+  <div class="de-em text-75" style="margin-top:-10px">More than <%= (@count.to_i / 10) * 10 %> neighbors have contributed!</div>
 <% else %>
   <!-- <div class="tip_progress_header"><%= @count %> responded</div> -->
   <div class="tip_progress_bar_border">
