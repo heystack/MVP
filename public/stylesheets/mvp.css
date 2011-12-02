@@ -288,11 +288,10 @@ td.stk_col_right {
 }
 
 div.stk_col_right_section {
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   padding: 10px;
   padding-bottom: 20px;
-  border: solid;
+  border: none;
   border-width: 1px;
   border-color: #eee;
 }
@@ -301,6 +300,9 @@ div.stk_col_right_header {
   color: #666;
   font-weight: bold;
   font-size: 125%;
+  border-bottom: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #666;
   margin-bottom: 10px;
 }
 
@@ -324,6 +326,13 @@ div.share_stack {
   border-width: 1px;
   border-color: #eee;
   text-align: center;
+}
+
+div.share_stack_header {
+  color: #666;
+  font-weight: bold;
+  font-size: 125%;
+  margin-bottom: 10px;
 }
 
 div.share_button_box {
